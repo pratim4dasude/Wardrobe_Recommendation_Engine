@@ -1,0 +1,15 @@
+project:
+  name: wardrobe_recommendation_engine
+  version: 0.1.0
+
+storage:
+  upload_dir: data/uploaded_images
+  sample_closet_dir: data/sample_closet
+
+models:
+  captioner: fallback
+  visual_embedding: clip
+  text_embedding: clip
+
+retrieval:
+  top_k: 5
