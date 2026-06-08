@@ -1,0 +1,37 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables
+.env
+
+# Test/lint cache
+.pytest_cache/
+.ruff_cache/
+
+# Notebook cache
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Outputs
+outputs/sample_results/*
+
+# Uploaded images
+data/uploaded_images/*
+!data/uploaded_images/.gitkeep
+
+# Keep sample closet folder
+!data/sample_closet/.gitkeep
