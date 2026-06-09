@@ -1,0 +1,1296 @@
+C:\Users\Pratim\PycharmProjects\Wardrobe_Recommendation_Engine\venv\Scripts\python.exe C:\Users\Pratim\PycharmProjects\Wardrobe_Recommendation_Engine\main.py 
+Loading CLIP model on: cpu
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights: 100%|██████████| 398/398 [00:00<00:00, 11963.80it/s]
+
+==========================================================================================
+WARDROBE RECOMMENDATION ENGINE
+==========================================================================================
+Main pipeline started.
+Project root: C:\Users\Pratim\PycharmProjects\Wardrobe_Recommendation_Engine
+
+==========================================================================================
+STEP 1: ENVIRONMENT CHECK
+==========================================================================================
+Environment looks good.
+Using DATABASE_URL: postgresql://postgres:postgres@localhost:5432/wardrobe_db
+
+==========================================================================================
+STEP 2: UPLOADED IMAGE CHECK
+==========================================================================================
+Found 106 wardrobe image(s).
+Image folder: C:\Users\Pratim\PycharmProjects\Wardrobe_Recommendation_Engine\data\uploaded_images
+
+==========================================================================================
+STEP 3: POSTGRESQL / PGVECTOR CHECK
+==========================================================================================
+PostgreSQL connection is working.
+Current wardrobe items in pgvector DB: 106
+
+==========================================================================================
+STEP 5: PGVECTOR MIGRATION CHECK
+==========================================================================================
+pgvector already has 106 item(s). Skipping migration.
+
+==========================================================================================
+STEP 6: CHAT MEMORY CHECK
+==========================================================================================
+PostgreSQL chat memory tables are ready.
+Using tables: chat_sessions, chat_messages, conversation_state
+
+==========================================================================================
+STEP 7: STARTING FASHION CHAT ASSISTANT
+==========================================================================================
+Fashion QnA Chat Assistant
+==========================================================================================
+Type your fashion request.
+
+Examples:
+- i have office tomorrow what should i wear
+- style item_003 for casule day out
+- What can I pair with item_003 for a smart casual outing?
+- What can I pair with C:\Users\Pratim\PycharmProjects\Wardrobe_Recommendation_Engine\11.jpg for a party?
+- Find similar items to what we have now
+
+Type 'exit' to stop.
+==========================================================================================
+
+You: i have office tomorrow what should i wear
+
+================================================================================
+QUERY UNDERSTANDING LAYER
+================================================================================
+{
+  "raw_query": "i have office tomorrow what should i wear",
+  "corrected_query": "I have office tomorrow. What should I wear?",
+  "intent": "text_outfit",
+  "tool_action": "recommend_outfit_from_text",
+  "occasion": "office",
+  "vibe": null,
+  "color_preference": null,
+  "item_id": null,
+  "image_path": null,
+  "is_followup": false,
+  "needs_followup": true,
+  "followup_question": "What kind of vibe or style are you looking for? For example formal, casual, classy, bold, or smart clean?",
+  "refinement_request": null
+}
+
+Assistant: What kind of vibe or style are you looking for? For example formal, casual, classy, bold, or smart clean?
+
+You: smart clean look
+
+================================================================================
+QUERY UNDERSTANDING LAYER
+================================================================================
+{
+  "raw_query": "smart clean look",
+  "corrected_query": "smart clean look",
+  "intent": "text_outfit",
+  "tool_action": "recommend_outfit_from_text",
+  "occasion": "office",
+  "vibe": "clean smart casual",
+  "color_preference": null,
+  "item_id": null,
+  "image_path": null,
+  "is_followup": true,
+  "needs_followup": false,
+  "followup_question": null,
+  "refinement_request": null
+}
+
+================================================================================
+FINAL CLEAN QUERY SENT TO RECOMMENDATION SYSTEM
+================================================================================
+occasion: office. vibe: clean smart casual. user request: smart clean look
+
+Building wardrobe candidate pool from text query...
+Loaded 106 wardrobe items from pgvector DB.
+upperwear: 8 candidate(s)
+bottomwear: 8 candidate(s)
+outerwear: 8 candidate(s)
+dress: 1 candidate(s)
+
+Sending candidates to LLM outfit assistant...
+
+Assistant: For a smart clean look at the office, I recommend the classic white tailored shirt paired with black straight-fit trousers. This combo is timeless and creates a sleek, professional appearance with minimal effort. To keep the look sharp, go light on accessories—sometimes simplicity is the ultimate sophistication. If you want a bit more polish, layering with a light blue blazer is a great second option.
+
+
+================================================================================
+USER OUTPUT
+================================================================================
+
+Three smart and clean smart casual office outfit recommendations combining classic shirts and dress trousers with optional layering for a neat appearance.
+
+--------------------------------------------------------------------------------
+Outfit #1: Classic White Shirt with Black Trousers
+Outfit type: minimal
+Confidence: high
+Overall reason: This outfit leverages classic colors and tailored pieces for a smart, clean, and minimal office-appropriate look.
+Styling notes: Keep accessories minimal if any; this outfit's simplicity exudes professionalism and neatness.
+
+Items:
+- Role: upperwear
+  Item ID: item_093
+  Filename: item_093.jpg
+  Image path: data/uploaded_images/item_093.jpg
+  Reason: Classic white tailored shirt offers a formal and clean look perfect for office smart casual.
+- Role: bottomwear
+  Item ID: item_045
+  Filename: item_045.jpg
+  Image path: data/uploaded_images/item_045.jpg
+  Reason: Black straight-fit trousers complement the white shirt achieving a minimal and professional aesthetic.
+
+--------------------------------------------------------------------------------
+Outfit #2: Layered Light Blue Shirt and Navy Trousers with Blazer
+Outfit type: layered
+Confidence: high
+Overall reason: This layered outfit adds sophistication and refinement suitable for office settings while maintaining a clean smart casual vibe.
+Styling notes: Roll up shirt sleeves slightly if desired for a relaxed but polished look; blazer adds structure.
+
+Items:
+- Role: upperwear
+  Item ID: item_087
+  Filename: item_087.jpg
+  Image path: data/uploaded_images/item_087.jpg
+  Reason: Light blue and white striped slim fit shirt is ideal for smart casual office wear and adds subtle pattern interest.
+- Role: bottomwear
+  Item ID: item_064
+  Filename: item_064.jpg
+  Image path: data/uploaded_images/item_064.jpg
+  Reason: Navy slim-fit dress pants maintain office formality and blend well with the shirt.
+- Role: outerwear
+  Item ID: item_065
+  Filename: item_065.jpg
+  Image path: data/uploaded_images/item_065.jpg
+  Reason: Light blue tailored blazer elevates the outfit with layering, enhancing smart casual professionalism.
+
+--------------------------------------------------------------------------------
+Outfit #3: Beige Striped Shirt with Beige Trousers and Textured Blazer
+Outfit type: alternative
+Confidence: medium
+Overall reason: This alternative outfit uses tonal neutrals with texture for a smart clean appearance suitable for office environments seeking a stylish edge.
+Styling notes: Pair with minimal accessories, keep shoes neutral and polished to maintain clean lines and smart vibe.
+
+Items:
+- Role: upperwear
+  Item ID: item_028
+  Filename: item_028.jpg
+  Image path: data/uploaded_images/item_028.jpg
+  Reason: Slim-fit beige and white striped shirt offers a subtle neutral pattern ideal for clean smart casual.
+- Role: bottomwear
+  Item ID: item_032
+  Filename: item_032.jpg
+  Image path: data/uploaded_images/item_032.jpg
+  Reason: Beige high-waisted slim fit dress trousers harmonize with the shirt color providing an all-neutral smart look.
+- Role: outerwear
+  Item ID: item_096
+  Filename: item_096.jpg
+  Image path: data/uploaded_images/item_096.jpg
+  Reason: Beige textured blazer with band collar and wooden buttons adds refined texture and a modern twist for smart casual.
+
+
+
+================================================================================
+
+STYLIST NOTE
+
+================================================================================
+
+I would personally pick the Classic White Shirt with Black Trousers outfit first, as it’s the safest choice for a smart clean look that never goes out of style and suits virtually any office environment. Its minimalist and tailored simplicity confidently communicates professionalism and neatness. For a small styling tip, keep accessories subtle—perhaps just a sleek watch—to let the clean lines speak for themselves.
+
+You: style item_003 for casule day out
+
+================================================================================
+QUERY UNDERSTANDING LAYER
+================================================================================
+{
+  "raw_query": "style item_003 for casule day out",
+  "corrected_query": "style item_003 for casual day out",
+  "intent": "wardrobe_item_pairing",
+  "tool_action": "style_wardrobe_item",
+  "occasion": "casual day out",
+  "vibe": "casual",
+  "color_preference": null,
+  "item_id": "item_003",
+  "image_path": null,
+  "is_followup": false,
+  "needs_followup": false,
+  "followup_question": null,
+  "refinement_request": null
+}
+
+================================================================================
+FINAL CLEAN QUERY SENT TO RECOMMENDATION SYSTEM
+================================================================================
+occasion: casual day out. vibe: casual. user request: style item_003 for casual day out
+
+Loading wardrobe embeddings...
+Loaded 106 wardrobe items from pgvector DB.
+Finding selected item: item_003
+
+Creating outfits using the selected garment...
+Retrieved 18 candidate(s) for item_type=bottomwear using pgvector + BM25.
+Retrieved 18 candidate(s) for item_type=outerwear using pgvector + BM25.
+
+Finding similar wardrobe garments...
+
+Creating alternative outfits using similar garments...
+Creating alternative outfit for similar item: item_074
+Retrieved 18 candidate(s) for item_type=bottomwear using pgvector + BM25.
+Retrieved 18 candidate(s) for item_type=outerwear using pgvector + BM25.
+Creating alternative outfit for similar item: item_097
+Retrieved 18 candidate(s) for item_type=bottomwear using pgvector + BM25.
+Retrieved 18 candidate(s) for item_type=outerwear using pgvector + BM25.
+Creating alternative outfit for similar item: item_008
+Retrieved 18 candidate(s) for item_type=bottomwear using pgvector + BM25.
+Retrieved 18 candidate(s) for item_type=outerwear using pgvector + BM25.
+
+Generating human stylist intro...
+Generating final stylist note...
+
+Assistant: ================================================================================
+SYSTEM DEBUG / PIPELINE STEPS
+================================================================================
+
+Step 1: Understanding request
+--------------------------------------------------------------------------------
+{
+  "intent": "wardrobe_item_pairing",
+  "item_id": "item_003",
+  "occasion": "occasion: casual day out. vibe: casual. user request: style item_003 for casual day out"
+}
+
+Step 2: Loading selected garment from wardrobe
+--------------------------------------------------------------------------------
+{
+  "present_in_wardrobe": true,
+  "source_item": {
+    "item_id": "item_003",
+    "filename": "item_003.jpg",
+    "image_path": "data/uploaded_images/item_003.jpg",
+    "caption": "A long-sleeve, button-down denim shirt in solid blue with a classic collar and regular fit, made from cotton fabric, ideal for casual or semi-casual occasions.",
+    "category": [
+      "shirt",
+      "upperwear",
+      "denim"
+    ],
+    "color": [
+      "blue"
+    ],
+    "style": [
+      "casual",
+      "semi-casual",
+      "cotton",
+      "long-sleeve"
+    ],
+    "item_type": "upperwear",
+    "bm25_score": null,
+    "hybrid_keyword_score": null
+  },
+  "text_embedding_available": true,
+  "visual_embedding_available": true
+}
+
+Step 3: Creating outfits using exact selected garment
+--------------------------------------------------------------------------------
+{
+  "generated_outfit_count": 3,
+  "outfit_names": [
+    "Classic Casual Denim-on-Denim",
+    "Layered Denim Casual with Black Jacket",
+    "Casual Contrast with Cream Wide-Leg Jeans"
+  ]
+}
+
+Step 4: Finding similar garments in wardrobe
+--------------------------------------------------------------------------------
+[
+  {
+    "rank": 1,
+    "item_id": "item_074",
+    "filename": "item_074.jpg",
+    "similarity_score": 0.8826,
+    "bm25_score": null,
+    "hybrid_keyword_score": null,
+    "caption": "A navy blue, long-sleeve button-down shirt with a slim fit and a single chest pocket, made of cotton or a cotton blend, ideal for casual and semi-formal occasions."
+  },
+  {
+    "rank": 2,
+    "item_id": "item_097",
+    "filename": "item_097.jpg",
+    "similarity_score": 0.8629,
+    "bm25_score": null,
+    "hybrid_keyword_score": null,
+    "caption": "Long-sleeve button-up shirt in solid warm brown with a classic collar, made from medium-weight cotton or cotton blend fabric, featuring a regular fit suitable for casual or smart-casual wear."
+  },
+  {
+    "rank": 3,
+    "item_id": "item_008",
+    "filename": "item_008.jpg",
+    "similarity_score": 0.8586,
+    "bm25_score": null,
+    "hybrid_keyword_score": null,
+    "caption": "Navy blue long-sleeve button-up shirt with front flap pockets, classic fit, made of cotton or cotton blend, suitable for casual or semi-formal occasions."
+  },
+  {
+    "rank": 4,
+    "item_id": "item_023",
+    "filename": "item_023.jpg",
+    "similarity_score": 0.8539,
+    "bm25_score": null,
+    "hybrid_keyword_score": null,
+    "caption": "A long-sleeve, button-up shirt in solid dusty rose with a classic collar and a single chest pocket, made from cotton or a cotton blend, featuring a regular fit ideal for casual or semi-formal occasions."
+  },
+  {
+    "rank": 5,
+    "item_id": "item_087",
+    "filename": "item_087.jpg",
+    "similarity_score": 0.8167,
+    "bm25_score": null,
+    "hybrid_keyword_score": null,
+    "caption": "Light blue and white vertically striped slim fit long-sleeve button-down shirt made from cotton, ideal for business casual or formal occasions."
+  }
+]
+
+Step 5: Creating alternative outfits using similar garments
+--------------------------------------------------------------------------------
+{
+  "alternative_outfit_count": 3,
+  "based_on_similar_items": [
+    "item_074",
+    "item_097",
+    "item_008"
+  ]
+}
+
+Step 6: Generating final user-facing response
+--------------------------------------------------------------------------------
+{
+  "human_intro_generated": true,
+  "structured_outfit_cards_generated": true,
+  "stylist_note_generated": true
+}
+
+================================================================================
+USER OUTPUT
+================================================================================
+
+It’s great that you have this classic denim shirt already in your wardrobe—such a versatile piece for a casual day out! I’ll start by styling this exact blue denim shirt to create a comfortable and laid-back look. After that, I’ve also found some similar shirts in your wardrobe in navy and warm brown tones that offer nice alternatives for mixing up your casual vibe. Let’s explore some easygoing outfit ideas that keep you stylish and relaxed!
+
+================================================================================
+OUTFITS USING YOUR SELECTED GARMENT
+================================================================================
+
+--------------------------------------------------------------------------------
+Outfit #1: Classic Casual Denim-on-Denim
+Outfit type: minimal
+Confidence: high
+Overall reason: This outfit is a straightforward classic casual look using the source shirt paired with dark blue denim jeans for a cohesive, monochromatic denim style. Great for casual day-to-day wear.
+Styling notes: Keep footwear casual such as sneakers or loafers for an easygoing vibe. Roll shirt sleeves for a relaxed touch.
+
+Items:
+- Role: source
+  Item ID: item_003
+  Filename: item_003.jpg
+  Image path: data/uploaded_images/item_003.jpg
+  Reason: Blue long-sleeve denim shirt provides a relaxed yet put-together casual upperwear base.
+- Role: bottomwear
+  Item ID: item_073
+  Filename: item_073.jpg
+  Image path: data/uploaded_images/item_073.jpg
+  Reason: Dark blue straight-fit denim jeans complement the shirt with tonal denim layering while maintaining casual style.
+
+--------------------------------------------------------------------------------
+Outfit #2: Layered Denim Casual with Black Jacket
+Outfit type: layered
+Confidence: high
+Overall reason: This layered outfit introduces a contrast in denim colors and textures, with the distressed jacket lending a trendy edge while maintaining a casual vibe.
+Styling notes: Leave the denim shirt untucked under the jacket and add simple sneakers or boots to complete the look.
+
+Items:
+- Role: source
+  Item ID: item_003
+  Filename: item_003.jpg
+  Image path: data/uploaded_images/item_003.jpg
+  Reason: The blue denim button-down shirt serves as the core casual upperwear layer.
+- Role: bottomwear
+  Item ID: item_033
+  Filename: item_033.jpg
+  Image path: data/uploaded_images/item_033.jpg
+  Reason: Wide-leg black denim jeans create contrast with the shirt, adding streetwear edge and comfort.
+- Role: outerwear
+  Item ID: item_046
+  Filename: item_046.jpg
+  Image path: data/uploaded_images/item_046.jpg
+  Reason: Adding the black distressed slim fit denim jacket elevates the outfit to a stylish layered look suitable for casual day out with subtle streetwear influences.
+
+--------------------------------------------------------------------------------
+Outfit #3: Casual Contrast with Cream Wide-Leg Jeans
+Outfit type: alternative
+Confidence: medium
+Overall reason: This alternative casual outfit uses the color contrast of cream wide-leg jeans against the blue shirt for a relaxed yet stylish vibe suitable for a casual day out.
+Styling notes: The wide-leg cut lends ease and movement; pair with minimal sneakers or sandals. Roll sleeves to keep it easygoing.
+
+Items:
+- Role: source
+  Item ID: item_003
+  Filename: item_003.jpg
+  Image path: data/uploaded_images/item_003.jpg
+  Reason: The blue denim shirt remains the casual foundation piece.
+- Role: bottomwear
+  Item ID: item_034
+  Filename: item_034.jpg
+  Image path: data/uploaded_images/item_034.jpg
+  Reason: Cream-colored wide-leg denim jeans contrast nicely with the blue shirt, brightening the outfit and adding a fresh casual feel.
+
+================================================================================
+ALTERNATIVE OUTFITS USING SIMILAR WARDROBE ITEMS
+================================================================================
+
+--------------------------------------------------------------------------------
+Alternative Outfit #1: Casual Navy & Denim Day Out
+Based on similar item: item_074
+Similar item caption: A navy blue, long-sleeve button-down shirt with a slim fit and a single chest pocket, made of cotton or a cotton blend, ideal for casual and semi-formal occasions.
+Outfit type: minimal
+Confidence: high
+Overall reason: The combination balances casual slim-fit shirt with relaxed denim jeans in matching dark tones, ideal for a casual day out with comfort and style.
+Styling notes: Roll up the sleeves of the shirt slightly for a more relaxed vibe. Add casual sneakers or loafers to complete the look.
+
+Items:
+- Role: source
+  Item ID: item_074
+  Filename: item_074.jpg
+  Image path: data/uploaded_images/item_074.jpg
+  Reason: Navy blue slim fit button-down shirt for casual day out, the main upperwear source.
+- Role: bottomwear
+  Item ID: item_073
+  Filename: item_073.jpg
+  Image path: data/uploaded_images/item_073.jpg
+  Reason: Dark blue straight-fit denim jeans provide a casual and semi-casual complement to the navy shirt, maintaining a cohesive color palette and relaxed style.
+
+--------------------------------------------------------------------------------
+Alternative Outfit #2: Warm Brown Shirt with Brown Denim Jeans
+Based on similar item: item_097
+Similar item caption: Long-sleeve button-up shirt in solid warm brown with a classic collar, made from medium-weight cotton or cotton blend fabric, featuring a regular fit suitable for casual or smart-casual wear.
+Outfit type: minimal
+Confidence: high
+Overall reason: This outfit offers a natural, monochromatic color scheme with casual yet neat styling, ideal for a casual day out.
+Styling notes: Opt for neutral casual shoes to keep the look balanced; minimal accessories to maintain the casual vibe.
+
+Items:
+- Role: source
+  Item ID: item_097
+  Filename: item_097.jpg
+  Image path: data/uploaded_images/item_097.jpg
+  Reason: Warm brown long-sleeve shirt as the key upperwear piece, perfect for casual day out.
+- Role: bottomwear
+  Item ID: item_043
+  Filename: item_043.jpg
+  Image path: data/uploaded_images/item_043.jpg
+  Reason: Brown straight-leg denim jeans complement the warm brown shirt with a relaxed casual tone and matching color harmony.
+
+--------------------------------------------------------------------------------
+Alternative Outfit #3: Classic Casual Denim Combo
+Based on similar item: item_008
+Similar item caption: Navy blue long-sleeve button-up shirt with front flap pockets, classic fit, made of cotton or cotton blend, suitable for casual or semi-formal occasions.
+Outfit type: minimal
+Confidence: high
+Overall reason: Combines classic navy shades in upper and bottomwear with casual denim jeans offering comfort and style appropriate for a casual day out.
+Styling notes: Roll up the shirt sleeves for a more relaxed look; pair with casual sneakers or loafers to enhance the casual vibe.
+
+Items:
+- Role: source
+  Item ID: item_008
+  Filename: item_008.jpg
+  Image path: data/uploaded_images/item_008.jpg
+  Reason: Navy blue long-sleeve shirt, classic fit, suitable for casual day out.
+- Role: bottomwear
+  Item ID: item_073
+  Filename: item_073.jpg
+  Image path: data/uploaded_images/item_073.jpg
+  Reason: Dark blue straight-fit denim jeans complementing the navy shirt for a cohesive casual look.
+
+================================================================================
+STYLIST NOTE
+================================================================================
+I would personally pick the "Classic Casual Denim-on-Denim" outfit first for its timeless and easygoing style that perfectly complements the blue denim shirt. Since the source shirt is already in your wardrobe, this outfit offers a great go-to look for casual occasions. If you ever want a change, the layered look with the black jacket provides a stylish and trendy alternative. Overall, the denim shirt is a versatile piece worth keeping and styling in multiple ways.
+
+You: What can I pair with item_003 for a smart casual outing?
+
+================================================================================
+QUERY UNDERSTANDING LAYER
+================================================================================
+{
+  "raw_query": "What can I pair with item_003 for a smart casual outing?",
+  "corrected_query": "What can I pair with item_003 for a smart casual outing?",
+  "intent": "wardrobe_item_pairing",
+  "tool_action": "style_wardrobe_item",
+  "occasion": "smart casual outing",
+  "vibe": "smart casual",
+  "color_preference": null,
+  "item_id": "item_003",
+  "image_path": null,
+  "is_followup": false,
+  "needs_followup": false,
+  "followup_question": null,
+  "refinement_request": null
+}
+
+================================================================================
+FINAL CLEAN QUERY SENT TO RECOMMENDATION SYSTEM
+================================================================================
+occasion: smart casual outing. vibe: smart casual. user request: What can I pair with item_003 for a smart casual outing?
+
+Loading wardrobe embeddings...
+Loaded 106 wardrobe items from pgvector DB.
+Finding selected item: item_003
+
+Creating outfits using the selected garment...
+Retrieved 18 candidate(s) for item_type=bottomwear using pgvector + BM25.
+Retrieved 18 candidate(s) for item_type=outerwear using pgvector + BM25.
+
+Finding similar wardrobe garments...
+
+Creating alternative outfits using similar garments...
+Creating alternative outfit for similar item: item_074
+Retrieved 18 candidate(s) for item_type=bottomwear using pgvector + BM25.
+Retrieved 18 candidate(s) for item_type=outerwear using pgvector + BM25.
+Creating alternative outfit for similar item: item_097
+Retrieved 18 candidate(s) for item_type=bottomwear using pgvector + BM25.
+Retrieved 18 candidate(s) for item_type=outerwear using pgvector + BM25.
+Creating alternative outfit for similar item: item_008
+Retrieved 18 candidate(s) for item_type=bottomwear using pgvector + BM25.
+Retrieved 18 candidate(s) for item_type=outerwear using pgvector + BM25.
+
+Generating human stylist intro...
+Generating final stylist note...
+
+Assistant: ================================================================================
+SYSTEM DEBUG / PIPELINE STEPS
+================================================================================
+
+Step 1: Understanding request
+--------------------------------------------------------------------------------
+{
+  "intent": "wardrobe_item_pairing",
+  "item_id": "item_003",
+  "occasion": "occasion: smart casual outing. vibe: smart casual. user request: What can I pair with item_003 for a smart casual outing?"
+}
+
+Step 2: Loading selected garment from wardrobe
+--------------------------------------------------------------------------------
+{
+  "present_in_wardrobe": true,
+  "source_item": {
+    "item_id": "item_003",
+    "filename": "item_003.jpg",
+    "image_path": "data/uploaded_images/item_003.jpg",
+    "caption": "A long-sleeve, button-down denim shirt in solid blue with a classic collar and regular fit, made from cotton fabric, ideal for casual or semi-casual occasions.",
+    "category": [
+      "shirt",
+      "upperwear",
+      "denim"
+    ],
+    "color": [
+      "blue"
+    ],
+    "style": [
+      "casual",
+      "semi-casual",
+      "cotton",
+      "long-sleeve"
+    ],
+    "item_type": "upperwear",
+    "bm25_score": null,
+    "hybrid_keyword_score": null
+  },
+  "text_embedding_available": true,
+  "visual_embedding_available": true
+}
+
+Step 3: Creating outfits using exact selected garment
+--------------------------------------------------------------------------------
+{
+  "generated_outfit_count": 3,
+  "outfit_names": [
+    "Classic Smart Casual with Dark Blue Jeans",
+    "Layered Look with Navy Cardigan",
+    "Alternative with Cream Wide-Leg Jeans"
+  ]
+}
+
+Step 4: Finding similar garments in wardrobe
+--------------------------------------------------------------------------------
+[
+  {
+    "rank": 1,
+    "item_id": "item_074",
+    "filename": "item_074.jpg",
+    "similarity_score": 0.8826,
+    "bm25_score": null,
+    "hybrid_keyword_score": null,
+    "caption": "A navy blue, long-sleeve button-down shirt with a slim fit and a single chest pocket, made of cotton or a cotton blend, ideal for casual and semi-formal occasions."
+  },
+  {
+    "rank": 2,
+    "item_id": "item_097",
+    "filename": "item_097.jpg",
+    "similarity_score": 0.8629,
+    "bm25_score": null,
+    "hybrid_keyword_score": null,
+    "caption": "Long-sleeve button-up shirt in solid warm brown with a classic collar, made from medium-weight cotton or cotton blend fabric, featuring a regular fit suitable for casual or smart-casual wear."
+  },
+  {
+    "rank": 3,
+    "item_id": "item_008",
+    "filename": "item_008.jpg",
+    "similarity_score": 0.8586,
+    "bm25_score": null,
+    "hybrid_keyword_score": null,
+    "caption": "Navy blue long-sleeve button-up shirt with front flap pockets, classic fit, made of cotton or cotton blend, suitable for casual or semi-formal occasions."
+  },
+  {
+    "rank": 4,
+    "item_id": "item_023",
+    "filename": "item_023.jpg",
+    "similarity_score": 0.8539,
+    "bm25_score": null,
+    "hybrid_keyword_score": null,
+    "caption": "A long-sleeve, button-up shirt in solid dusty rose with a classic collar and a single chest pocket, made from cotton or a cotton blend, featuring a regular fit ideal for casual or semi-formal occasions."
+  },
+  {
+    "rank": 5,
+    "item_id": "item_087",
+    "filename": "item_087.jpg",
+    "similarity_score": 0.8167,
+    "bm25_score": null,
+    "hybrid_keyword_score": null,
+    "caption": "Light blue and white vertically striped slim fit long-sleeve button-down shirt made from cotton, ideal for business casual or formal occasions."
+  }
+]
+
+Step 5: Creating alternative outfits using similar garments
+--------------------------------------------------------------------------------
+{
+  "alternative_outfit_count": 3,
+  "based_on_similar_items": [
+    "item_074",
+    "item_097",
+    "item_008"
+  ]
+}
+
+Step 6: Generating final user-facing response
+--------------------------------------------------------------------------------
+{
+  "human_intro_generated": true,
+  "structured_outfit_cards_generated": true,
+  "stylist_note_generated": true
+}
+
+================================================================================
+USER OUTPUT
+================================================================================
+
+Great choice with the blue denim shirt you already have in your wardrobe! I’ll start by styling that exact shirt for your smart casual outing. After that, I also found a few similar shirts from your wardrobe that can give you some alternative looks while keeping the smart casual vibe. Let’s create some outfits that feel polished yet comfortable!
+
+================================================================================
+OUTFITS USING YOUR SELECTED GARMENT
+================================================================================
+
+--------------------------------------------------------------------------------
+Outfit #1: Classic Smart Casual with Dark Blue Jeans
+Outfit type: minimal
+Confidence: high
+Overall reason: Pairing similar tones of denim in medium to dark blue creates a cohesive, polished smart casual outfit that leverages classic pieces.
+Styling notes: Tuck in the shirt for a neater appearance; add clean leather shoes or loafers if available to enhance the smart vibe.
+
+Items:
+- Role: source
+  Item ID: item_003
+  Filename: item_003.jpg
+  Image path: data/uploaded_images/item_003.jpg
+  Reason: This blue denim shirt is the base for a smart casual style.
+- Role: bottomwear
+  Item ID: item_073
+  Filename: item_073.jpg
+  Image path: data/uploaded_images/item_073.jpg
+  Reason: Dark blue straight-fit denim jeans complement the shirt for a refined denim-on-denim look suitable for smart casual outings.
+
+--------------------------------------------------------------------------------
+Outfit #2: Layered Look with Navy Cardigan
+Outfit type: layered
+Confidence: high
+Overall reason: Adding the navy cardigan refines the denim shirt and jeans combo for cooler weather or when you want an added layer that keeps the outfit smart and cohesive.
+Styling notes: Wear the cardigan buttoned or open depending on temperature; keep accessories minimal to maintain a clean look.
+
+Items:
+- Role: source
+  Item ID: item_003
+  Filename: item_003.jpg
+  Image path: data/uploaded_images/item_003.jpg
+  Reason: The blue denim shirt is the smart casual foundation.
+- Role: bottomwear
+  Item ID: item_073
+  Filename: item_073.jpg
+  Image path: data/uploaded_images/item_073.jpg
+  Reason: Dark blue straight-fit jeans provide a smart yet casual bottom half.
+- Role: outerwear
+  Item ID: item_091
+  Filename: item_091.jpg
+  Image path: data/uploaded_images/item_091.jpg
+  Reason: The navy blue regular fit button-up wool cardigan adds warmth and elevates the outfit's sophistication while keeping it smart casual.
+
+--------------------------------------------------------------------------------
+Outfit #3: Alternative with Cream Wide-Leg Jeans
+Outfit type: alternative
+Confidence: medium
+Overall reason: This alternative mixes the classic blue shirt with a lighter, more fashion-forward bottom to diversify looks beyond traditional blue denim while staying smart casual.
+Styling notes: Pair with neutral-colored shoes and minimal accessories; consider a tucked-in shirt to balance the wide-leg jeans' volume.
+
+Items:
+- Role: source
+  Item ID: item_003
+  Filename: item_003.jpg
+  Image path: data/uploaded_images/item_003.jpg
+  Reason: Denim shirt in classic blue for semi-casual smartness.
+- Role: bottomwear
+  Item ID: item_034
+  Filename: item_034.jpg
+  Image path: data/uploaded_images/item_034.jpg
+  Reason: Cream-colored wide-leg denim jeans create a color contrast that brightens the outfit and introduces a trendy silhouette fitting smart casual occasions.
+
+================================================================================
+ALTERNATIVE OUTFITS USING SIMILAR WARDROBE ITEMS
+================================================================================
+
+--------------------------------------------------------------------------------
+Alternative Outfit #1: Smart Casual Minimal
+Based on similar item: item_074
+Similar item caption: A navy blue, long-sleeve button-down shirt with a slim fit and a single chest pocket, made of cotton or a cotton blend, ideal for casual and semi-formal occasions.
+Outfit type: minimal
+Confidence: high
+Overall reason: This outfit pairs the navy blue slim fit shirt with off-white trousers creating a harmonious and classic smart casual look ideal for outings.
+Styling notes: Tuck in the shirt neatly, wear with brown or navy smart casual shoes, and consider a minimal belt to complete the look.
+
+Items:
+- Role: source
+  Item ID: item_074
+  Filename: item_074.jpg
+  Image path: data/uploaded_images/item_074.jpg
+  Reason: Navy blue slim fit button-down shirt suitable for smart casual occasions.
+- Role: bottomwear
+  Item ID: item_002
+  Filename: item_002.jpg
+  Image path: data/uploaded_images/item_002.jpg
+  Reason: Off-white straight-leg trousers with a relaxed fit providing a smart casual balance and color contrast to the navy shirt.
+
+--------------------------------------------------------------------------------
+Alternative Outfit #2: Warm Brown Shirt with Off-White Trousers
+Based on similar item: item_097
+Similar item caption: Long-sleeve button-up shirt in solid warm brown with a classic collar, made from medium-weight cotton or cotton blend fabric, featuring a regular fit suitable for casual or smart-casual wear.
+Outfit type: minimal
+Confidence: high
+Overall reason: This outfit creates a balanced smart casual look with neutral and warm tones, combining tailored trousers with a classic shirt.
+Styling notes: Tuck the shirt into the trousers and consider brown leather shoes for a polished finish. Minimal accessories will keep the look refined.
+
+Items:
+- Role: source
+  Item ID: item_097
+  Filename: item_097.jpg
+  Image path: data/uploaded_images/item_097.jpg
+  Reason: The main upperwear piece, a warm brown button-up shirt providing a smart casual, regular fit look.
+- Role: bottomwear
+  Item ID: item_085
+  Filename: item_085.jpg
+  Image path: data/uploaded_images/item_085.jpg
+  Reason: Off-white high-waisted straight-fit trousers with pleated front that complement the warm brown shirt and fit the smart casual dress code.
+
+--------------------------------------------------------------------------------
+Alternative Outfit #3: Classic Smart Casual Contrast
+Based on similar item: item_008
+Similar item caption: Navy blue long-sleeve button-up shirt with front flap pockets, classic fit, made of cotton or cotton blend, suitable for casual or semi-formal occasions.
+Outfit type: minimal
+Confidence: high
+Overall reason: This combination balances color contrast and style for a polished smart casual outfit that is both stylish and comfortable.
+Styling notes: Tuck in the shirt for a neat look and pair with brown or black smart casual shoes to complete the outfit.
+
+Items:
+- Role: source
+  Item ID: item_008
+  Filename: item_008.jpg
+  Image path: data/uploaded_images/item_008.jpg
+  Reason: Navy blue long-sleeve button-up shirt, classic and ideal for smart casual occasions.
+- Role: bottomwear
+  Item ID: item_085
+  Filename: item_085.jpg
+  Image path: data/uploaded_images/item_085.jpg
+  Reason: Off-white high-waisted straight-fit trousers with pleats, providing a smart casual, slightly dressy contrast to the navy shirt.
+
+================================================================================
+STYLIST NOTE
+================================================================================
+I would personally pick the "Classic Smart Casual with Dark Blue Jeans" outfit first for its timeless, polished denim-on-denim look that works perfectly for both casual and semi-casual occasions. Since your blue denim shirt is already in your wardrobe, it’s a great versatile piece to style effortlessly. Consider layering with the navy cardigan if you want extra warmth and sophistication. This outfit combines comfort and smart style seamlessly.
+
+You: What can I pair with C:\Users\Pratim\PycharmProjects\Wardrobe_Recommendation_Engine\11.jpg for a party?
+
+================================================================================
+QUERY UNDERSTANDING LAYER
+================================================================================
+{
+  "raw_query": "What can I pair with C:\\Users\\Pratim\\PycharmProjects\\Wardrobe_Recommendation_Engine\\11.jpg for a party?",
+  "corrected_query": "What can I pair with C:\\Users\\Pratim\\PycharmProjects\\Wardrobe_Recommendation_Engine\\11.jpg for a party?",
+  "intent": "outside_image_pairing",
+  "tool_action": "style_outside_image",
+  "occasion": "party",
+  "vibe": "party",
+  "color_preference": null,
+  "item_id": null,
+  "image_path": "C:\\Users\\Pratim\\PycharmProjects\\Wardrobe_Recommendation_Engine\\11.jpg",
+  "is_followup": false,
+  "needs_followup": false,
+  "followup_question": null,
+  "refinement_request": null
+}
+
+================================================================================
+FINAL CLEAN QUERY SENT TO RECOMMENDATION SYSTEM
+================================================================================
+occasion: party. vibe: party. user request: What can I pair with C:\Users\Pratim\PycharmProjects\Wardrobe_Recommendation_Engine\11.jpg for a party?
+
+Processing new image like a temporary wardrobe item...
+Image path: C:\Users\Pratim\PycharmProjects\Wardrobe_Recommendation_Engine\11.jpg
+
+Step 1: Generating caption...
+Caption: This is a long-sleeve, button-up plaid shirt in a black, white, and gray gradient pattern with a relaxed fit, likely made from a soft cotton or flannel fabric, suitable for casual wear or layering in cooler weather.
+
+Step 2: Converting caption to metadata...
+
+Step 3: Creating text embedding...
+
+Step 4: Creating visual embedding...
+
+Temporary query item created:
+Item ID: query_image
+Filename: 11.jpg
+Category: ['shirt', 'upperwear']
+Color: ['black', 'white', 'gray']
+Style: ['casual', 'layering', 'comfortable', 'cool weather']
+Search text: A long-sleeve button-up plaid shirt in black, white, and gray with a relaxed fit, crafted from soft cotton or flannel, perfect for casual or layered outfits during cooler seasons.
+Text vector size: 1536
+Visual vector size: 512
+Loaded 106 wardrobe items from pgvector DB.
+Retrieved 18 candidate(s) for item_type=bottomwear using pgvector + BM25.
+Retrieved 18 candidate(s) for item_type=outerwear using pgvector + BM25.
+Creating alternative outfit for similar item: item_097
+Retrieved 18 candidate(s) for item_type=bottomwear using pgvector + BM25.
+Retrieved 18 candidate(s) for item_type=outerwear using pgvector + BM25.
+Creating alternative outfit for similar item: item_008
+Retrieved 18 candidate(s) for item_type=bottomwear using pgvector + BM25.
+Retrieved 18 candidate(s) for item_type=outerwear using pgvector + BM25.
+Creating alternative outfit for similar item: item_087
+Retrieved 18 candidate(s) for item_type=bottomwear using pgvector + BM25.
+Retrieved 18 candidate(s) for item_type=outerwear using pgvector + BM25.
+
+Assistant: ================================================================================
+SYSTEM DEBUG / PIPELINE STEPS
+================================================================================
+
+Step 1: Understanding request
+--------------------------------------------------------------------------------
+{
+  "intent": "outside_image_pairing",
+  "image_path": "C:\\Users\\Pratim\\PycharmProjects\\Wardrobe_Recommendation_Engine\\11.jpg",
+  "occasion": "occasion: party. vibe: party. user request: What can I pair with C:\\Users\\Pratim\\PycharmProjects\\Wardrobe_Recommendation_Engine\\11.jpg for a party?"
+}
+
+Step 2: Processing outside image as temporary garment
+--------------------------------------------------------------------------------
+{
+  "present_in_wardrobe": false,
+  "source_item": {
+    "item_id": "query_image",
+    "filename": "11.jpg",
+    "image_path": "C:\\Users\\Pratim\\PycharmProjects\\Wardrobe_Recommendation_Engine\\11.jpg",
+    "caption": "Long-sleeve, button-up plaid shirt with black, white, and gray gradient pattern and a relaxed fit, made from soft cotton or flannel fabric, ideal for casual wear or layering in cooler weather.",
+    "category": [
+      "shirt",
+      "upperwear"
+    ],
+    "color": [
+      "black",
+      "white",
+      "gray"
+    ],
+    "style": [
+      "casual",
+      "layering",
+      "comfortable",
+      "cool weather"
+    ],
+    "item_type": "upperwear",
+    "bm25_score": null,
+    "hybrid_keyword_score": null
+  },
+  "search_text": "A long-sleeve button-up plaid shirt in black, white, and gray with a relaxed fit, crafted from soft cotton or flannel, perfect for casual or layered outfits during cooler seasons.",
+  "text_embedding_created": true,
+  "text_vector_size": 1536,
+  "visual_embedding_created": true,
+  "visual_vector_size": 512
+}
+
+Step 3: Creating outfits using exact outside input garment
+--------------------------------------------------------------------------------
+{
+  "generated_outfit_count": 3,
+  "outfit_names": [
+    "Casual Party Look with Gradient Pants",
+    "Elevated Party Look with Artistic Blazer",
+    "Light Contrast Party Outfit"
+  ]
+}
+
+Step 4: Finding similar garments already in wardrobe
+--------------------------------------------------------------------------------
+[
+  {
+    "rank": 1,
+    "item_id": "item_097",
+    "filename": "item_097.jpg",
+    "similarity_score": 0.8064,
+    "text_score": 0.6799,
+    "visual_score": 0.8907,
+    "bm25_score": null,
+    "hybrid_keyword_score": null,
+    "caption": "Long-sleeve button-up shirt in solid warm brown with a classic collar, made from medium-weight cotton or cotton blend fabric, featuring a regular fit suitable for casual or smart-casual wear."
+  },
+  {
+    "rank": 2,
+    "item_id": "item_008",
+    "filename": "item_008.jpg",
+    "similarity_score": 0.7939,
+    "text_score": 0.641,
+    "visual_score": 0.8958,
+    "bm25_score": null,
+    "hybrid_keyword_score": null,
+    "caption": "Navy blue long-sleeve button-up shirt with front flap pockets, classic fit, made of cotton or cotton blend, suitable for casual or semi-formal occasions."
+  },
+  {
+    "rank": 3,
+    "item_id": "item_087",
+    "filename": "item_087.jpg",
+    "similarity_score": 0.7896,
+    "text_score": 0.6209,
+    "visual_score": 0.9021,
+    "bm25_score": null,
+    "hybrid_keyword_score": null,
+    "caption": "Light blue and white vertically striped slim fit long-sleeve button-down shirt made from cotton, ideal for business casual or formal occasions."
+  },
+  {
+    "rank": 4,
+    "item_id": "item_084",
+    "filename": "item_084.jpg",
+    "similarity_score": 0.7782,
+    "text_score": 0.6231,
+    "visual_score": 0.8816,
+    "bm25_score": null,
+    "hybrid_keyword_score": null,
+    "caption": "Light blue button-up shirt with vertical white stripes, classic collar, chest pocket, and relaxed fit, made from cotton fabric, ideal for casual or business casual wear."
+  },
+  {
+    "rank": 5,
+    "item_id": "item_025",
+    "filename": "item_025.jpg",
+    "similarity_score": 0.774,
+    "text_score": 0.6542,
+    "visual_score": 0.8539,
+    "bm25_score": null,
+    "hybrid_keyword_score": null,
+    "caption": "A short-sleeve, button-up shirt with a gradient pattern transitioning from burgundy to black, made from a lightweight cotton or polyester blend, featuring a relaxed fit suitable for casual or semi-casual wear."
+  }
+]
+
+Step 5: Creating alternative outfits using similar wardrobe garments
+--------------------------------------------------------------------------------
+{
+  "alternative_outfit_count": 3,
+  "based_on_similar_items": [
+    "item_097",
+    "item_008",
+    "item_087"
+  ]
+}
+
+Step 6: Generating final user-facing response
+--------------------------------------------------------------------------------
+{
+  "human_intro_generated": true,
+  "structured_outfit_cards_generated": true,
+  "stylist_note_generated": true
+}
+
+================================================================================
+USER OUTPUT
+================================================================================
+
+I see you’re thinking about styling that cool black, white, and gray plaid shirt, which isn’t in your wardrobe yet but looks perfect for a casual party vibe. Let me first put together some outfit ideas using this exact shirt so you get a clear picture. After that, I’ve also found a few similar shirts in your collection that could offer some great alternatives for your party look. Let’s make sure you stand out and feel comfortable at your event!
+
+================================================================================
+OUTFITS USING YOUR INPUT GARMENT
+================================================================================
+
+--------------------------------------------------------------------------------
+Outfit #1: Casual Party Look with Gradient Pants
+Outfit type: minimal
+Confidence: high
+Overall reason: This minimal outfit pairs the softly casual plaid shirt with gradient dark pants to keep the look cohesive and party-appropriate without extra layers.
+Styling notes: Keep accessories minimal and consider casual sneakers or loafers for footwear. Roll sleeves for more relaxed party vibes.
+
+Items:
+- Role: source
+  Item ID: query_image
+  Filename: 11.jpg
+  Image path: C:\Users\Pratim\PycharmProjects\Wardrobe_Recommendation_Engine\11.jpg
+  Reason: The plaid black, white, and gray shirt provides a relaxed yet stylish upperwear option for a party.
+- Role: bottomwear
+  Item ID: item_018
+  Filename: item_018.jpg
+  Image path: data/uploaded_images/item_018.jpg
+  Reason: Relaxed-fit black-to-gray gradient casual pants complement the shirt’s tones and provide comfortable yet cool party wear.
+
+--------------------------------------------------------------------------------
+Outfit #2: Elevated Party Look with Artistic Blazer
+Outfit type: layered
+Confidence: high
+Overall reason: Layering the plaid shirt with the artistic blazer and sleek wide-leg pants creates a smart and fashionable party look with an edge.
+Styling notes: Add a sleek hairstyle or subtle jewelry to complement the blazer and create a bold party-ready appearance.
+
+Items:
+- Role: source
+  Item ID: query_image
+  Filename: 11.jpg
+  Image path: C:\Users\Pratim\PycharmProjects\Wardrobe_Recommendation_Engine\11.jpg
+  Reason: Plaid shirt acts as a stylish base layer with its versatile black, white, and gray tones.
+- Role: bottomwear
+  Item ID: item_012
+  Filename: item_012.jpg
+  Image path: data/uploaded_images/item_012.jpg
+  Reason: Black wide-leg pants with white piping detail add a trendy edge, coordinating well with the monochrome shirt.
+- Role: outerwear
+  Item ID: item_075
+  Filename: item_075.jpg
+  Image path: data/uploaded_images/item_075.jpg
+  Reason: The fitted black blazer with a satin lapel and white paint splatter pattern introduces a formal and fashionable party vibe.
+
+--------------------------------------------------------------------------------
+Outfit #3: Light Contrast Party Outfit
+Outfit type: alternative
+Confidence: medium
+Overall reason: This alternative uses lighter bottomwear to create a fresh and balanced contrast with the dark plaid shirt, suitable for daytime or indoor parties with a semi-formal vibe.
+Styling notes: Consider adding minimal white or silver accessories to enhance the crisp look created by the off-white pants.
+
+Items:
+- Role: source
+  Item ID: query_image
+  Filename: 11.jpg
+  Image path: C:\Users\Pratim\PycharmProjects\Wardrobe_Recommendation_Engine\11.jpg
+  Reason: Stylish plaid shirt with a monochrome palette as the party outfit base.
+- Role: bottomwear
+  Item ID: item_002
+  Filename: item_002.jpg
+  Image path: data/uploaded_images/item_002.jpg
+  Reason: Off-white straight-leg trousers provide a bright contrast to the dark shirt while maintaining a relaxed fit suitable for semi-formal parties.
+
+================================================================================
+ALTERNATIVE OUTFITS USING SIMILAR WARDROBE ITEMS
+================================================================================
+
+--------------------------------------------------------------------------------
+Alternative Outfit #1: Smart-Casual Party Outfit
+Based on similar item: item_097
+Similar item caption: Long-sleeve button-up shirt in solid warm brown with a classic collar, made from medium-weight cotton or cotton blend fabric, featuring a regular fit suitable for casual or smart-casual wear.
+Outfit type: minimal
+Confidence: high
+Overall reason: This outfit combines the rich warm brown shirt with light off-white trousers to maintain a polished look suitable for a party while ensuring color harmony and style alignment.
+Styling notes: Add leather shoes or loafers in brown or burgundy tones and minimal accessories for an elegant party-ready appearance.
+
+Items:
+- Role: source
+  Item ID: item_097
+  Filename: item_097.jpg
+  Image path: data/uploaded_images/item_097.jpg
+  Reason: Warm brown long-sleeve button-up shirt, perfect for a party with its smart-casual vibe.
+- Role: bottomwear
+  Item ID: item_085
+  Filename: item_085.jpg
+  Image path: data/uploaded_images/item_085.jpg
+  Reason: Off-white, high-waisted straight-fit trousers that complement the brown shirt and elevate the outfit for a party.
+
+--------------------------------------------------------------------------------
+Alternative Outfit #2: Classic Navy & Black Party Look
+Based on similar item: item_008
+Similar item caption: Navy blue long-sleeve button-up shirt with front flap pockets, classic fit, made of cotton or cotton blend, suitable for casual or semi-formal occasions.
+Outfit type: minimal
+Confidence: high
+Overall reason: This outfit combines the navy blue shirt with black tailored trousers for a sleek and polished party appearance that balances casual and smart styling.
+Styling notes: Add a belt and dressy shoes to elevate the look further for a party setting. Avoid over-layering to keep the outfit clean and stylish.
+
+Items:
+- Role: source
+  Item ID: item_008
+  Filename: item_008.jpg
+  Image path: data/uploaded_images/item_008.jpg
+  Reason: Navy blue long-sleeve shirt with a classic and semi-formal party vibe.
+- Role: bottomwear
+  Item ID: item_092
+  Filename: item_092.jpg
+  Image path: data/uploaded_images/item_092.jpg
+  Reason: Black straight-leg tailored trousers enhance the semi-formal yet party-appropriate look with color contrast.
+
+--------------------------------------------------------------------------------
+Alternative Outfit #3: Sleek Party Ensemble
+Based on similar item: item_087
+Similar item caption: Light blue and white vertically striped slim fit long-sleeve button-down shirt made from cotton, ideal for business casual or formal occasions.
+Outfit type: minimal
+Confidence: high
+Overall reason: This combination creates a sophisticated and approachable party look suitable for both formal and business casual occasions with a contemporary touch.
+Styling notes: Pair with dark leather shoes and minimal accessories to keep focus on the crisp shirt and navy pants. Keep the shirt neatly tucked in for a clean silhouette.
+
+Items:
+- Role: source
+  Item ID: item_087
+  Filename: item_087.jpg
+  Image path: data/uploaded_images/item_087.jpg
+  Reason: The statement slim fit button-down shirt in light blue and white stripes sets a polished party vibe.
+- Role: bottomwear
+  Item ID: item_064
+  Filename: item_064.jpg
+  Image path: data/uploaded_images/item_064.jpg
+  Reason: The navy blue slim fit dress pants complement the shirt with a harmonious color contrast and formal style ideal for a party setting.
+
+================================================================================
+STYLIST NOTE
+================================================================================
+I would personally pick the "Elevated Party Look with Artistic Blazer" first for its stylish layering and bold party-ready edge. Since the plaid shirt is not currently in your wardrobe, investing in it makes sense as it pairs well with your existing versatile monochrome and black pieces, enhancing your options for both casual and smart occasions. Alternatively, you can achieve polished party looks with your similar warm brown or navy shirts for variety. Overall, adding this shirt will elevate your layering game and freshen up your party outfits effectively.
+
+You: i need something for office
+
+================================================================================
+QUERY UNDERSTANDING LAYER
+================================================================================
+{
+  "raw_query": "i need something for office",
+  "corrected_query": "I need something for office",
+  "intent": "text_outfit",
+  "tool_action": "recommend_outfit_from_text",
+  "occasion": "office",
+  "vibe": null,
+  "color_preference": null,
+  "item_id": null,
+  "image_path": null,
+  "is_followup": false,
+  "needs_followup": true,
+  "followup_question": "What vibe are you aiming for? For example, formal, casual, or business casual?",
+  "refinement_request": null
+}
+
+================================================================================
+FINAL CLEAN QUERY SENT TO RECOMMENDATION SYSTEM
+================================================================================
+occasion: office. vibe: party. user request: I need something for office
+
+Building wardrobe candidate pool from text query...
+Loaded 106 wardrobe items from pgvector DB.
+upperwear: 8 candidate(s)
+bottomwear: 8 candidate(s)
+outerwear: 8 candidate(s)
+dress: 1 candidate(s)
+
+Sending candidates to LLM outfit assistant...
+
+Assistant: For your office party look, I recommend the "Classic Minimal Office Party" outfit. It pairs a crisp white button-up shirt with black straight-fit trousers—a timeless combo that’s perfect for maintaining professionalism with a subtle party-ready edge. To elevate the look, keep your accessories minimal but consider adding a sleek watch or subtle cufflinks for extra polish. This outfit balances formality and style effortlessly.
+
+
+================================================================================
+USER OUTPUT
+================================================================================
+
+Outfits combining office-appropriate pieces with a party vibe, balancing formal/business casual with a touch of style elevation or alternative flair.
+
+--------------------------------------------------------------------------------
+Outfit #1: Classic Minimal Office Party
+Outfit type: minimal
+Confidence: high
+Overall reason: Simple, timeless, and sharp business casual outfit that fits office requirements while maintaining a party-ready clean appearance.
+Styling notes: Keep accessories minimal and add a sleek watch or subtle cufflinks if available for a little extra polish.
+
+Items:
+- Role: upperwear
+  Item ID: item_093
+  Filename: item_093.jpg
+  Image path: data/uploaded_images/item_093.jpg
+  Reason: A classic white long-sleeve button-up shirt, formal and business casual suitable, providing a clean and professional look ideal for office and subtle party appeal.
+- Role: bottomwear
+  Item ID: item_045
+  Filename: item_045.jpg
+  Image path: data/uploaded_images/item_045.jpg
+  Reason: Black straight-fit trousers, formal and professional, pairing well with the white shirt for a sleek minimal outfit perfect for office party vibes.
+
+--------------------------------------------------------------------------------
+Outfit #2: Elevated Light Blue Layered Office Look
+Outfit type: layered
+Confidence: high
+Overall reason: Layered outfit that brings business formality and office professionalism with added flair and color coordination for a party vibe.
+Styling notes: Unbutton blazer for a more relaxed party look, consider light accessories or a pocket square for visual interest.
+
+Items:
+- Role: outerwear
+  Item ID: item_065
+  Filename: item_065.jpg
+  Image path: data/uploaded_images/item_065.jpg
+  Reason: Light blue tailored slim fit blazer adds a sophisticated layer, elevating the business casual look with a semi-formal daytime vibe suitable for office parties.
+- Role: upperwear
+  Item ID: item_087
+  Filename: item_087.jpg
+  Image path: data/uploaded_images/item_087.jpg
+  Reason: Light blue and white vertically striped slim fit shirt providing a formal yet relaxed base that complements the blazer.
+- Role: bottomwear
+  Item ID: item_064
+  Filename: item_064.jpg
+  Image path: data/uploaded_images/item_064.jpg
+  Reason: Slim-fit navy blue dress pants offer a formal and smooth foundation matching well with the blazer and shirt colors.
+
+--------------------------------------------------------------------------------
+Outfit #3: Alternative Burgundy Party Office Style
+Outfit type: alternative
+Confidence: medium
+Overall reason: An alternative office party look balancing a vibrant top with classic formal pants, suitable for a workplace open to personality and style innovation.
+Styling notes: Roll sleeves slightly and add subtle accessories to emphasize the party vibe while retaining professionalism.
+
+Items:
+- Role: upperwear
+  Item ID: item_025
+  Filename: item_025.jpg
+  Image path: data/uploaded_images/item_025.jpg
+  Reason: Short-sleeve gradient shirt from burgundy to black with a relaxed fit provides a bold party vibe suitable for a semi-casual office environment with personality.
+- Role: bottomwear
+  Item ID: item_045
+  Filename: item_045.jpg
+  Image path: data/uploaded_images/item_045.jpg
+  Reason: Black straight-fit trousers keep the outfit grounded with formality and balance the statement shirt for office appropriateness.
+
+
+
+================================================================================
+
+STYLIST NOTE
+
+================================================================================
+
+I would personally pick the "Classic Minimal Office Party" outfit as the first choice because it balances professionalism with a subtle party vibe through timeless pieces like the white shirt and black trousers. It's the safest option for most office settings while still looking polished and festive. For a small styling tip, add a sleek watch or subtle cufflinks to elevate the look without overwhelming it. This keeps the outfit sharp and effortlessly stylish.
+
+You: exit
+Assistant: Done. See you!
+
+Process finished with exit code 0
