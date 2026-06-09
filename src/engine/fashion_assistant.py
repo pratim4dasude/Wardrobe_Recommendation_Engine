@@ -17,10 +17,7 @@ from src.engine.outfit_recommender import (
 )
 from src.engine.query_image_processor import process_query_image
 from src.engine.similar_search import similar_search_by_new_image
-from src.engine.llm_similar_reranker import (
-    llm_rerank_similar_results,
-    print_llm_similar_results,
-)
+from src.engine.llm_similar_reranker import llm_rerank_similar_results
 
 
 load_dotenv()

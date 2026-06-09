@@ -1,6 +1,4 @@
 import json
-from pathlib import Path
-
 import torch
 from dotenv import load_dotenv
 from openai import OpenAI

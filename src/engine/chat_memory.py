@@ -1,6 +1,5 @@
 import json
 from datetime import datetime
-from pathlib import Path
 from uuid import uuid4
 
 from src.utils import resolve_project_path
