@@ -12,8 +12,9 @@ outfit in code before it is shown. In other words, this is a Retrieval-Augmented
 
 > 💡 **How it works:** To understand the project workflow and see it in action, please check the [OUT_LOG.txt](OUT_LOG.txt).
 
----
+> 📖 **[Read the Production & Scaling Roadmap (PRODUCTION.md)](./PRODUCTION.md)**
 
+---
 ## What it can do
 
 | Request | Behaviour |
