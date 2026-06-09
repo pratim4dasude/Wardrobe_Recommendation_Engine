@@ -5,6 +5,7 @@ from collections import defaultdict
 from dotenv import load_dotenv
 from openai import OpenAI
 
+from src.engine.bm25_retrieval import rerank_items_with_bm25
 from src.engine.embeddings import create_text_embedding
 from src.utils import resolve_project_path
 
@@ -21,7 +22,7 @@ def load_hybrid_items(
     hybrid_embeddings_path: str = HYBRID_EMBEDDINGS_PATH,
 ) -> list[dict]:
     """
-    Load wardrobe items with metadata and embeddings.
+    Load wardrobe items with metadata and hybrid embeddings.
     """
     hybrid_file = resolve_project_path(hybrid_embeddings_path)
 
@@ -46,7 +47,7 @@ def load_hybrid_items(
 
 def find_item_by_id(items: list[dict], item_id: str) -> dict:
     """
-    Find source wardrobe item.
+    Find source wardrobe item by item_id.
     """
     for item in items:
         if item.get("item_id") == item_id:
@@ -62,7 +63,7 @@ def cosine_similarity(vector_a: list[float], vector_b: list[float]) -> float:
     if len(vector_a) != len(vector_b):
         raise ValueError(f"Vector size mismatch: {len(vector_a)} vs {len(vector_b)}")
 
-    dot_product = sum(a * b for a, b in zip(vector_a, vector_b))
+    dot_product = sum(a * b for a, b in zip(vector_a, vector_b, strict=False))
     norm_a = math.sqrt(sum(a * a for a in vector_a))
     norm_b = math.sqrt(sum(b * b for b in vector_b))
 
@@ -84,19 +85,41 @@ def detect_item_type(item: dict) -> str:
 
     if any(
         word in full_text
-        for word in ["jeans", "trousers", "pants", "shorts", "bottomwear", "bottom wear"]
+        for word in [
+            "jeans",
+            "trousers",
+            "pants",
+            "shorts",
+            "bottomwear",
+            "bottom wear",
+        ]
     ):
         return "bottomwear"
 
     if any(
         word in full_text
-        for word in ["sneakers", "shoes", "footwear", "sandals", "boots", "loafers"]
+        for word in [
+            "sneakers",
+            "shoes",
+            "footwear",
+            "sandals",
+            "boots",
+            "loafers",
+        ]
     ):
         return "footwear"
 
     if any(
         word in full_text
-        for word in ["jacket", "blazer", "coat", "outerwear", "hoodie", "sweater"]
+        for word in [
+            "jacket",
+            "blazer",
+            "coat",
+            "outerwear",
+            "hoodie",
+            "sweater",
+            "cardigan",
+        ]
     ):
         return "outerwear"
 
@@ -105,7 +128,15 @@ def detect_item_type(item: dict) -> str:
 
     if any(
         word in full_text
-        for word in ["accessory", "bag", "belt", "watch", "cap", "hat"]
+        for word in [
+            "accessory",
+            "bag",
+            "belt",
+            "watch",
+            "cap",
+            "hat",
+            "scarf",
+        ]
     ):
         return "accessory"
 
@@ -121,6 +152,8 @@ def detect_item_type(item: dict) -> str:
             "upperwear",
             "upper wear",
             "sleeveless",
+            "button-up",
+            "button-down",
         ]
     ):
         return "upperwear"
@@ -149,11 +182,6 @@ def get_target_item_types(source_type: str) -> list[str]:
 def get_required_roles_for_source_type(source_type: str) -> list[str]:
     """
     Decide mandatory roles for a complete outfit.
-
-    Example:
-    - If source is upperwear, bottomwear is required.
-    - If source is bottomwear, upperwear is required.
-    - If source is dress, no upper/lower required because dress is already a main outfit piece.
     """
     required_roles_map = {
         "upperwear": ["bottomwear"],
@@ -168,33 +196,125 @@ def get_required_roles_for_source_type(source_type: str) -> list[str]:
     return required_roles_map.get(source_type, required_roles_map["unknown"])
 
 
+def normalize_text_list(values: list | str | None) -> set[str]:
+    """
+    Convert style/category/color metadata into lowercase set.
+    """
+    if not values:
+        return set()
+
+    if isinstance(values, str):
+        return {values.lower()}
+
+    return {str(value).lower() for value in values}
+
+
 def metadata_bonus_score(source_item: dict, candidate_item: dict, occasion: str) -> float:
     """
-    Small rule-based score to help candidate selection before LLM.
-    LLM still makes the final decision.
+    Rule-based score to help candidate selection before LLM.
+
+    This is not the final outfit decision.
+    It only improves candidate ranking before sending to the LLM.
     """
     score = 0.0
 
-    source_styles = set(style.lower() for style in source_item.get("style", []))
-    candidate_styles = set(style.lower() for style in candidate_item.get("style", []))
+    source_styles = normalize_text_list(source_item.get("style", []))
+    candidate_styles = normalize_text_list(candidate_item.get("style", []))
+
+    source_colors = normalize_text_list(source_item.get("color", []))
+    candidate_colors = normalize_text_list(candidate_item.get("color", []))
+
+    source_categories = normalize_text_list(source_item.get("category", []))
+    candidate_categories = normalize_text_list(candidate_item.get("category", []))
 
     style_overlap = source_styles.intersection(candidate_styles)
+    color_overlap = source_colors.intersection(candidate_colors)
+    category_overlap = source_categories.intersection(candidate_categories)
+
     score += len(style_overlap) * 0.05
+    score += len(color_overlap) * 0.03
+    score += len(category_overlap) * 0.02
 
     occasion_text = occasion.lower()
     candidate_text = (
         " ".join(candidate_item.get("style", []))
+        + " "
+        + " ".join(candidate_item.get("category", []))
+        + " "
+        + " ".join(candidate_item.get("color", []))
         + " "
         + candidate_item.get("caption", "")
         + " "
         + candidate_item.get("search_text", "")
     ).lower()
 
+    occasion_keywords = [
+        "formal",
+        "office",
+        "party",
+        "casual",
+        "smart",
+        "clean",
+        "classy",
+        "streetwear",
+        "wedding",
+        "travel",
+        "date",
+        "outing",
+        "blazer",
+        "trousers",
+        "denim",
+        "plaid",
+        "flannel",
+    ]
+
+    for keyword in occasion_keywords:
+        if keyword in occasion_text and keyword in candidate_text:
+            score += 0.05
+
     for word in occasion_text.split():
         if word in candidate_text:
-            score += 0.03
+            score += 0.02
 
-    return score
+    return round(score, 4)
+
+
+def build_outfit_query(source_item: dict, occasion: str) -> str:
+    """
+    Build query used for text embedding retrieval and BM25 scoring.
+    """
+    return (
+        f"Outfit item compatible with: {source_item.get('caption', '')}. "
+        f"Occasion/style intent: {occasion}. "
+        f"Source category: {source_item.get('category', [])}. "
+        f"Source colors: {source_item.get('color', [])}. "
+        f"Source style: {source_item.get('style', [])}. "
+        f"Source search text: {source_item.get('search_text', '')}."
+    )
+
+
+def compact_candidate_for_llm(item: dict) -> dict:
+    """
+    Keep only useful fields for the LLM prompt.
+    This avoids sending unnecessary large data.
+    """
+    return {
+        "item_id": item.get("item_id"),
+        "filename": item.get("filename"),
+        "image_path": item.get("image_path"),
+        "item_type": item.get("item_type"),
+        "caption": item.get("caption", ""),
+        "category": item.get("category", []),
+        "color": item.get("color", []),
+        "style": item.get("style", []),
+        "search_text": item.get("search_text", ""),
+        "text_score": item.get("text_score"),
+        "metadata_score": item.get("metadata_score"),
+        "candidate_score": item.get("candidate_score"),
+        "bm25_score": item.get("bm25_score"),
+        "bm25_raw_score": item.get("bm25_raw_score"),
+        "hybrid_keyword_score": item.get("hybrid_keyword_score"),
+    }
 
 
 def build_candidate_pool(
@@ -205,18 +325,17 @@ def build_candidate_pool(
 ) -> dict[str, list[dict]]:
     """
     Retrieve compatible candidates grouped by outfit role/type.
-    Uses text embedding similarity + lightweight metadata score.
+
+    Ranking layers:
+    1. Text embedding similarity
+    2. Metadata/style/category bonus
+    3. BM25 keyword score
+    4. Final hybrid keyword score
     """
     source_type = detect_item_type(source_item)
     target_types = get_target_item_types(source_type)
 
-    outfit_query = (
-        f"Outfit item compatible with: {source_item.get('caption', '')}. "
-        f"Occasion/style intent: {occasion}. "
-        f"Source colors: {source_item.get('color', [])}. "
-        f"Source style: {source_item.get('style', [])}."
-    )
-
+    outfit_query = build_outfit_query(source_item=source_item, occasion=occasion)
     query_embedding = create_text_embedding(outfit_query)
 
     grouped_candidates = defaultdict(list)
@@ -230,35 +349,72 @@ def build_candidate_pool(
         if candidate_type not in target_types:
             continue
 
-        text_score = cosine_similarity(query_embedding, item["text_embedding"])
-        bonus_score = metadata_bonus_score(source_item, item, occasion)
-        final_score = text_score + bonus_score
+        if not item.get("text_embedding"):
+            continue
 
-        grouped_candidates[candidate_type].append(
-            {
-                "item_id": item.get("item_id"),
-                "filename": item.get("filename"),
-                "image_path": item.get("image_path"),
-                "item_type": candidate_type,
-                "candidate_score": round(final_score, 4),
-                "text_score": round(text_score, 4),
-                "caption": item.get("caption", ""),
-                "category": item.get("category", []),
-                "color": item.get("color", []),
-                "style": item.get("style", []),
-                "search_text": item.get("search_text", ""),
-            }
-        )
+        text_score = cosine_similarity(query_embedding, item["text_embedding"])
+        metadata_score = metadata_bonus_score(source_item, item, occasion)
+
+        candidate_score = text_score + metadata_score
+
+        candidate = {
+            "item_id": item.get("item_id"),
+            "filename": item.get("filename"),
+            "image_path": item.get("image_path"),
+            "item_type": candidate_type,
+            "candidate_score": round(candidate_score, 4),
+            "similarity_score": round(candidate_score, 4),
+            "text_score": round(text_score, 4),
+            "metadata_score": metadata_score,
+            "caption": item.get("caption", ""),
+            "category": item.get("category", []),
+            "color": item.get("color", []),
+            "style": item.get("style", []),
+            "search_text": item.get("search_text", ""),
+        }
+
+        grouped_candidates[candidate_type].append(candidate)
 
     final_grouped_candidates = {}
 
     for item_type, candidates in grouped_candidates.items():
-        sorted_candidates = sorted(
+        candidates = sorted(
             candidates,
-            key=lambda item: item["candidate_score"],
+            key=lambda item: item.get("candidate_score", 0.0),
             reverse=True,
         )
-        final_grouped_candidates[item_type] = sorted_candidates[:max_per_type]
+
+        # Keep a wider candidate set before BM25 so exact keywords can recover.
+        shortlist_size = max(max_per_type * 3, max_per_type)
+        candidates = candidates[:shortlist_size]
+
+        bm25_reranked_candidates = rerank_items_with_bm25(
+            query=outfit_query,
+            items=candidates,
+            bm25_weight=0.30,
+            existing_score_weight=0.70,
+        )
+
+        print("\n" + "=" * 80)
+        print(f"BM25 + HYBRID RERANKING DEBUG | item_type: {item_type}")
+        print("=" * 80)
+        print(f"BM25 query: {outfit_query[:300]}...")
+
+        for rank, candidate in enumerate(bm25_reranked_candidates[:5], start=1):
+            print(
+                f"{rank}. {candidate.get('item_id')} | "
+                f"text_score={candidate.get('text_score')} | "
+                f"metadata_score={candidate.get('metadata_score')} | "
+                f"candidate_score={candidate.get('candidate_score')} | "
+                f"bm25_score={candidate.get('bm25_score')} | "
+                f"hybrid_keyword_score={candidate.get('hybrid_keyword_score')}"
+            )
+            print(f"   caption: {candidate.get('caption', '')[:160]}")
+
+        final_grouped_candidates[item_type] = [
+            compact_candidate_for_llm(item)
+            for item in bm25_reranked_candidates[:max_per_type]
+        ]
 
     return final_grouped_candidates
 
@@ -332,6 +488,13 @@ The user wants an outfit for this occasion/style intent:
 Below are compatible wardrobe candidates retrieved from the user's closet.
 They are grouped by item type:
 {json.dumps(candidate_pool, indent=2, ensure_ascii=False)}
+
+Candidate scoring meaning:
+- text_score: semantic compatibility using text embeddings.
+- metadata_score: simple style/category/color/occasion bonus.
+- bm25_score: exact keyword match score for words like plaid, flannel, formal, office, denim, blazer, trousers.
+- hybrid_keyword_score: combined retrieval score using semantic + keyword signals.
+Use these scores as guidance, but make the final decision based on wearability, occasion fit, color harmony, and outfit completeness.
 
 Your task:
 Create practical and complete outfit recommendations using only the provided wardrobe items.
@@ -443,12 +606,15 @@ def validate_outfit_recommendation(recommendation: dict, source_item: dict) -> d
         if missing_required_role:
             continue
 
-        # Avoid bad outfit like shirt + blazer only.
         if source_type == "upperwear" and "bottomwear" not in roles:
             continue
 
         if source_type == "bottomwear" and "upperwear" not in roles:
             continue
+
+        if source_type in ["outerwear", "footwear", "accessory"]:
+            if "upperwear" not in roles or "bottomwear" not in roles:
+                continue
 
         valid_outfits.append(outfit)
 
@@ -497,6 +663,14 @@ def recommend_outfits_for_item(
 
     for item_type, candidates in candidate_pool.items():
         print(f"{item_type}: {len(candidates)} candidate(s)")
+
+        for index, candidate in enumerate(candidates[:3], start=1):
+            print(
+                f"  {index}. {candidate.get('item_id')} | "
+                f"text={candidate.get('text_score')} | "
+                f"bm25={candidate.get('bm25_score')} | "
+                f"hybrid={candidate.get('hybrid_keyword_score')}"
+            )
 
     print("\nSending source item + candidates to LLM outfit recommender...")
 
