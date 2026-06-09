@@ -1,6 +1,6 @@
 import json
 import math
-from collections import defaultdict
+# from collections import defaultdict
 
 from dotenv import load_dotenv
 from openai import OpenAI
