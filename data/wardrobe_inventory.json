@@ -1,0 +1,638 @@
+[
+  {
+    "item_id": "item_001",
+    "filename": "item_001.jpg",
+    "image_path": "data/uploaded_images/item_001.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_002",
+    "filename": "item_002.jpg",
+    "image_path": "data/uploaded_images/item_002.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_003",
+    "filename": "item_003.jpg",
+    "image_path": "data/uploaded_images/item_003.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_004",
+    "filename": "item_004.jpg",
+    "image_path": "data/uploaded_images/item_004.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_005",
+    "filename": "item_005.jpg",
+    "image_path": "data/uploaded_images/item_005.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_006",
+    "filename": "item_006.jpg",
+    "image_path": "data/uploaded_images/item_006.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_007",
+    "filename": "item_007.jpg",
+    "image_path": "data/uploaded_images/item_007.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_008",
+    "filename": "item_008.jpg",
+    "image_path": "data/uploaded_images/item_008.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_009",
+    "filename": "item_009.jpg",
+    "image_path": "data/uploaded_images/item_009.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_010",
+    "filename": "item_010.jpg",
+    "image_path": "data/uploaded_images/item_010.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_011",
+    "filename": "item_011.jpg",
+    "image_path": "data/uploaded_images/item_011.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_012",
+    "filename": "item_012.jpg",
+    "image_path": "data/uploaded_images/item_012.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_013",
+    "filename": "item_013.jpg",
+    "image_path": "data/uploaded_images/item_013.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_014",
+    "filename": "item_014.jpg",
+    "image_path": "data/uploaded_images/item_014.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_015",
+    "filename": "item_015.jpg",
+    "image_path": "data/uploaded_images/item_015.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_016",
+    "filename": "item_016.jpg",
+    "image_path": "data/uploaded_images/item_016.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_017",
+    "filename": "item_017.jpg",
+    "image_path": "data/uploaded_images/item_017.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_018",
+    "filename": "item_018.jpg",
+    "image_path": "data/uploaded_images/item_018.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_019",
+    "filename": "item_019.jpg",
+    "image_path": "data/uploaded_images/item_019.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_020",
+    "filename": "item_020.jpg",
+    "image_path": "data/uploaded_images/item_020.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_021",
+    "filename": "item_021.jpg",
+    "image_path": "data/uploaded_images/item_021.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_022",
+    "filename": "item_022.jpg",
+    "image_path": "data/uploaded_images/item_022.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_023",
+    "filename": "item_023.jpg",
+    "image_path": "data/uploaded_images/item_023.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_024",
+    "filename": "item_024.jpg",
+    "image_path": "data/uploaded_images/item_024.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_025",
+    "filename": "item_025.jpg",
+    "image_path": "data/uploaded_images/item_025.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_026",
+    "filename": "item_026.jpg",
+    "image_path": "data/uploaded_images/item_026.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_027",
+    "filename": "item_027.jpg",
+    "image_path": "data/uploaded_images/item_027.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_028",
+    "filename": "item_028.jpg",
+    "image_path": "data/uploaded_images/item_028.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_029",
+    "filename": "item_029.jpg",
+    "image_path": "data/uploaded_images/item_029.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_030",
+    "filename": "item_030.jpg",
+    "image_path": "data/uploaded_images/item_030.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_031",
+    "filename": "item_031.jpg",
+    "image_path": "data/uploaded_images/item_031.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_032",
+    "filename": "item_032.jpg",
+    "image_path": "data/uploaded_images/item_032.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_033",
+    "filename": "item_033.jpg",
+    "image_path": "data/uploaded_images/item_033.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_034",
+    "filename": "item_034.jpg",
+    "image_path": "data/uploaded_images/item_034.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_035",
+    "filename": "item_035.jpg",
+    "image_path": "data/uploaded_images/item_035.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_036",
+    "filename": "item_036.jpg",
+    "image_path": "data/uploaded_images/item_036.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_037",
+    "filename": "item_037.jpg",
+    "image_path": "data/uploaded_images/item_037.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_038",
+    "filename": "item_038.jpg",
+    "image_path": "data/uploaded_images/item_038.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_039",
+    "filename": "item_039.jpg",
+    "image_path": "data/uploaded_images/item_039.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_040",
+    "filename": "item_040.jpg",
+    "image_path": "data/uploaded_images/item_040.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_041",
+    "filename": "item_041.jpg",
+    "image_path": "data/uploaded_images/item_041.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_042",
+    "filename": "item_042.jpg",
+    "image_path": "data/uploaded_images/item_042.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_043",
+    "filename": "item_043.jpg",
+    "image_path": "data/uploaded_images/item_043.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_044",
+    "filename": "item_044.jpg",
+    "image_path": "data/uploaded_images/item_044.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_045",
+    "filename": "item_045.jpg",
+    "image_path": "data/uploaded_images/item_045.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_046",
+    "filename": "item_046.jpg",
+    "image_path": "data/uploaded_images/item_046.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_047",
+    "filename": "item_047.jpg",
+    "image_path": "data/uploaded_images/item_047.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_048",
+    "filename": "item_048.jpg",
+    "image_path": "data/uploaded_images/item_048.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_049",
+    "filename": "item_049.jpg",
+    "image_path": "data/uploaded_images/item_049.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_050",
+    "filename": "item_050.jpg",
+    "image_path": "data/uploaded_images/item_050.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_051",
+    "filename": "item_051.jpg",
+    "image_path": "data/uploaded_images/item_051.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_052",
+    "filename": "item_052.jpg",
+    "image_path": "data/uploaded_images/item_052.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_053",
+    "filename": "item_053.jpg",
+    "image_path": "data/uploaded_images/item_053.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_054",
+    "filename": "item_054.jpg",
+    "image_path": "data/uploaded_images/item_054.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_055",
+    "filename": "item_055.jpg",
+    "image_path": "data/uploaded_images/item_055.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_056",
+    "filename": "item_056.jpg",
+    "image_path": "data/uploaded_images/item_056.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_057",
+    "filename": "item_057.jpg",
+    "image_path": "data/uploaded_images/item_057.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_058",
+    "filename": "item_058.jpg",
+    "image_path": "data/uploaded_images/item_058.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_059",
+    "filename": "item_059.jpg",
+    "image_path": "data/uploaded_images/item_059.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_060",
+    "filename": "item_060.jpg",
+    "image_path": "data/uploaded_images/item_060.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_061",
+    "filename": "item_061.jpg",
+    "image_path": "data/uploaded_images/item_061.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_062",
+    "filename": "item_062.jpg",
+    "image_path": "data/uploaded_images/item_062.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_063",
+    "filename": "item_063.jpg",
+    "image_path": "data/uploaded_images/item_063.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_064",
+    "filename": "item_064.jpg",
+    "image_path": "data/uploaded_images/item_064.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_065",
+    "filename": "item_065.jpg",
+    "image_path": "data/uploaded_images/item_065.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_066",
+    "filename": "item_066.jpg",
+    "image_path": "data/uploaded_images/item_066.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_067",
+    "filename": "item_067.jpg",
+    "image_path": "data/uploaded_images/item_067.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_068",
+    "filename": "item_068.jpg",
+    "image_path": "data/uploaded_images/item_068.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_069",
+    "filename": "item_069.jpg",
+    "image_path": "data/uploaded_images/item_069.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_070",
+    "filename": "item_070.jpg",
+    "image_path": "data/uploaded_images/item_070.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_071",
+    "filename": "item_071.jpg",
+    "image_path": "data/uploaded_images/item_071.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_072",
+    "filename": "item_072.jpg",
+    "image_path": "data/uploaded_images/item_072.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_073",
+    "filename": "item_073.jpg",
+    "image_path": "data/uploaded_images/item_073.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_074",
+    "filename": "item_074.jpg",
+    "image_path": "data/uploaded_images/item_074.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_075",
+    "filename": "item_075.jpg",
+    "image_path": "data/uploaded_images/item_075.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_076",
+    "filename": "item_076.jpg",
+    "image_path": "data/uploaded_images/item_076.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_077",
+    "filename": "item_077.jpg",
+    "image_path": "data/uploaded_images/item_077.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_078",
+    "filename": "item_078.jpg",
+    "image_path": "data/uploaded_images/item_078.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_079",
+    "filename": "item_079.jpg",
+    "image_path": "data/uploaded_images/item_079.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_080",
+    "filename": "item_080.jpg",
+    "image_path": "data/uploaded_images/item_080.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_081",
+    "filename": "item_081.jpg",
+    "image_path": "data/uploaded_images/item_081.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_082",
+    "filename": "item_082.jpg",
+    "image_path": "data/uploaded_images/item_082.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_083",
+    "filename": "item_083.jpg",
+    "image_path": "data/uploaded_images/item_083.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_084",
+    "filename": "item_084.jpg",
+    "image_path": "data/uploaded_images/item_084.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_085",
+    "filename": "item_085.jpg",
+    "image_path": "data/uploaded_images/item_085.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_086",
+    "filename": "item_086.jpg",
+    "image_path": "data/uploaded_images/item_086.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_087",
+    "filename": "item_087.jpg",
+    "image_path": "data/uploaded_images/item_087.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_088",
+    "filename": "item_088.jpg",
+    "image_path": "data/uploaded_images/item_088.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_089",
+    "filename": "item_089.jpg",
+    "image_path": "data/uploaded_images/item_089.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_090",
+    "filename": "item_090.jpg",
+    "image_path": "data/uploaded_images/item_090.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_091",
+    "filename": "item_091.jpg",
+    "image_path": "data/uploaded_images/item_091.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_092",
+    "filename": "item_092.jpg",
+    "image_path": "data/uploaded_images/item_092.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_093",
+    "filename": "item_093.jpg",
+    "image_path": "data/uploaded_images/item_093.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_094",
+    "filename": "item_094.jpg",
+    "image_path": "data/uploaded_images/item_094.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_095",
+    "filename": "item_095.jpg",
+    "image_path": "data/uploaded_images/item_095.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_096",
+    "filename": "item_096.jpg",
+    "image_path": "data/uploaded_images/item_096.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_097",
+    "filename": "item_097.jpg",
+    "image_path": "data/uploaded_images/item_097.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_098",
+    "filename": "item_098.jpg",
+    "image_path": "data/uploaded_images/item_098.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_099",
+    "filename": "item_099.jpg",
+    "image_path": "data/uploaded_images/item_099.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_100",
+    "filename": "item_100.jpg",
+    "image_path": "data/uploaded_images/item_100.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_101",
+    "filename": "item_101.jpg",
+    "image_path": "data/uploaded_images/item_101.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_102",
+    "filename": "item_102.jpg",
+    "image_path": "data/uploaded_images/item_102.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_103",
+    "filename": "item_103.jpg",
+    "image_path": "data/uploaded_images/item_103.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_104",
+    "filename": "item_104.jpg",
+    "image_path": "data/uploaded_images/item_104.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_105",
+    "filename": "item_105.jpg",
+    "image_path": "data/uploaded_images/item_105.jpg",
+    "status": "pending_metadata"
+  },
+  {
+    "item_id": "item_106",
+    "filename": "item_106.jpg",
+    "image_path": "data/uploaded_images/item_106.jpg",
+    "status": "pending_metadata"
+  }
+]

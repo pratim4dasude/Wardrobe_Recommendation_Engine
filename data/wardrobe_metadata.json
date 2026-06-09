@@ -1,0 +1,2406 @@
+[
+  {
+    "item_id": "item_001",
+    "filename": "item_001.jpg",
+    "image_path": "data/uploaded_images/item_001.jpg",
+    "status": "metadata_generated",
+    "caption": "A fitted, sleeveless beige tank top made from smooth cotton or cotton-blend fabric, ideal for casual and warm-weather wear.",
+    "category": [
+      "tank top",
+      "sleeveless top",
+      "upperwear"
+    ],
+    "color": [
+      "beige"
+    ],
+    "style": [
+      "casual",
+      "summer",
+      "daily wear"
+    ],
+    "search_text": "Fitted beige sleeveless tank top crafted from smooth cotton fabric, perfect for casual and warm-weather styles.",
+    "raw_caption": "The main clothing item is a fitted, sleeveless beige tank top, likely made of a smooth cotton or cotton-blend fabric, suitable for casual or warm-weather wear."
+  },
+  {
+    "item_id": "item_002",
+    "filename": "item_002.jpg",
+    "image_path": "data/uploaded_images/item_002.jpg",
+    "status": "metadata_generated",
+    "caption": "A pair of off-white, straight-leg trousers with a subtle front crease, made from soft, smooth fabric like cotton or a cotton blend, featuring a relaxed fit suitable for casual or semi-formal occasions.",
+    "category": [
+      "trousers",
+      "bottomwear"
+    ],
+    "color": [
+      "off-white"
+    ],
+    "style": [
+      "casual",
+      "semi-formal",
+      "relaxed fit"
+    ],
+    "search_text": "Off-white straight-leg trousers with a subtle crease, made from soft cotton blend fabric, offering a relaxed fit ideal for casual and semi-formal wear.",
+    "raw_caption": "The main clothing item is a pair of off-white, straight-leg trousers with a subtle crease down the front, likely made from a soft, smooth fabric such as cotton or a cotton blend, featuring a relaxed fit suitable for casual or semi-formal wear."
+  },
+  {
+    "item_id": "item_003",
+    "filename": "item_003.jpg",
+    "image_path": "data/uploaded_images/item_003.jpg",
+    "status": "metadata_generated",
+    "caption": "A long-sleeve, button-down denim shirt in solid blue with a classic collar and regular fit, made from cotton fabric, ideal for casual or semi-casual occasions.",
+    "category": [
+      "shirt",
+      "upperwear",
+      "denim"
+    ],
+    "color": [
+      "blue"
+    ],
+    "style": [
+      "casual",
+      "semi-casual",
+      "cotton",
+      "long-sleeve"
+    ],
+    "search_text": "Long-sleeve blue denim button-down shirt with classic collar and regular fit, made of cotton, perfect for casual and semi-casual wear.",
+    "raw_caption": "This is a long-sleeve, button-down denim shirt in solid blue with a classic collar and a regular fit, likely made from cotton fabric, suitable for casual or semi-casual wear."
+  },
+  {
+    "item_id": "item_004",
+    "filename": "item_004.jpg",
+    "image_path": "data/uploaded_images/item_004.jpg",
+    "status": "metadata_generated",
+    "caption": "A color-blocked red, black, and white varsity jacket with racing-style graphic text details, snap-button front, ribbed cuffs and hem, made from synthetic fabric, ideal for casual and sporty outings.",
+    "category": [
+      "jacket",
+      "upperwear",
+      "casual wear"
+    ],
+    "color": [
+      "red",
+      "black",
+      "white"
+    ],
+    "style": [
+      "casual",
+      "sporty",
+      "streetwear"
+    ],
+    "search_text": "Color-blocked red, black, and white varsity jacket featuring racing-style graphic text, snap-button closure, ribbed cuffs and hem, designed for casual and sporty occasions.",
+    "raw_caption": "This is a color-blocked red, black, and white racing-style varsity jacket with graphic text details, a snap-button front, ribbed cuffs and hem, made from a likely synthetic fabric suitable for casual and sporty outings."
+  },
+  {
+    "item_id": "item_005",
+    "filename": "item_005.jpg",
+    "image_path": "data/uploaded_images/item_005.jpg",
+    "status": "metadata_generated",
+    "caption": "Men's tailored blazer with a bold, multi-colored abstract paint-splatter pattern, slim fit, made from smooth cotton or cotton-blend fabric, ideal for high fashion and artistic formal occasions.",
+    "category": [
+      "jacket",
+      "upperwear",
+      "blazer"
+    ],
+    "color": [
+      "multi-colored"
+    ],
+    "style": [
+      "formal",
+      "high fashion",
+      "artistic",
+      "slim fit"
+    ],
+    "search_text": "A men's slim fit tailored blazer featuring a bold, multi-colored abstract paint-splatter design, crafted from smooth cotton-blend fabric, perfect for high fashion events and artistic formal wear.",
+    "raw_caption": "The main clothing item is a men's tailored blazer featuring a bold, multi-colored abstract paint-splatter pattern with a slim fit, likely made from a smooth fabric like cotton or a cotton-blend, suitable for high fashion events or artistic formal occasions."
+  },
+  {
+    "item_id": "item_006",
+    "filename": "item_006.jpg",
+    "image_path": "data/uploaded_images/item_006.jpg",
+    "status": "metadata_generated",
+    "caption": "A brown quilted puffer jacket with a cream-colored hood and lining, featuring a casual, slightly loose fit made from synthetic insulated fabric, ideal for cold weather casual wear.",
+    "category": [
+      "jacket",
+      "upperwear",
+      "outerwear"
+    ],
+    "color": [
+      "brown",
+      "cream"
+    ],
+    "style": [
+      "casual",
+      "winter",
+      "loose fit",
+      "cold weather"
+    ],
+    "search_text": "Brown quilted puffer jacket with cream hood, synthetic insulation, casual loose fit, perfect for cold weather and daily casual wear.",
+    "raw_caption": "This is a brown, quilted puffer jacket with a contrasting cream-colored hood and lining, featuring a casual, slightly loose fit likely made from synthetic insulated fabric, suitable for cold weather casual wear."
+  },
+  {
+    "item_id": "item_007",
+    "filename": "item_007.jpg",
+    "image_path": "data/uploaded_images/item_007.jpg",
+    "status": "metadata_generated",
+    "caption": "A beige, embroidered, fitted traditional Indian sleeveless Nehru jacket made of silk or brocade-like fabric, featuring golden buttons and ornate detailing, ideal for formal occasions like weddings and cultural events.",
+    "category": [
+      "jacket",
+      "sleeveless top",
+      "upperwear"
+    ],
+    "color": [
+      "beige",
+      "gold"
+    ],
+    "style": [
+      "formal",
+      "ethnic",
+      "traditional",
+      "party"
+    ],
+    "search_text": "Beige embroidered fitted sleeveless Nehru jacket with golden buttons made from silk or brocade fabric, perfect for formal weddings and cultural events.",
+    "raw_caption": "The image shows a beige, embroidered, fitted traditional Indian sleeveless jacket (Nehru jacket) made of a silk or brocade-like fabric, adorned with golden buttons and ornate detailing, suitable for formal occasions such as weddings or cultural events."
+  },
+  {
+    "item_id": "item_008",
+    "filename": "item_008.jpg",
+    "image_path": "data/uploaded_images/item_008.jpg",
+    "status": "metadata_generated",
+    "caption": "Navy blue long-sleeve button-up shirt with front flap pockets, classic fit, made of cotton or cotton blend, suitable for casual or semi-formal occasions.",
+    "category": [
+      "shirt",
+      "upperwear"
+    ],
+    "color": [
+      "navy blue"
+    ],
+    "style": [
+      "casual",
+      "semi-formal",
+      "classic"
+    ],
+    "search_text": "Navy blue long-sleeve button-up shirt with flap pockets, classic fit, cotton material, ideal for casual or semi-formal wear.",
+    "raw_caption": "The main clothing item is a navy blue, long-sleeve button-up shirt with front flap pockets, featuring a classic fit and likely made of cotton or a cotton blend, suitable for casual or semi-formal wear."
+  },
+  {
+    "item_id": "item_009",
+    "filename": "item_009.jpg",
+    "image_path": "data/uploaded_images/item_009.jpg",
+    "status": "metadata_generated",
+    "caption": "A sporty color-blocked Ferrari racing jacket in red, black, and white with branded logos and a zip-up front, featuring a fitted style made from lightweight, durable synthetic fabric, perfect for casual wear or motorsport events.",
+    "category": [
+      "jacket",
+      "upperwear",
+      "outerwear"
+    ],
+    "color": [
+      "red",
+      "black",
+      "white"
+    ],
+    "style": [
+      "sporty",
+      "casual",
+      "lightweight",
+      "fitted"
+    ],
+    "search_text": "Sporty color-blocked Ferrari racing jacket in red, black, and white with logos, zip-up front, fitted lightweight synthetic fabric ideal for casual and motorsport wear.",
+    "raw_caption": "The main clothing item is a sporty, color-blocked Ferrari racing jacket in red, black, and white with branded logos, a zip-up front, a fitted style likely made from lightweight, durable synthetic fabric, suitable for casual wear or motorsport events."
+  },
+  {
+    "item_id": "item_010",
+    "filename": "item_010.jpg",
+    "image_path": "data/uploaded_images/item_010.jpg",
+    "status": "metadata_generated",
+    "caption": "Navy blue swim shorts with a relaxed fit, elastic waistband, and white drawstring, made from quick-drying synthetic fabric, perfect for casual beach or poolside wear.",
+    "category": [
+      "bottomwear",
+      "swim shorts",
+      "casual wear"
+    ],
+    "color": [
+      "navy blue",
+      "white"
+    ],
+    "style": [
+      "casual",
+      "summer",
+      "sporty",
+      "beachwear"
+    ],
+    "search_text": "Navy blue quick-drying swim shorts featuring a relaxed fit, elastic waistband, and white drawstring ideal for casual beach and poolside activities.",
+    "raw_caption": "The navy blue swim shorts feature a relaxed fit with an elastic waistband and a white drawstring, made from quick-drying synthetic fabric, suitable for casual beach or poolside wear."
+  },
+  {
+    "item_id": "item_011",
+    "filename": "item_011.jpg",
+    "image_path": "data/uploaded_images/item_011.jpg",
+    "status": "metadata_generated",
+    "caption": "Light blue and white vertically striped button-down dress shirt with a classic fit, made of cotton or a cotton blend, suitable for business or formal occasions.",
+    "category": [
+      "shirt",
+      "upperwear",
+      "dress shirt"
+    ],
+    "color": [
+      "light blue",
+      "white"
+    ],
+    "style": [
+      "classic",
+      "formal",
+      "business"
+    ],
+    "search_text": "A light blue and white vertically striped button-down dress shirt in classic fit, crafted from cotton or cotton blend, ideal for business and formal settings.",
+    "raw_caption": "This is a light blue and white vertically striped button-down dress shirt, likely made of cotton or a cotton blend, featuring a classic fit suitable for business or formal occasions."
+  },
+  {
+    "item_id": "item_012",
+    "filename": "item_012.jpg",
+    "image_path": "data/uploaded_images/item_012.jpg",
+    "status": "metadata_generated",
+    "caption": "Black wide-leg pants with white piping details, loose fit, made from soft, comfortable fabric like cotton or cotton blend, ideal for casual or streetwear.",
+    "category": [
+      "trousers",
+      "bottomwear"
+    ],
+    "color": [
+      "black",
+      "white"
+    ],
+    "style": [
+      "casual",
+      "streetwear",
+      "comfortable"
+    ],
+    "search_text": "Black wide-leg loose fit pants with white piping, made from soft cotton fabric, suitable for casual and streetwear occasions.",
+    "raw_caption": "The main clothing item is a pair of black wide-leg pants with white piping details, featuring a loose fit and likely made of a soft, comfortable fabric such as cotton or a cotton blend, suitable for casual or streetwear occasions."
+  },
+  {
+    "item_id": "item_013",
+    "filename": "item_013.jpg",
+    "image_path": "data/uploaded_images/item_013.jpg",
+    "status": "metadata_generated",
+    "caption": "A beige tailored blazer made from smooth fabric, featuring a classic single-breasted design with black buttons, ideal for semi-formal or business-casual occasions.",
+    "category": [
+      "jacket",
+      "upperwear",
+      "business-casual"
+    ],
+    "color": [
+      "beige",
+      "black"
+    ],
+    "style": [
+      "formal",
+      "business-casual",
+      "semi-formal",
+      "tailored"
+    ],
+    "search_text": "Beige tailored single-breasted blazer with black buttons made of smooth fabric, perfect for semi-formal and business-casual settings.",
+    "raw_caption": "The main clothing item is a beige, tailored blazer made from a smooth fabric, featuring a classic single-breasted style with black buttons, suitable for semi-formal or business-casual settings."
+  },
+  {
+    "item_id": "item_014",
+    "filename": "item_014.jpg",
+    "image_path": "data/uploaded_images/item_014.jpg",
+    "status": "metadata_generated",
+    "caption": "Navy blue short-sleeve polo shirt with white piping accents and a half-zip front, made from fitted, smooth knit fabric likely cotton or a cotton blend, suitable for casual or smart-casual occasions.",
+    "category": [
+      "shirt",
+      "upperwear",
+      "polo"
+    ],
+    "color": [
+      "navy blue",
+      "white"
+    ],
+    "style": [
+      "casual",
+      "smart-casual",
+      "summer",
+      "daily wear"
+    ],
+    "search_text": "Navy blue short-sleeve polo shirt with white piping and half-zip front, made from fitted cotton blend knit fabric, perfect for casual and smart-casual summer wear.",
+    "raw_caption": "The clothing item is a navy blue short-sleeve polo shirt with white piping accents and a half-zip front, featuring a fitted, smooth knit fabric likely made of cotton or a cotton blend, suitable for casual or smart-casual occasions."
+  },
+  {
+    "item_id": "item_015",
+    "filename": "item_015.jpg",
+    "image_path": "data/uploaded_images/item_015.jpg",
+    "status": "metadata_generated",
+    "caption": "Black sleeveless Nike running tank top made from lightweight, moisture-wicking Dri-FIT fabric, designed for a comfortable and breathable fit, perfect for athletic and casual wear.",
+    "category": [
+      "tank top",
+      "sleeveless top",
+      "upperwear"
+    ],
+    "color": [
+      "black"
+    ],
+    "style": [
+      "sporty",
+      "casual",
+      "athletic",
+      "lightweight"
+    ],
+    "search_text": "Black sleeveless Nike running tank top with moisture-wicking Dri-FIT fabric, breathable and comfortable, suitable for athletic and casual activities.",
+    "raw_caption": "This is a black sleeveless Nike running tank top made from lightweight, moisture-wicking Dri-FIT fabric, designed for a comfortable, breathable fit, ideal for athletic and casual wear."
+  },
+  {
+    "item_id": "item_016",
+    "filename": "item_016.jpg",
+    "image_path": "data/uploaded_images/item_016.jpg",
+    "status": "metadata_generated",
+    "caption": "A fitted, long-sleeve, quarter-zip athletic top in slate blue, made from smooth, stretchy fabric suitable for workouts and casual sportswear.",
+    "category": [
+      "upperwear",
+      "shirt",
+      "athletic top"
+    ],
+    "color": [
+      "slate blue"
+    ],
+    "style": [
+      "sporty",
+      "casual",
+      "athletic"
+    ],
+    "search_text": "Fitted long-sleeve quarter-zip athletic top in slate blue made from smooth, stretchy fabric ideal for workouts and casual sportswear.",
+    "raw_caption": "The main clothing item is a fitted, long-sleeve, quarter-zip athletic top in slate blue, made from a smooth, stretchy fabric likely polyester or a polyester blend, ideal for workouts or casual sportswear."
+  },
+  {
+    "item_id": "item_017",
+    "filename": "item_017.jpg",
+    "image_path": "data/uploaded_images/item_017.jpg",
+    "status": "metadata_generated",
+    "caption": "A long-sleeve, button-down shirt with a regular fit, featuring red and white vertical stripes, made from lightweight linen fabric, ideal for casual to semi-formal spring or summer wear.",
+    "category": [
+      "shirt",
+      "upperwear"
+    ],
+    "color": [
+      "red",
+      "white"
+    ],
+    "style": [
+      "casual",
+      "semi-formal",
+      "summer",
+      "spring"
+    ],
+    "search_text": "Long-sleeve button-down shirt with red and white vertical stripes, regular fit, lightweight linen fabric suitable for casual and semi-formal wear in spring and summer.",
+    "raw_caption": "This is a long-sleeve, button-down shirt with a regular fit, featuring red and white vertical stripes, likely made from lightweight linen fabric, suitable for casual to semi-formal summer or spring wear."
+  },
+  {
+    "item_id": "item_018",
+    "filename": "item_018.jpg",
+    "image_path": "data/uploaded_images/item_018.jpg",
+    "status": "metadata_generated",
+    "caption": "Relaxed-fit casual pants with a gradient black-to-gray color, made from cotton denim or similar fabric, ideal for everyday wear.",
+    "category": [
+      "trousers",
+      "bottomwear",
+      "casual pants"
+    ],
+    "color": [
+      "black",
+      "gray"
+    ],
+    "style": [
+      "casual",
+      "relaxed fit",
+      "daily wear"
+    ],
+    "search_text": "Relaxed-fit casual pants in gradient black to gray, made of cotton denim or similar fabric, perfect for everyday casual outings.",
+    "raw_caption": "These are relaxed-fit, gradient black-to-gray casual pants, likely made of cotton denim or a similar fabric, suitable for casual outings or everyday wear."
+  },
+  {
+    "item_id": "item_019",
+    "filename": "item_019.jpg",
+    "image_path": "data/uploaded_images/item_019.jpg",
+    "status": "metadata_generated",
+    "caption": "A short-sleeve, button-up men's shirt with a light blue and white swirling marble pattern, featuring a relaxed fit and made of lightweight polyester or rayon fabric, ideal for casual outings or summer events.",
+    "category": [
+      "shirt",
+      "upperwear",
+      "men's clothing"
+    ],
+    "color": [
+      "light blue",
+      "white"
+    ],
+    "style": [
+      "casual",
+      "summer",
+      "relaxed fit",
+      "lightweight"
+    ],
+    "search_text": "Men's short-sleeve button-up shirt with light blue and white marble pattern, relaxed fit, lightweight fabric perfect for casual and summer wear.",
+    "raw_caption": "This is a short-sleeve, button-up men's shirt with a light blue and white swirling marble pattern, a relaxed fit likely made of lightweight polyester or rayon fabric, suitable for casual outings or summer events."
+  },
+  {
+    "item_id": "item_020",
+    "filename": "item_020.jpg",
+    "image_path": "data/uploaded_images/item_020.jpg",
+    "status": "metadata_generated",
+    "caption": "Light blue distressed skinny-fit denim jeans suitable for casual everyday wear.",
+    "category": [
+      "jeans",
+      "bottomwear",
+      "denim"
+    ],
+    "color": [
+      "light blue"
+    ],
+    "style": [
+      "casual",
+      "distressed",
+      "skinny-fit",
+      "everyday"
+    ],
+    "search_text": "Light blue distressed skinny-fit denim jeans perfect for casual and everyday wear.",
+    "raw_caption": "These are light blue, distressed skinny-fit jeans made of denim fabric, suitable for casual everyday wear."
+  },
+  {
+    "item_id": "item_021",
+    "filename": "item_021.jpg",
+    "image_path": "data/uploaded_images/item_021.jpg",
+    "status": "metadata_generated",
+    "caption": "Men's sleeveless athletic tank top with a red and black geometric gradient pattern, fitted style, made of moisture-wicking synthetic fabric suitable for sports or casual workouts.",
+    "category": [
+      "tank top",
+      "sleeveless top",
+      "upperwear",
+      "athletic wear"
+    ],
+    "color": [
+      "red",
+      "black"
+    ],
+    "style": [
+      "sporty",
+      "casual",
+      "fitted",
+      "moisture-wicking"
+    ],
+    "search_text": "Men's fitted sleeveless athletic tank top in red and black geometric gradient pattern, made from moisture-wicking synthetic fabric ideal for sports and casual workouts.",
+    "raw_caption": "The image shows a men's sleeveless athletic tank top featuring a red and black geometric gradient pattern with a fitted style, likely made of moisture-wicking synthetic fabric suitable for sports or casual workout wear."
+  },
+  {
+    "item_id": "item_022",
+    "filename": "item_022.jpg",
+    "image_path": "data/uploaded_images/item_022.jpg",
+    "status": "metadata_generated",
+    "caption": "A pair of loose-fitting, light gray sweatpants made from a soft, cotton-blend fabric, perfect for casual wear or lounging.",
+    "category": [
+      "bottomwear",
+      "sweatpants",
+      "casual wear"
+    ],
+    "color": [
+      "light gray"
+    ],
+    "style": [
+      "loose-fitting",
+      "casual",
+      "comfortable",
+      "loungewear"
+    ],
+    "search_text": "Loose-fitting light gray sweatpants made of soft cotton-blend fabric ideal for casual and lounge wear.",
+    "raw_caption": "The main clothing item is a pair of loose-fitting, light gray sweatpants made of soft, likely cotton-blend fabric, ideal for casual wear or lounging."
+  },
+  {
+    "item_id": "item_023",
+    "filename": "item_023.jpg",
+    "image_path": "data/uploaded_images/item_023.jpg",
+    "status": "metadata_generated",
+    "caption": "A long-sleeve, button-up shirt in solid dusty rose with a classic collar and a single chest pocket, made from cotton or a cotton blend, featuring a regular fit ideal for casual or semi-formal occasions.",
+    "category": [
+      "shirt",
+      "upperwear"
+    ],
+    "color": [
+      "dusty rose"
+    ],
+    "style": [
+      "casual",
+      "semi-formal",
+      "regular fit",
+      "cotton"
+    ],
+    "search_text": "Long-sleeve dusty rose button-up shirt with classic collar and chest pocket, made of cotton blend, suitable for casual and semi-formal wear.",
+    "raw_caption": "This is a long-sleeve, button-up shirt in a solid dusty rose color, featuring a classic collar and a single chest pocket, made from a cotton or cotton-blend fabric with a regular fit, suitable for casual or semi-formal occasions."
+  },
+  {
+    "item_id": "item_024",
+    "filename": "item_024.jpg",
+    "image_path": "data/uploaded_images/item_024.jpg",
+    "status": "metadata_generated",
+    "caption": "Light gray, slightly distressed straight-fit denim jeans made from cotton, ideal for casual or everyday wear.",
+    "category": [
+      "jeans",
+      "bottomwear",
+      "denim"
+    ],
+    "color": [
+      "light gray"
+    ],
+    "style": [
+      "casual",
+      "everyday",
+      "straight-fit",
+      "distressed"
+    ],
+    "search_text": "Light gray straight-fit denim jeans made from cotton with slight distressing, perfect for casual and daily wear.",
+    "raw_caption": "These are light gray, slightly distressed straight-fit denim jeans made from cotton, suitable for casual or everyday wear."
+  },
+  {
+    "item_id": "item_025",
+    "filename": "item_025.jpg",
+    "image_path": "data/uploaded_images/item_025.jpg",
+    "status": "metadata_generated",
+    "caption": "A short-sleeve, button-up shirt with a gradient pattern transitioning from burgundy to black, made from a lightweight cotton or polyester blend, featuring a relaxed fit suitable for casual or semi-casual wear.",
+    "category": [
+      "shirt",
+      "upperwear"
+    ],
+    "color": [
+      "burgundy",
+      "black"
+    ],
+    "style": [
+      "casual",
+      "semi-casual",
+      "relaxed fit",
+      "lightweight"
+    ],
+    "search_text": "Short-sleeve button-up shirt with gradient burgundy to black colors, lightweight fabric, relaxed fit, perfect for casual and semi-casual occasions.",
+    "raw_caption": "This is a short-sleeve, button-up shirt with a gradient pattern transitioning from burgundy to black, likely made from a lightweight cotton or polyester blend, featuring a relaxed fit and suitable for casual or semi-casual wear."
+  },
+  {
+    "item_id": "item_026",
+    "filename": "item_026.jpg",
+    "image_path": "data/uploaded_images/item_026.jpg",
+    "status": "metadata_generated",
+    "caption": "Relaxed-fit gradient blue hooded sweatshirt made of soft cotton, perfect for casual everyday wear.",
+    "category": [
+      "hoodie",
+      "upperwear",
+      "casual"
+    ],
+    "color": [
+      "blue"
+    ],
+    "style": [
+      "relaxed-fit",
+      "casual",
+      "everyday",
+      "soft fabric"
+    ],
+    "search_text": "Relaxed-fit gradient blue cotton hoodie ideal for casual and everyday wear, featuring soft fabric for comfort.",
+    "raw_caption": "This is a relaxed-fit, gradient blue hooded sweatshirt made of soft cotton fabric, ideal for casual, everyday wear."
+  },
+  {
+    "item_id": "item_027",
+    "filename": "item_027.jpg",
+    "image_path": "data/uploaded_images/item_027.jpg",
+    "status": "metadata_generated",
+    "caption": "A pair of dark blue, slightly faded denim jeans with contrast stitching, relaxed fit, and classic five-pocket style, ideal for casual or everyday wear.",
+    "category": [
+      "jeans",
+      "bottomwear",
+      "casual"
+    ],
+    "color": [
+      "dark blue"
+    ],
+    "style": [
+      "casual",
+      "relaxed fit",
+      "everyday wear"
+    ],
+    "search_text": "Dark blue faded denim jeans with contrast stitching and five-pocket design, relaxed fit perfect for casual and everyday wear.",
+    "raw_caption": "The main clothing item is a pair of dark blue, slightly faded denim jeans with contrast stitching, a relaxed fit, and a classic five-pocket style, suitable for casual or everyday wear."
+  },
+  {
+    "item_id": "item_028",
+    "filename": "item_028.jpg",
+    "image_path": "data/uploaded_images/item_028.jpg",
+    "status": "metadata_generated",
+    "caption": "A slim-fit, long-sleeve button-up shirt with beige and white vertical stripes, made of lightweight cotton or a cotton blend, ideal for casual and smart-casual settings.",
+    "category": [
+      "shirt",
+      "upperwear",
+      "button-up"
+    ],
+    "color": [
+      "beige",
+      "white"
+    ],
+    "style": [
+      "slim-fit",
+      "casual",
+      "smart-casual",
+      "lightweight"
+    ],
+    "search_text": "Slim-fit long-sleeve button-up shirt featuring beige and white vertical stripes in lightweight cotton blend, perfect for casual and smart-casual occasions.",
+    "raw_caption": "The clothing item is a slim-fit, long-sleeve button-up shirt with beige and white vertical stripes, likely made of a lightweight cotton or cotton-blend fabric, suitable for casual or smart-casual occasions."
+  },
+  {
+    "item_id": "item_029",
+    "filename": "item_029.jpg",
+    "image_path": "data/uploaded_images/item_029.jpg",
+    "status": "metadata_generated",
+    "caption": "A brown long-sleeve polo shirt with a relaxed fit, made from a soft cotton or cotton-blend fabric, ideal for casual or semi-casual occasions.",
+    "category": [
+      "shirt",
+      "upperwear",
+      "polo shirt"
+    ],
+    "color": [
+      "brown"
+    ],
+    "style": [
+      "casual",
+      "semi-casual",
+      "relaxed fit"
+    ],
+    "search_text": "Brown long-sleeve polo shirt with relaxed fit and soft cotton-blend fabric, perfect for casual and semi-casual wear.",
+    "raw_caption": "The clothing item is a brown long-sleeve polo shirt with a relaxed fit, featuring a soft, likely cotton or cotton-blend fabric, making it suitable for casual or semi-casual wear."
+  },
+  {
+    "item_id": "item_030",
+    "filename": "item_030.jpg",
+    "image_path": "data/uploaded_images/item_030.jpg",
+    "status": "metadata_generated",
+    "caption": "Black puffer jacket with light gray hooded lining, made of thick insulated polyester fabric, featuring a regular fit ideal for casual cold-weather wear.",
+    "category": [
+      "jacket",
+      "upperwear",
+      "hoodie"
+    ],
+    "color": [
+      "black",
+      "light gray"
+    ],
+    "style": [
+      "casual",
+      "winter",
+      "insulated",
+      "regular fit"
+    ],
+    "search_text": "Black insulated puffer jacket with light gray hood, thick polyester fabric, regular fit designed for casual and cold weather.",
+    "raw_caption": "The main clothing item is a black puffer jacket with a light gray hooded lining, featuring a thick, insulated fabric likely polyester, designed in a regular fit suitable for casual cold-weather wear."
+  },
+  {
+    "item_id": "item_031",
+    "filename": "item_031.jpg",
+    "image_path": "data/uploaded_images/item_031.jpg",
+    "status": "metadata_generated",
+    "caption": "A slim-fit, olive green single-breasted blazer with notch lapels and flap pockets, made of smooth woven fabric suitable for business casual or semi-formal occasions.",
+    "category": [
+      "jacket",
+      "upperwear"
+    ],
+    "color": [
+      "olive green"
+    ],
+    "style": [
+      "slim-fit",
+      "business casual",
+      "semi-formal",
+      "formal"
+    ],
+    "search_text": "Slim-fit olive green single-breasted blazer with notch lapels and flap pockets in smooth woven fabric, perfect for business casual and semi-formal wear.",
+    "raw_caption": "The visible clothing item is a slim-fit, olive green single-breasted blazer with notch lapels and flap pockets, likely made of a smooth, woven fabric suitable for business casual or semi-formal occasions."
+  },
+  {
+    "item_id": "item_032",
+    "filename": "item_032.jpg",
+    "image_path": "data/uploaded_images/item_032.jpg",
+    "status": "metadata_generated",
+    "caption": "Beige high-waisted slim fit dress trousers with button details at the waistband, made from smooth lightweight fabric suitable for formal or business occasions.",
+    "category": [
+      "trousers",
+      "bottomwear",
+      "dress"
+    ],
+    "color": [
+      "beige"
+    ],
+    "style": [
+      "formal",
+      "office",
+      "slim fit",
+      "business"
+    ],
+    "search_text": "High-waisted beige dress trousers with button waistband, slim fit and lightweight fabric perfect for formal and business settings.",
+    "raw_caption": "These are beige, high-waisted dress trousers with button details at the waistband, a slim fit, likely made from a smooth, lightweight fabric suitable for formal or business occasions."
+  },
+  {
+    "item_id": "item_033",
+    "filename": "item_033.jpg",
+    "image_path": "data/uploaded_images/item_033.jpg",
+    "status": "metadata_generated",
+    "caption": "Wide-leg, high-waisted black denim jeans with a subtle faded wash, featuring a classic five-pocket design and sturdy fabric suitable for casual or semi-casual wear.",
+    "category": [
+      "jeans",
+      "bottomwear"
+    ],
+    "color": [
+      "black"
+    ],
+    "style": [
+      "casual",
+      "semi-casual",
+      "streetwear"
+    ],
+    "search_text": "Black wide-leg high-waisted denim jeans with a faded wash, classic five-pocket style, made from sturdy fabric perfect for casual and semi-casual outfits.",
+    "raw_caption": "These are wide-leg, high-waisted black denim jeans with a subtle faded wash, featuring a classic five-pocket style and sturdy fabric suitable for casual or semi-casual wear."
+  },
+  {
+    "item_id": "item_034",
+    "filename": "item_034.jpg",
+    "image_path": "data/uploaded_images/item_034.jpg",
+    "status": "metadata_generated",
+    "caption": "Cream-colored wide-leg jeans with contrasting orange stitching, classic five-pocket design, and button closure, made from denim fabric, ideal for casual or semi-casual wear.",
+    "category": [
+      "jeans",
+      "bottomwear",
+      "denim"
+    ],
+    "color": [
+      "cream",
+      "orange"
+    ],
+    "style": [
+      "casual",
+      "semi-casual",
+      "wide-leg"
+    ],
+    "search_text": "Cream-colored wide-leg denim jeans featuring orange stitching, five-pocket style, and button closure, perfect for casual and semi-casual outfits.",
+    "raw_caption": "These are cream-colored, wide-leg jeans featuring contrasting orange stitching, a classic five-pocket design, and a button closure, made from denim fabric, suitable for casual or semi-casual wear."
+  },
+  {
+    "item_id": "item_035",
+    "filename": "item_035.jpg",
+    "image_path": "data/uploaded_images/item_035.jpg",
+    "status": "metadata_generated",
+    "caption": "A loose-fit, short-sleeve crew neck t-shirt in solid olive brown, made from soft cotton, ideal for casual everyday wear.",
+    "category": [
+      "t-shirt",
+      "shirt",
+      "upperwear"
+    ],
+    "color": [
+      "olive brown"
+    ],
+    "style": [
+      "casual",
+      "daily wear",
+      "comfortable"
+    ],
+    "search_text": "Loose-fit short-sleeve crew neck t-shirt in olive brown cotton fabric perfect for casual and everyday wear.",
+    "raw_caption": "The visible clothing item is a loose-fit, short-sleeve crew neck t-shirt in a solid olive brown color, likely made from a soft cotton fabric, suitable for casual and everyday wear."
+  },
+  {
+    "item_id": "item_036",
+    "filename": "item_036.jpg",
+    "image_path": "data/uploaded_images/item_036.jpg",
+    "status": "metadata_generated",
+    "caption": "High-waisted, straight-leg grey acid-wash denim jeans made of sturdy cotton, ideal for casual everyday wear.",
+    "category": [
+      "jeans",
+      "bottomwear",
+      "denim"
+    ],
+    "color": [
+      "grey"
+    ],
+    "style": [
+      "high-waisted",
+      "straight-leg",
+      "casual",
+      "acid-wash",
+      "daily wear"
+    ],
+    "search_text": "Grey high-waisted straight-leg acid-wash denim jeans with a sturdy cotton weave, perfect for casual and everyday use.",
+    "raw_caption": "These are high-waisted, straight-leg, grey acid-wash denim jeans, likely made of cotton with a sturdy weave, suitable for casual everyday wear."
+  },
+  {
+    "item_id": "item_037",
+    "filename": "item_037.jpg",
+    "image_path": "data/uploaded_images/item_037.jpg",
+    "status": "metadata_generated",
+    "caption": "A loose-fitting gray crew-neck sweater made from soft wool or cashmere, ideal for casual to semi-formal cooler weather occasions.",
+    "category": [
+      "sweater",
+      "upperwear"
+    ],
+    "color": [
+      "gray"
+    ],
+    "style": [
+      "casual",
+      "semi-formal",
+      "winter"
+    ],
+    "search_text": "Loose gray crew-neck sweater in soft wool or cashmere, perfect for casual and semi-formal outfits in cold weather.",
+    "raw_caption": "The main clothing item is a loose-fitting, gray, crew-neck sweater made of what appears to be a soft wool or cashmere fabric, suitable for casual to semi-formal occasions in cooler weather."
+  },
+  {
+    "item_id": "item_038",
+    "filename": "item_038.jpg",
+    "image_path": "data/uploaded_images/item_038.jpg",
+    "status": "metadata_generated",
+    "caption": "Navy blue cable knit V-neck sweater with white striped trim on collar, cuffs, and hem, featuring a relaxed fit, made of cotton or cotton blend, suitable for casual and semi-casual wear.",
+    "category": [
+      "sweater",
+      "upperwear"
+    ],
+    "color": [
+      "navy blue",
+      "white"
+    ],
+    "style": [
+      "casual",
+      "semi-casual",
+      "relaxed fit"
+    ],
+    "search_text": "Navy blue cable knit V-neck sweater with white stripes on collar, cuffs, and hem, relaxed fit, cotton blend fabric, ideal for casual and semi-casual occasions.",
+    "raw_caption": "This is a navy blue cable knit V-neck sweater with white striped trim on the collar, cuffs, and hem, featuring a relaxed fit and likely made of cotton or a cotton blend, suitable for casual or semi-casual wear."
+  },
+  {
+    "item_id": "item_039",
+    "filename": "item_039.jpg",
+    "image_path": "data/uploaded_images/item_039.jpg",
+    "status": "metadata_generated",
+    "caption": "A cream-colored fleece zip-up jacket with sherpa texture, relaxed fit, and high collar, made from synthetic fleece fabric suitable for casual wear and chilly weather.",
+    "category": [
+      "jacket",
+      "upperwear"
+    ],
+    "color": [
+      "cream"
+    ],
+    "style": [
+      "casual",
+      "winter",
+      "relaxed fit",
+      "comfortable"
+    ],
+    "search_text": "cream-colored synthetic fleece jacket with sherpa texture, zip-up front, high collar and relaxed fit ideal for casual and chilly weather outings",
+    "raw_caption": "This is a cream-colored fleece zip-up jacket with a sherpa texture, featuring a relaxed fit and high collar, likely made from synthetic fleece fabric suitable for casual wear or chilly weather outings."
+  },
+  {
+    "item_id": "item_040",
+    "filename": "item_040.jpg",
+    "image_path": "data/uploaded_images/item_040.jpg",
+    "status": "metadata_generated",
+    "caption": "A white cable-knit V-neck sweater with black stripe accents on the collar, cuffs, and hem, featuring a classic fit, likely made of wool or a wool blend, ideal for smart casual and semi-formal occasions.",
+    "category": [
+      "upperwear",
+      "sweater"
+    ],
+    "color": [
+      "white",
+      "black"
+    ],
+    "style": [
+      "smart casual",
+      "semi-formal",
+      "classic",
+      "winter"
+    ],
+    "search_text": "White cable-knit V-neck sweater with black stripes on collar, cuffs, and hem, classic fit, wool or wool blend, perfect for smart casual and semi-formal wear.",
+    "raw_caption": "The main clothing item is a white cable-knit V-neck sweater with black stripe accents on the collar, cuffs, and hem, featuring a classic fit and likely made of wool or a wool blend, suitable for smart casual or semi-formal occasions."
+  },
+  {
+    "item_id": "item_041",
+    "filename": "item_041.jpg",
+    "image_path": "data/uploaded_images/item_041.jpg",
+    "status": "metadata_generated",
+    "caption": "A navy blue, long-sleeve slim fit button-up shirt with a single chest pocket and rolled cuffs, made from cotton or a cotton blend, perfect for casual or smart-casual occasions.",
+    "category": [
+      "shirt",
+      "upperwear"
+    ],
+    "color": [
+      "navy blue"
+    ],
+    "style": [
+      "casual",
+      "smart-casual",
+      "slim fit"
+    ],
+    "search_text": "navy blue long-sleeve slim fit button-up shirt with chest pocket and rolled cuffs, cotton fabric, ideal for casual and smart-casual wear",
+    "raw_caption": "This is a navy blue, long-sleeve button-up shirt with a slim fit, likely made from cotton or a cotton blend fabric, featuring a single chest pocket and rolled cuffs, suitable for casual or smart-casual occasions."
+  },
+  {
+    "item_id": "item_042",
+    "filename": "item_042.jpg",
+    "image_path": "data/uploaded_images/item_042.jpg",
+    "status": "metadata_generated",
+    "caption": "Light blue loose fit denim jeans with black graffiti-style text pattern of days of the week down one leg, made of cotton denim fabric, ideal for casual streetwear.",
+    "category": [
+      "jeans",
+      "bottomwear",
+      "denim"
+    ],
+    "color": [
+      "light blue",
+      "black"
+    ],
+    "style": [
+      "casual",
+      "loose fit",
+      "streetwear"
+    ],
+    "search_text": "Light blue loose fit denim jeans featuring black graffiti text of days of the week on one leg, made from cotton denim, perfect for casual streetwear and outings.",
+    "raw_caption": "These light blue denim jeans feature a loose fit with a casual style and black graffiti-style text pattern of days of the week down one leg, likely made of cotton denim fabric, suitable for streetwear or casual outings."
+  },
+  {
+    "item_id": "item_043",
+    "filename": "item_043.jpg",
+    "image_path": "data/uploaded_images/item_043.jpg",
+    "status": "metadata_generated",
+    "caption": "Brown straight-leg denim jeans with a classic five-pocket design and a relaxed fit, made from cotton denim fabric, ideal for casual everyday wear.",
+    "category": [
+      "jeans",
+      "bottomwear"
+    ],
+    "color": [
+      "brown"
+    ],
+    "style": [
+      "casual",
+      "relaxed",
+      "everyday"
+    ],
+    "search_text": "Brown straight-leg denim jeans featuring a classic five-pocket design and relaxed fit, made from cotton denim, perfect for casual daily wear.",
+    "raw_caption": "These are brown straight-leg denim jeans with a classic five-pocket design, a relaxed fit, and likely made of cotton denim fabric, suitable for casual everyday wear."
+  },
+  {
+    "item_id": "item_044",
+    "filename": "item_044.jpg",
+    "image_path": "data/uploaded_images/item_044.jpg",
+    "status": "metadata_generated",
+    "caption": "A pair of off-white wide-leg sweatpants with black side stripes and a drawstring waist, made from a soft knit or cotton blend, ideal for casual wear or lounging.",
+    "category": [
+      "bottomwear",
+      "sweatpants",
+      "casual pants"
+    ],
+    "color": [
+      "off-white",
+      "black"
+    ],
+    "style": [
+      "casual",
+      "loungewear",
+      "comfortable",
+      "wide-leg"
+    ],
+    "search_text": "Off-white wide-leg sweatpants with black side stripes and drawstring waist, made from soft knit or cotton blend, perfect for casual and lounge wear.",
+    "raw_caption": "The main clothing item is a pair of off-white, wide-leg sweatpants with black side stripes, a drawstring waist, likely made of a soft knit or cotton blend, suited for casual wear or lounging."
+  },
+  {
+    "item_id": "item_045",
+    "filename": "item_045.jpg",
+    "image_path": "data/uploaded_images/item_045.jpg",
+    "status": "metadata_generated",
+    "caption": "Black straight-fit trousers made from smooth fabric, perfect for formal or professional occasions.",
+    "category": [
+      "trousers",
+      "bottomwear"
+    ],
+    "color": [
+      "black"
+    ],
+    "style": [
+      "formal",
+      "professional",
+      "minimal"
+    ],
+    "search_text": "Black smooth fabric straight-fit trousers suitable for formal and professional settings.",
+    "raw_caption": "These are black, straight-fit trousers made from a smooth fabric, ideal for formal or professional settings."
+  },
+  {
+    "item_id": "item_046",
+    "filename": "item_046.jpg",
+    "image_path": "data/uploaded_images/item_046.jpg",
+    "status": "metadata_generated",
+    "caption": "Black distressed denim jacket with button-up front, classic collar, and slim fit, made from sturdy denim fabric, perfect for casual or streetwear looks.",
+    "category": [
+      "jacket",
+      "denim jacket",
+      "upperwear"
+    ],
+    "color": [
+      "black"
+    ],
+    "style": [
+      "distressed",
+      "casual",
+      "streetwear",
+      "slim fit"
+    ],
+    "search_text": "Black distressed slim fit denim jacket with button-up front and classic collar, ideal for casual and streetwear outfits.",
+    "raw_caption": "This is a black distressed denim jacket with a button-up front, classic collar, and slim fit, made from sturdy denim fabric, ideal for casual or streetwear occasions."
+  },
+  {
+    "item_id": "item_047",
+    "filename": "item_047.jpg",
+    "image_path": "data/uploaded_images/item_047.jpg",
+    "status": "metadata_generated",
+    "caption": "A brown suede zip-up jacket with a classic collar and buttoned cuffs, featuring a tailored fit and soft suede fabric, suitable for casual to smart-casual occasions.",
+    "category": [
+      "jacket",
+      "upperwear"
+    ],
+    "color": [
+      "brown"
+    ],
+    "style": [
+      "casual",
+      "smart-casual",
+      "tailored"
+    ],
+    "search_text": "brown suede zip-up jacket with classic collar and buttoned cuffs, tailored fit, soft suede fabric, casual and smart-casual style",
+    "raw_caption": "The main clothing item is a brown suede zip-up jacket with a classic collar and buttoned cuffs, offering a tailored fit, likely made from soft suede fabric, suitable for casual to smart-casual settings."
+  },
+  {
+    "item_id": "item_048",
+    "filename": "item_048.jpg",
+    "image_path": "data/uploaded_images/item_048.jpg",
+    "status": "metadata_generated",
+    "caption": "A long, tailored, brown herringbone-patterned wool overcoat with a classic and sophisticated fit, ideal for autumn or winter outdoor or semi-formal settings.",
+    "category": [
+      "overcoat",
+      "jacket",
+      "upperwear"
+    ],
+    "color": [
+      "brown"
+    ],
+    "style": [
+      "classic",
+      "sophisticated",
+      "autumn",
+      "winter",
+      "semi-formal"
+    ],
+    "search_text": "Long tailored brown wool overcoat with herringbone pattern, perfect for classic and sophisticated autumn or winter outdoor and semi-formal occasions.",
+    "raw_caption": "The visible clothing item is a long, tailored, brown herringbone-patterned wool overcoat, offering a classic and sophisticated fit perfect for autumn or winter outdoor or semi-formal occasions."
+  },
+  {
+    "item_id": "item_049",
+    "filename": "item_049.jpg",
+    "image_path": "data/uploaded_images/item_049.jpg",
+    "status": "metadata_generated",
+    "caption": "A loose-fitting blue puffer jacket with a high collar, made from a soft, matte fabric like cotton or a cotton blend, ideal for casual winter or cold-weather wear.",
+    "category": [
+      "jacket",
+      "upperwear",
+      "outerwear"
+    ],
+    "color": [
+      "blue"
+    ],
+    "style": [
+      "casual",
+      "winter",
+      "cold-weather",
+      "loose-fitting"
+    ],
+    "search_text": "Loose-fitting blue puffer jacket with a high collar, soft matte fabric, suitable for casual winter and cold-weather wear.",
+    "raw_caption": "The main clothing item is a loose-fitting, blue puffer jacket with a high collar, likely made of a soft, matte fabric like cotton or a cotton blend, perfect for casual winter or cold-weather wear."
+  },
+  {
+    "item_id": "item_050",
+    "filename": "item_050.jpg",
+    "image_path": "data/uploaded_images/item_050.jpg",
+    "status": "metadata_generated",
+    "caption": "Light blue denim loose-fit cargo pants with black Gothic-style letter prints and patch details, perfect for casual or streetwear looks.",
+    "category": [
+      "bottomwear",
+      "trousers",
+      "cargo pants"
+    ],
+    "color": [
+      "light blue",
+      "black"
+    ],
+    "style": [
+      "casual",
+      "streetwear",
+      "loose-fit"
+    ],
+    "search_text": "Light blue denim loose-fit cargo pants featuring black Gothic-style letter prints and patch details, suitable for casual and streetwear fashion.",
+    "raw_caption": "These are light blue denim loose-fit cargo pants with black Gothic-style letter prints and patch details, ideal for casual or streetwear occasions."
+  },
+  {
+    "item_id": "item_051",
+    "filename": "item_051.jpg",
+    "image_path": "data/uploaded_images/item_051.jpg",
+    "status": "metadata_generated",
+    "caption": "A pair of blue medium wash denim jeans with a straight fit and contrast stitching, made from traditional cotton denim, ideal for casual and semi-casual wear.",
+    "category": [
+      "jeans",
+      "bottomwear"
+    ],
+    "color": [
+      "blue"
+    ],
+    "style": [
+      "casual",
+      "semi-casual",
+      "daily wear"
+    ],
+    "search_text": "Blue medium wash straight fit denim jeans with contrast stitching made from cotton denim suitable for casual and semi-casual occasions.",
+    "raw_caption": "The image shows a pair of blue denim jeans with a medium wash, a straight fit, and visible contrast stitching, made from traditional cotton denim, suitable for casual and semi-casual wear."
+  },
+  {
+    "item_id": "item_052",
+    "filename": "item_052.jpg",
+    "image_path": "data/uploaded_images/item_052.jpg",
+    "status": "metadata_generated",
+    "caption": "High-waisted, straight-leg dark blue denim jeans with a classic five-pocket design, made from cotton denim fabric, ideal for casual and everyday wear.",
+    "category": [
+      "jeans",
+      "bottomwear"
+    ],
+    "color": [
+      "dark blue"
+    ],
+    "style": [
+      "casual",
+      "everyday",
+      "classic"
+    ],
+    "search_text": "Dark blue high-waisted straight-leg denim jeans with five-pocket design, perfect for casual daily wear.",
+    "raw_caption": "These are high-waisted, straight-leg dark blue denim jeans with a classic five-pocket design, likely made from cotton denim fabric, suitable for casual and everyday wear."
+  },
+  {
+    "item_id": "item_053",
+    "filename": "item_053.jpg",
+    "image_path": "data/uploaded_images/item_053.jpg",
+    "status": "metadata_generated",
+    "caption": "White short-sleeve crewneck t-shirt with a loose fit, featuring a black anime-style graphic print of a character's head with purple eyes and Japanese text, made of cotton, perfect for casual everyday wear.",
+    "category": [
+      "t-shirt",
+      "shirt",
+      "upperwear"
+    ],
+    "color": [
+      "white",
+      "black",
+      "purple"
+    ],
+    "style": [
+      "casual",
+      "everyday",
+      "loose fit",
+      "graphic"
+    ],
+    "search_text": "White loose fit short-sleeve crewneck t-shirt with black anime-style graphic print and purple eyes, featuring Japanese text, suitable for casual and everyday wear.",
+    "raw_caption": "This is a white short-sleeve crewneck t-shirt with a loose fit, featuring a black anime-style graphic print of a character's head with purple eyes and Japanese text on one side, likely made of cotton, suitable for casual and everyday wear."
+  },
+  {
+    "item_id": "item_054",
+    "filename": "item_054.jpg",
+    "image_path": "data/uploaded_images/item_054.jpg",
+    "status": "metadata_generated",
+    "caption": "Beige straight-leg dress pants with a flat front and side pockets, made from a cotton blend fabric, suitable for formal or business casual occasions.",
+    "category": [
+      "trousers",
+      "bottomwear"
+    ],
+    "color": [
+      "beige"
+    ],
+    "style": [
+      "formal",
+      "business casual"
+    ],
+    "search_text": "Beige straight-leg dress pants with flat front and side pockets, crafted from cotton blend fabric, ideal for formal and business casual wear.",
+    "raw_caption": "These are beige, straight-leg dress pants with a flat front and side pockets, likely made from a cotton blend fabric, suitable for formal or business casual occasions."
+  },
+  {
+    "item_id": "item_055",
+    "filename": "item_055.jpg",
+    "image_path": "data/uploaded_images/item_055.jpg",
+    "status": "metadata_generated",
+    "caption": "A white distressed denim jacket with a relaxed fit, frayed edges, and silver snap buttons, ideal for casual or street style looks.",
+    "category": [
+      "jacket",
+      "upperwear",
+      "denim"
+    ],
+    "color": [
+      "white"
+    ],
+    "style": [
+      "casual",
+      "streetwear",
+      "relaxed"
+    ],
+    "search_text": "White distressed denim jacket featuring frayed edges and silver snap buttons, designed with a relaxed fit for casual or street style fashion.",
+    "raw_caption": "This is a white distressed denim jacket with a relaxed fit, featuring frayed edges and silver snap buttons, suitable for casual wear or street style."
+  },
+  {
+    "item_id": "item_056",
+    "filename": "item_056.jpg",
+    "image_path": "data/uploaded_images/item_056.jpg",
+    "status": "metadata_generated",
+    "caption": "A navy blue double-breasted pinstripe suit jacket with a tailored fit, made from wool or wool blend, featuring gold buttons, suitable for formal or business occasions.",
+    "category": [
+      "jacket",
+      "upperwear",
+      "formal wear"
+    ],
+    "color": [
+      "navy blue",
+      "gold"
+    ],
+    "style": [
+      "formal",
+      "business",
+      "tailored",
+      "double-breasted"
+    ],
+    "search_text": "Navy blue double-breasted pinstripe suit jacket with gold buttons, tailored fit, wool material, ideal for formal business occasions.",
+    "raw_caption": "The main clothing item is a navy blue double-breasted pinstripe suit jacket with a tailored fit, likely made from wool or a wool blend, featuring gold buttons and ideal for formal or business occasions."
+  },
+  {
+    "item_id": "item_057",
+    "filename": "item_057.jpg",
+    "image_path": "data/uploaded_images/item_057.jpg",
+    "status": "metadata_generated",
+    "caption": "Light blue button-up shirt with white vertical stripes, classic fit, made of cotton fabric, ideal for casual or semi-formal occasions.",
+    "category": [
+      "shirt",
+      "upperwear"
+    ],
+    "color": [
+      "light blue",
+      "white"
+    ],
+    "style": [
+      "casual",
+      "semi-formal",
+      "classic"
+    ],
+    "search_text": "Light blue cotton button-up shirt with white vertical stripes and a classic fit, perfect for casual and semi-formal wear.",
+    "raw_caption": "The main clothing item is a light blue button-up shirt with white vertical stripes, featuring a classic fit and cotton fabric, suitable for casual or semi-formal occasions."
+  },
+  {
+    "item_id": "item_058",
+    "filename": "item_058.jpg",
+    "image_path": "data/uploaded_images/item_058.jpg",
+    "status": "metadata_generated",
+    "caption": "Casual white and blue vertically striped shorts with a relaxed fit, elastic waistband, and cream drawstring, made from lightweight linen or cotton fabric, perfect for beach outings or summer wear.",
+    "category": [
+      "bottomwear",
+      "shorts",
+      "casual"
+    ],
+    "color": [
+      "white",
+      "blue",
+      "cream"
+    ],
+    "style": [
+      "casual",
+      "summer",
+      "relaxed",
+      "beachwear"
+    ],
+    "search_text": "Relaxed fit casual shorts featuring white and blue vertical stripes with an elastic waistband and cream drawstring, made from lightweight linen or cotton, ideal for summer and beach outings.",
+    "raw_caption": "These are casual, white and blue vertically striped shorts with a relaxed fit, an elastic waistband with a cream drawstring, likely made from a lightweight linen or cotton fabric, suitable for beach outings or casual summer wear."
+  },
+  {
+    "item_id": "item_059",
+    "filename": "item_059.jpg",
+    "image_path": "data/uploaded_images/item_059.jpg",
+    "status": "metadata_generated",
+    "caption": "A loose-fit, short-sleeve button-up shirt featuring a teal, beige, and dark blue abstract paisley pattern, made of lightweight cotton or rayon, ideal for casual or beachwear.",
+    "category": [
+      "shirt",
+      "upperwear"
+    ],
+    "color": [
+      "teal",
+      "beige",
+      "dark blue"
+    ],
+    "style": [
+      "casual",
+      "summer",
+      "beachwear",
+      "lightweight"
+    ],
+    "search_text": "Loose-fit short-sleeve button-up shirt with teal, beige, and dark blue abstract paisley pattern, lightweight cotton or rayon fabric, perfect for casual summer or beachwear styles.",
+    "raw_caption": "The main clothing item is a loose-fit, short-sleeve button-up shirt with a teal, beige, and dark blue abstract paisley pattern, likely made of lightweight cotton or rayon, perfect for casual or beachwear."
+  },
+  {
+    "item_id": "item_060",
+    "filename": "item_060.jpg",
+    "image_path": "data/uploaded_images/item_060.jpg",
+    "status": "metadata_generated",
+    "caption": "Light gray, straight-fit denim jeans with a classic five-pocket design, made from cotton fabric, ideal for casual and everyday wear.",
+    "category": [
+      "jeans",
+      "bottomwear",
+      "denim"
+    ],
+    "color": [
+      "light gray"
+    ],
+    "style": [
+      "casual",
+      "daily wear"
+    ],
+    "search_text": "Light gray straight-fit cotton denim jeans featuring a classic five-pocket design, perfect for casual and everyday occasions.",
+    "raw_caption": "These are light gray, straight-fit denim jeans with a classic five-pocket design, made from cotton fabric, suitable for casual or everyday wear."
+  },
+  {
+    "item_id": "item_061",
+    "filename": "item_061.jpg",
+    "image_path": "data/uploaded_images/item_061.jpg",
+    "status": "metadata_generated",
+    "caption": "White short-sleeve crew neck graphic T-shirt with a bold black and red stylized anime print, made from cotton or a cotton blend, ideal for casual wear or fandom events.",
+    "category": [
+      "t-shirt",
+      "shirt",
+      "upperwear"
+    ],
+    "color": [
+      "white",
+      "black",
+      "red"
+    ],
+    "style": [
+      "casual",
+      "streetwear",
+      "daily wear",
+      "fandom"
+    ],
+    "search_text": "White short-sleeve crew neck graphic T-shirt featuring a bold black and red anime print, made of cotton blend, perfect for casual and fandom event wear.",
+    "raw_caption": "This is a white short-sleeve crew neck graphic T-shirt featuring a bold, stylized anime print in black and red, likely made from cotton or a cotton blend, suitable for casual wear or fandom events."
+  },
+  {
+    "item_id": "item_062",
+    "filename": "item_062.jpg",
+    "image_path": "data/uploaded_images/item_062.jpg",
+    "status": "metadata_generated",
+    "caption": "Loose-fitting, gray-scale camouflage cargo pants made from durable cotton or cotton-blend fabric, ideal for casual and streetwear looks.",
+    "category": [
+      "cargo pants",
+      "bottomwear",
+      "trousers"
+    ],
+    "color": [
+      "gray",
+      "black",
+      "white"
+    ],
+    "style": [
+      "casual",
+      "streetwear",
+      "daily wear"
+    ],
+    "search_text": "Loose-fitting gray-scale camouflage cargo pants made from durable cotton fabric perfect for casual or streetwear outfits.",
+    "raw_caption": "These are loose-fitting, gray-scale camouflage cargo pants made from a durable, likely cotton or cotton-blend fabric, suitable for casual or streetwear settings."
+  },
+  {
+    "item_id": "item_063",
+    "filename": "item_063.jpg",
+    "image_path": "data/uploaded_images/item_063.jpg",
+    "status": "metadata_generated",
+    "caption": "Light blue men's swim shorts with dark blue sea turtle and starfish pattern, relaxed fit, elastic waistband, white drawstring, made from quick-drying polyester, ideal for beach or poolside.",
+    "category": [
+      "men's swim shorts",
+      "bottomwear",
+      "beachwear"
+    ],
+    "color": [
+      "light blue",
+      "dark blue",
+      "white"
+    ],
+    "style": [
+      "casual",
+      "summer",
+      "sporty",
+      "relaxed fit"
+    ],
+    "search_text": "Men's light blue swim shorts featuring a dark blue sea turtle and starfish pattern, relaxed fit with elastic waistband and white drawstring, made from quick-drying polyester, perfect for beach and poolside wear.",
+    "raw_caption": "The clothing item is a pair of light blue men's swim shorts featuring a dark blue sea turtle and starfish pattern, a relaxed fit with an elastic waistband and white drawstring, likely made from quick-drying polyester, suitable for beach or poolside wear."
+  },
+  {
+    "item_id": "item_064",
+    "filename": "item_064.jpg",
+    "image_path": "data/uploaded_images/item_064.jpg",
+    "status": "metadata_generated",
+    "caption": "A pair of slim-fit navy blue dress pants made from a smooth cotton blend fabric, ideal for formal or office wear.",
+    "category": [
+      "trousers",
+      "bottomwear"
+    ],
+    "color": [
+      "navy blue"
+    ],
+    "style": [
+      "slim-fit",
+      "formal",
+      "office"
+    ],
+    "search_text": "Slim-fit navy blue dress pants crafted from smooth cotton blend fabric perfect for formal and office occasions.",
+    "raw_caption": "The clothing item is a pair of slim-fit, navy blue dress pants made from a smooth, likely cotton blend fabric, suitable for formal or office wear."
+  },
+  {
+    "item_id": "item_065",
+    "filename": "item_065.jpg",
+    "image_path": "data/uploaded_images/item_065.jpg",
+    "status": "metadata_generated",
+    "caption": "A light blue tailored slim fit blazer made from linen or a linen blend, ideal for business casual or semi-formal daytime occasions.",
+    "category": [
+      "jacket",
+      "upperwear"
+    ],
+    "color": [
+      "light blue"
+    ],
+    "style": [
+      "slim fit",
+      "business casual",
+      "semi-formal",
+      "daytime"
+    ],
+    "search_text": "Light blue tailored slim fit linen blazer suitable for business casual and semi-formal daytime events.",
+    "raw_caption": "The main clothing item is a light blue tailored blazer with a slim fit, likely made of linen or a linen blend, suitable for business casual settings or semi-formal daytime events."
+  },
+  {
+    "item_id": "item_066",
+    "filename": "item_066.jpg",
+    "image_path": "data/uploaded_images/item_066.jpg",
+    "status": "metadata_generated",
+    "caption": "Light gray slim-fit dress pants with a subtle white windowpane check pattern, made from a lightweight wool blend, ideal for professional or formal occasions.",
+    "category": [
+      "trousers",
+      "bottomwear",
+      "formal"
+    ],
+    "color": [
+      "light gray",
+      "white"
+    ],
+    "style": [
+      "slim-fit",
+      "formal",
+      "professional",
+      "lightweight"
+    ],
+    "search_text": "Light gray slim-fit dress pants featuring a subtle white windowpane check pattern, crafted from a lightweight wool blend, suitable for formal and professional settings.",
+    "raw_caption": "These are light gray slim-fit dress pants with a subtle white windowpane check pattern, likely made from a lightweight wool blend, suitable for professional or formal occasions."
+  },
+  {
+    "item_id": "item_067",
+    "filename": "item_067.jpg",
+    "image_path": "data/uploaded_images/item_067.jpg",
+    "status": "metadata_generated",
+    "caption": "A casual, loose-fit button-up shirt in green and beige plaid, made of soft cotton flannel, ideal for relaxed everyday wear or casual outings.",
+    "category": [
+      "shirt",
+      "upperwear",
+      "button-up"
+    ],
+    "color": [
+      "green",
+      "beige"
+    ],
+    "style": [
+      "casual",
+      "loose-fit",
+      "everyday wear"
+    ],
+    "search_text": "Casual loose-fit green and beige plaid button-up shirt made from soft cotton flannel, perfect for relaxed and everyday casual outings.",
+    "raw_caption": "The main clothing item is a casual, loose-fit button-up shirt in a green and beige plaid pattern, likely made of soft cotton flannel, suitable for relaxed, everyday wear or casual outings."
+  },
+  {
+    "item_id": "item_068",
+    "filename": "item_068.jpg",
+    "image_path": "data/uploaded_images/item_068.jpg",
+    "status": "metadata_generated",
+    "caption": "Light green athletic shorts with a relaxed fit, elastic waistband, side pockets with reflective accents, and breathable mesh panels made from lightweight synthetic fabric, ideal for running or gym workouts.",
+    "category": [
+      "bottomwear",
+      "shorts",
+      "athletic wear"
+    ],
+    "color": [
+      "light green"
+    ],
+    "style": [
+      "sporty",
+      "casual",
+      "breathable",
+      "lightweight"
+    ],
+    "search_text": "Light green relaxed fit athletic shorts with elastic waistband, side reflective pockets, and breathable mesh panels, perfect for running and gym workouts.",
+    "raw_caption": "These are light green athletic shorts with a relaxed fit, featuring an elastic waistband, side pockets with reflective accents, and breathable mesh panels, likely made from a lightweight synthetic fabric ideal for running or gym workouts."
+  },
+  {
+    "item_id": "item_069",
+    "filename": "item_069.jpg",
+    "image_path": "data/uploaded_images/item_069.jpg",
+    "status": "metadata_generated",
+    "caption": "A slim-fit short-sleeve knit polo shirt with vertical beige, olive green, and white color-block stripes, featuring a front zipper, made of cotton blend, ideal for casual or smart-casual occasions.",
+    "category": [
+      "shirt",
+      "upperwear",
+      "polo shirt"
+    ],
+    "color": [
+      "beige",
+      "olive green",
+      "white"
+    ],
+    "style": [
+      "casual",
+      "smart-casual",
+      "summer"
+    ],
+    "search_text": "Slim-fit short-sleeve knit polo shirt with vertical beige, olive green, and white stripes, zipper front, suitable for casual and smart-casual wear.",
+    "raw_caption": "The clothing item is a short-sleeve knit polo shirt with vertical color-block stripes in beige, olive green, and white, featuring a zipper front, a slim fit, likely made of cotton or a cotton blend, suitable for casual or smart-casual occasions."
+  },
+  {
+    "item_id": "item_070",
+    "filename": "item_070.jpg",
+    "image_path": "data/uploaded_images/item_070.jpg",
+    "status": "metadata_generated",
+    "caption": "A pair of loose-fit, tie-dye patterned pants in white and dark blue, made of cotton, suitable for casual and streetwear occasions.",
+    "category": [
+      "bottomwear",
+      "trousers"
+    ],
+    "color": [
+      "white",
+      "dark blue"
+    ],
+    "style": [
+      "casual",
+      "streetwear",
+      "loose-fit"
+    ],
+    "search_text": "Loose-fit cotton pants featuring a white and dark blue tie-dye pattern, ideal for casual and streetwear styles.",
+    "raw_caption": "The visible clothing item is a pair of loose-fit, tie-dye patterned pants in white and dark blue, likely made of cotton, suitable for casual or streetwear occasions."
+  },
+  {
+    "item_id": "item_071",
+    "filename": "item_071.jpg",
+    "image_path": "data/uploaded_images/item_071.jpg",
+    "status": "metadata_generated",
+    "caption": "A loose-fitting, long-sleeve polo shirt in muted beige with a classic collar and button placket, made of cotton or a cotton blend, ideal for casual or smart-casual occasions.",
+    "category": [
+      "shirt",
+      "upperwear"
+    ],
+    "color": [
+      "beige"
+    ],
+    "style": [
+      "casual",
+      "smart-casual",
+      "comfortable"
+    ],
+    "search_text": "Loose long-sleeve beige polo shirt with classic collar and buttons, cotton blend fabric, perfect for casual and smart-casual wear.",
+    "raw_caption": "This is a loose-fitting, long-sleeve polo shirt in a muted beige color, likely made of cotton or a cotton blend, featuring a classic collar and button placket, suitable for casual or smart-casual wear."
+  },
+  {
+    "item_id": "item_072",
+    "filename": "item_072.jpg",
+    "image_path": "data/uploaded_images/item_072.jpg",
+    "status": "metadata_generated",
+    "caption": "A long-sleeve crewneck sweatshirt with a navy to white ombre gradient, made from a soft cotton blend fabric, featuring a relaxed fit ideal for casual or athleisure wear.",
+    "category": [
+      "sweatshirt",
+      "upperwear",
+      "casual wear"
+    ],
+    "color": [
+      "navy",
+      "white"
+    ],
+    "style": [
+      "casual",
+      "athleisure",
+      "relaxed fit"
+    ],
+    "search_text": "Long-sleeve navy and white ombre crewneck sweatshirt in soft cotton blend fabric with relaxed fit perfect for casual and athleisure styles.",
+    "raw_caption": "This is a long-sleeve crewneck sweatshirt featuring a navy to white ombre gradient pattern, likely made of a soft cotton blend fabric, with a relaxed fit suitable for casual or athleisure wear."
+  },
+  {
+    "item_id": "item_073",
+    "filename": "item_073.jpg",
+    "image_path": "data/uploaded_images/item_073.jpg",
+    "status": "metadata_generated",
+    "caption": "A pair of dark blue straight-fit denim jeans with slight fading and contrast stitching, made from cotton denim fabric, suitable for casual and semi-casual wear.",
+    "category": [
+      "jeans",
+      "bottomwear",
+      "denim"
+    ],
+    "color": [
+      "dark blue"
+    ],
+    "style": [
+      "casual",
+      "semi-casual",
+      "straight-fit"
+    ],
+    "search_text": "Dark blue straight-fit cotton denim jeans with slight fading and contrast stitching, ideal for casual and semi-casual occasions.",
+    "raw_caption": "The clothing item is a pair of dark blue straight-fit denim jeans with slight fading and contrast stitching, likely made from cotton denim fabric, suitable for casual and semi-casual wear."
+  },
+  {
+    "item_id": "item_074",
+    "filename": "item_074.jpg",
+    "image_path": "data/uploaded_images/item_074.jpg",
+    "status": "metadata_generated",
+    "caption": "A navy blue, long-sleeve button-down shirt with a slim fit and a single chest pocket, made of cotton or a cotton blend, ideal for casual and semi-formal occasions.",
+    "category": [
+      "shirt",
+      "upperwear"
+    ],
+    "color": [
+      "navy blue"
+    ],
+    "style": [
+      "casual",
+      "semi-formal",
+      "slim fit"
+    ],
+    "search_text": "Navy blue long-sleeve slim fit button-down shirt with chest pocket made from cotton, suitable for casual and semi-formal wear.",
+    "raw_caption": "This is a navy blue, long-sleeve button-down shirt with a single chest pocket, featuring a slim fit and likely made of cotton or a cotton blend, suitable for both casual and semi-formal occasions."
+  },
+  {
+    "item_id": "item_075",
+    "filename": "item_075.jpg",
+    "image_path": "data/uploaded_images/item_075.jpg",
+    "status": "metadata_generated",
+    "caption": "A fitted black blazer with a satin lapel and an artistic white paint splatter pattern, made from wool or a wool blend, ideal for fashionable evening events or high-end parties.",
+    "category": [
+      "jacket",
+      "upperwear"
+    ],
+    "color": [
+      "black",
+      "white"
+    ],
+    "style": [
+      "formal",
+      "party",
+      "fashionable",
+      "evening"
+    ],
+    "search_text": "Fitted black wool blazer with satin lapel and white paint splatter pattern, perfect for formal evening events and high-end parties.",
+    "raw_caption": "The clothing item is a fitted black blazer with a satin lapel, featuring an artistic white paint splatter pattern, likely made of wool or a wool blend, suitable for fashionable evening events or high-end parties."
+  },
+  {
+    "item_id": "item_076",
+    "filename": "item_076.jpg",
+    "image_path": "data/uploaded_images/item_076.jpg",
+    "status": "metadata_generated",
+    "caption": "Light blue short-sleeve Hawaiian-style shirt with white tropical leaf pattern, relaxed fit, made of lightweight cotton or linen, ideal for casual beachwear and summer outings.",
+    "category": [
+      "shirt",
+      "upperwear"
+    ],
+    "color": [
+      "light blue",
+      "white"
+    ],
+    "style": [
+      "casual",
+      "summer",
+      "beachwear",
+      "relaxed fit"
+    ],
+    "search_text": "Light blue Hawaiian short-sleeve shirt with white tropical leaf pattern, relaxed fit, lightweight cotton or linen fabric, perfect for casual beach and summer wear.",
+    "raw_caption": "The main clothing item is a light blue, short-sleeve Hawaiian-style shirt with a white tropical leaf pattern, a relaxed fit, likely made of lightweight cotton or linen, suitable for casual beachwear or summer outings."
+  },
+  {
+    "item_id": "item_077",
+    "filename": "item_077.jpg",
+    "image_path": "data/uploaded_images/item_077.jpg",
+    "status": "metadata_generated",
+    "caption": "A light pink and white long-sleeved mandarin collar shirt with an intricate floral motif pattern, relaxed fit, made of cotton, ideal for casual or semi-formal occasions.",
+    "category": [
+      "shirt",
+      "upperwear"
+    ],
+    "color": [
+      "light pink",
+      "white"
+    ],
+    "style": [
+      "casual",
+      "semi-formal",
+      "relaxed fit",
+      "cotton"
+    ],
+    "search_text": "Light pink and white mandarin collar shirt featuring a floral motif, long sleeves, relaxed cotton fabric, perfect for casual and semi-formal wear.",
+    "raw_caption": "The visible clothing item is a light pink and white, long-sleeved, mandarin collar shirt with an intricate floral motif pattern, a relaxed fit likely made of cotton fabric, suitable for casual or semi-formal occasions."
+  },
+  {
+    "item_id": "item_078",
+    "filename": "item_078.jpg",
+    "image_path": "data/uploaded_images/item_078.jpg",
+    "status": "metadata_generated",
+    "caption": "A navy blue slim fit crewneck sweater made of soft knit fabric with a small green logo on the chest, ideal for casual to smart-casual occasions.",
+    "category": [
+      "upperwear",
+      "sweater"
+    ],
+    "color": [
+      "navy blue",
+      "green"
+    ],
+    "style": [
+      "casual",
+      "smart-casual",
+      "slim fit"
+    ],
+    "search_text": "Navy blue slim fit crewneck sweater in soft knit fabric with small green chest logo, suitable for casual and smart-casual occasions.",
+    "raw_caption": "The main clothing item is a navy blue crewneck sweater with a slim fit, likely made of a soft knit fabric, featuring a small green logo on the chest, suitable for casual to smart-casual settings such as a day out by the sea or relaxed social gatherings."
+  },
+  {
+    "item_id": "item_079",
+    "filename": "item_079.jpg",
+    "image_path": "data/uploaded_images/item_079.jpg",
+    "status": "metadata_generated",
+    "caption": "A pair of loose-fitting gray cargo pants with multiple pockets, made from durable cotton or cotton-blend fabric, ideal for casual or outdoor wear.",
+    "category": [
+      "bottomwear",
+      "trousers",
+      "cargo pants"
+    ],
+    "color": [
+      "gray"
+    ],
+    "style": [
+      "casual",
+      "outdoor",
+      "comfortable"
+    ],
+    "search_text": "Loose-fitting gray cargo pants made from durable cotton blend, featuring multiple pockets, perfect for casual and outdoor activities.",
+    "raw_caption": "The clothing item is a pair of loose-fitting gray cargo pants with multiple pockets, likely made of durable cotton or cotton-blend fabric, suitable for casual or outdoor wear."
+  },
+  {
+    "item_id": "item_080",
+    "filename": "item_080.jpg",
+    "image_path": "data/uploaded_images/item_080.jpg",
+    "status": "metadata_generated",
+    "caption": "Light blue sleeveless muscle tank top with a small black palm tree graphic on the chest, relaxed fit, made of soft cotton fabric, ideal for casual outdoor or beachwear.",
+    "category": [
+      "tank top",
+      "sleeveless top",
+      "upperwear"
+    ],
+    "color": [
+      "light blue",
+      "black"
+    ],
+    "style": [
+      "casual",
+      "summer",
+      "beachwear",
+      "relaxed fit"
+    ],
+    "search_text": "Light blue sleeveless muscle tank top featuring a small black palm tree graphic, soft cotton material, relaxed fit, perfect for casual summer outdoor and beachwear.",
+    "raw_caption": "The main clothing item is a light blue sleeveless muscle tank top with a small black palm tree graphic on the chest, featuring a relaxed fit and likely made of soft cotton fabric, suitable for casual outdoor or beachwear."
+  },
+  {
+    "item_id": "item_081",
+    "filename": "item_081.jpg",
+    "image_path": "data/uploaded_images/item_081.jpg",
+    "status": "metadata_generated",
+    "caption": "A dark brown button-up cardigan with a regular fit, knit fabric, featuring front patch pockets, ideal for casual or smart-casual occasions.",
+    "category": [
+      "upperwear",
+      "cardigan",
+      "knitwear"
+    ],
+    "color": [
+      "dark brown"
+    ],
+    "style": [
+      "casual",
+      "smart-casual",
+      "regular fit"
+    ],
+    "search_text": "Dark brown knit cardigan with button-up front and patch pockets, perfect for casual and smart-casual wear.",
+    "raw_caption": "The main clothing item is a dark brown button-up cardigan with a regular fit, made of a knit fabric, featuring front patch pockets, suitable for casual or smart-casual wear."
+  },
+  {
+    "item_id": "item_082",
+    "filename": "item_082.jpg",
+    "image_path": "data/uploaded_images/item_082.jpg",
+    "status": "metadata_generated",
+    "caption": "Navy blue, pleated, straight-leg dress trousers made from wool or wool-blend fabric with a classic fit, perfect for formal or professional settings.",
+    "category": [
+      "trousers",
+      "bottomwear",
+      "dress"
+    ],
+    "color": [
+      "navy blue"
+    ],
+    "style": [
+      "formal",
+      "professional",
+      "classic"
+    ],
+    "search_text": "Navy blue pleated straight-leg wool or wool-blend dress trousers with a classic fit ideal for formal and professional occasions.",
+    "raw_caption": "These are navy blue, pleated, straight-leg dress trousers made from a likely wool or wool-blend fabric, featuring a classic fit suitable for formal or professional settings."
+  },
+  {
+    "item_id": "item_083",
+    "filename": "item_083.jpg",
+    "image_path": "data/uploaded_images/item_083.jpg",
+    "status": "metadata_generated",
+    "caption": "A black padded bomber jacket with a zip-up front, elastic cuffs, and a relaxed fit, made from synthetic fabric ideal for casual or cold weather wear.",
+    "category": [
+      "jacket",
+      "upperwear"
+    ],
+    "color": [
+      "black"
+    ],
+    "style": [
+      "casual",
+      "winter",
+      "streetwear",
+      "relaxed fit"
+    ],
+    "search_text": "Black padded bomber jacket featuring a zip-up front, elastic cuffs, and relaxed fit, perfect synthetic fabric for casual and cold weather outings.",
+    "raw_caption": "The clothing item is a black, padded bomber jacket with a zip-up front, elastic cuffs, and a relaxed fit, likely made from a synthetic fabric suitable for casual wear or cold weather outings."
+  },
+  {
+    "item_id": "item_084",
+    "filename": "item_084.jpg",
+    "image_path": "data/uploaded_images/item_084.jpg",
+    "status": "metadata_generated",
+    "caption": "Light blue button-up shirt with vertical white stripes, classic collar, chest pocket, and relaxed fit, made from cotton fabric, ideal for casual or business casual wear.",
+    "category": [
+      "shirt",
+      "upperwear"
+    ],
+    "color": [
+      "light blue",
+      "white"
+    ],
+    "style": [
+      "casual",
+      "business casual",
+      "relaxed fit"
+    ],
+    "search_text": "Light blue and white striped button-up cotton shirt with classic collar and chest pocket, suitable for casual and business casual occasions.",
+    "raw_caption": "This is a light blue button-up shirt with vertical white stripes, featuring a classic collar, chest pocket, and a relaxed fit likely made from cotton fabric, suitable for casual or business casual wear."
+  },
+  {
+    "item_id": "item_085",
+    "filename": "item_085.jpg",
+    "image_path": "data/uploaded_images/item_085.jpg",
+    "status": "metadata_generated",
+    "caption": "Off-white, high-waisted straight-fit trousers with a pleated front, made of smooth, lightweight fabric suitable for smart casual or semi-formal occasions.",
+    "category": [
+      "trousers",
+      "bottomwear"
+    ],
+    "color": [
+      "off-white"
+    ],
+    "style": [
+      "smart casual",
+      "semi-formal",
+      "lightweight"
+    ],
+    "search_text": "Off-white high-waisted straight-fit trousers with pleats, crafted from smooth lightweight fabric, ideal for smart casual and semi-formal wear.",
+    "raw_caption": "These are off-white, high-waisted, straight-fit trousers with a pleated front, likely made of a smooth, lightweight fabric such as cotton or a cotton blend, suitable for smart casual or semi-formal occasions."
+  },
+  {
+    "item_id": "item_086",
+    "filename": "item_086.jpg",
+    "image_path": "data/uploaded_images/item_086.jpg",
+    "status": "metadata_generated",
+    "caption": "Oversized short-sleeve crewneck T-shirt in washed olive green with visible seam detailing, made of soft cotton fabric, perfect for casual wear.",
+    "category": [
+      "t-shirt",
+      "upperwear",
+      "casual wear"
+    ],
+    "color": [
+      "olive green"
+    ],
+    "style": [
+      "oversized",
+      "casual",
+      "short-sleeve",
+      "cotton"
+    ],
+    "search_text": "Oversized olive green washed crewneck cotton T-shirt with short sleeves and visible seams, ideal for casual outfits.",
+    "raw_caption": "This is an oversized, short-sleeve crewneck T-shirt in a washed olive green color with visible seam detailing, likely made of soft cotton fabric, suitable for casual wear."
+  },
+  {
+    "item_id": "item_087",
+    "filename": "item_087.jpg",
+    "image_path": "data/uploaded_images/item_087.jpg",
+    "status": "metadata_generated",
+    "caption": "Light blue and white vertically striped slim fit long-sleeve button-down shirt made from cotton, ideal for business casual or formal occasions.",
+    "category": [
+      "shirt",
+      "upperwear",
+      "button-down"
+    ],
+    "color": [
+      "light blue",
+      "white"
+    ],
+    "style": [
+      "formal",
+      "business casual",
+      "slim fit"
+    ],
+    "search_text": "A light blue and white vertically striped slim fit long-sleeve button-down shirt made of cotton, perfect for business casual and formal settings.",
+    "raw_caption": "This is a light blue and white vertically striped long-sleeve button-down shirt with a slim fit, made from cotton fabric, suitable for business casual or formal occasions."
+  },
+  {
+    "item_id": "item_088",
+    "filename": "item_088.jpg",
+    "image_path": "data/uploaded_images/item_088.jpg",
+    "status": "metadata_generated",
+    "caption": "A loose-fit, beige tie-dye hoodie made from soft cotton or fleece fabric, featuring a front kangaroo pocket and drawstring hood, ideal for casual or relaxed settings.",
+    "category": [
+      "hoodie",
+      "upperwear",
+      "casual wear"
+    ],
+    "color": [
+      "beige"
+    ],
+    "style": [
+      "loose-fit",
+      "casual",
+      "relaxed",
+      "tie-dye"
+    ],
+    "search_text": "Loose-fit beige tie-dye hoodie with soft cotton or fleece fabric, front kangaroo pocket, and drawstring hood, perfect for casual and relaxed occasions.",
+    "raw_caption": "The clothing item is a loose-fit, beige tie-dye hoodie made from a soft, likely cotton or fleece fabric, featuring a front kangaroo pocket and drawstring hood, suitable for casual or relaxed settings."
+  },
+  {
+    "item_id": "item_089",
+    "filename": "item_089.jpg",
+    "image_path": "data/uploaded_images/item_089.jpg",
+    "status": "metadata_generated",
+    "caption": "A fitted dark brown leather biker jacket with zippered chest and side pockets, a snap-button collar, and a sleek, slightly textured finish, perfect for casual or semi-casual outings.",
+    "category": [
+      "jacket",
+      "biker jacket",
+      "upperwear"
+    ],
+    "color": [
+      "dark brown"
+    ],
+    "style": [
+      "casual",
+      "semi-casual",
+      "streetwear"
+    ],
+    "search_text": "Dark brown fitted leather biker jacket featuring zippered chest and side pockets, snap-button collar, and a sleek textured finish suitable for casual and semi-casual occasions.",
+    "raw_caption": "This is a fitted dark brown leather biker jacket with zippered chest and side pockets, a snap-button collar, and a sleek, slightly textured finish, ideal for casual or semi-casual outings."
+  },
+  {
+    "item_id": "item_090",
+    "filename": "item_090.jpg",
+    "image_path": "data/uploaded_images/item_090.jpg",
+    "status": "metadata_generated",
+    "caption": "A slim-fit, single-breasted blazer with a bold orange and black paint-splatter pattern, made from smooth wool or wool blend fabric, ideal for high-fashion and avant-garde formal events.",
+    "category": [
+      "jacket",
+      "upperwear",
+      "formal"
+    ],
+    "color": [
+      "orange",
+      "black"
+    ],
+    "style": [
+      "slim-fit",
+      "formal",
+      "avant-garde",
+      "high-fashion"
+    ],
+    "search_text": "Slim-fit single-breasted blazer featuring a bold orange and black paint-splatter pattern crafted from smooth wool or wool blend fabric, perfect for avant-garde and high-fashion formal occasions.",
+    "raw_caption": "The clothing item is a slim-fit, single-breasted blazer with a bold orange and black paint-splatter pattern, likely made from a smooth suit fabric such as wool or a wool blend, suitable for high-fashion events or avant-garde formal occasions."
+  },
+  {
+    "item_id": "item_091",
+    "filename": "item_091.jpg",
+    "image_path": "data/uploaded_images/item_091.jpg",
+    "status": "metadata_generated",
+    "caption": "Navy blue button-up cardigan with a regular fit, made of wool or wool-blend fabric, ideal for casual and smart-casual occasions.",
+    "category": [
+      "cardigan",
+      "upperwear"
+    ],
+    "color": [
+      "navy blue"
+    ],
+    "style": [
+      "casual",
+      "smart-casual",
+      "winter"
+    ],
+    "search_text": "Navy blue regular fit button-up wool cardigan suitable for casual and smart-casual settings.",
+    "raw_caption": "The main clothing item is a navy blue button-up cardigan with a regular fit, likely made of wool or a wool-blend fabric, suitable for casual or smart-casual settings."
+  },
+  {
+    "item_id": "item_092",
+    "filename": "item_092.jpg",
+    "image_path": "data/uploaded_images/item_092.jpg",
+    "status": "metadata_generated",
+    "caption": "A pair of black, straight-leg trousers with a tailored fit made from a smooth fabric blend, suitable for casual to semi-formal occasions.",
+    "category": [
+      "trousers",
+      "bottomwear"
+    ],
+    "color": [
+      "black"
+    ],
+    "style": [
+      "casual",
+      "semi-formal",
+      "tailored"
+    ],
+    "search_text": "black straight-leg tailored trousers made of smooth fabric blend ideal for casual and semi-formal wear",
+    "raw_caption": "The clothing item is a pair of black, straight-leg trousers with a tailored fit, likely made of a smooth fabric blend suitable for casual to semi-formal wear."
+  },
+  {
+    "item_id": "item_093",
+    "filename": "item_093.jpg",
+    "image_path": "data/uploaded_images/item_093.jpg",
+    "status": "metadata_generated",
+    "caption": "A classic white long-sleeve button-up shirt with a tailored fit, made of smooth cotton or cotton blend fabric, ideal for formal or business casual occasions.",
+    "category": [
+      "shirt",
+      "upperwear"
+    ],
+    "color": [
+      "white"
+    ],
+    "style": [
+      "formal",
+      "business casual",
+      "tailored",
+      "classic"
+    ],
+    "search_text": "classic white long-sleeve button-up shirt with a tailored fit made from smooth cotton fabric suitable for formal and business casual settings",
+    "raw_caption": "The clothing item is a classic white long-sleeve button-up shirt with a tailored fit, made of a smooth fabric likely cotton or a cotton blend, suitable for formal or business casual settings."
+  },
+  {
+    "item_id": "item_094",
+    "filename": "item_094.jpg",
+    "image_path": "data/uploaded_images/item_094.jpg",
+    "status": "metadata_generated",
+    "caption": "A slim-fit, long-sleeve, button-up pink shirt with vertical white stripes, made of lightweight cotton or cotton-blend fabric, suitable for casual or smart-casual occasions.",
+    "category": [
+      "shirt",
+      "upperwear",
+      "button-up"
+    ],
+    "color": [
+      "pink",
+      "white"
+    ],
+    "style": [
+      "slim-fit",
+      "casual",
+      "smart-casual",
+      "long-sleeve"
+    ],
+    "search_text": "Slim-fit pink button-up shirt with vertical white stripes, long sleeves, lightweight cotton fabric, ideal for casual and smart-casual settings.",
+    "raw_caption": "The clothing item is a slim-fit, long-sleeve, button-up shirt in pink with vertical white stripes, likely made of a lightweight cotton or cotton-blend fabric, suitable for casual or smart-casual settings."
+  },
+  {
+    "item_id": "item_095",
+    "filename": "item_095.jpg",
+    "image_path": "data/uploaded_images/item_095.jpg",
+    "status": "metadata_generated",
+    "caption": "A brown suede jacket with a relaxed fit, minimalist design, and zip closure, ideal for casual or smart-casual occasions.",
+    "category": [
+      "jacket",
+      "upperwear"
+    ],
+    "color": [
+      "brown"
+    ],
+    "style": [
+      "casual",
+      "smart-casual",
+      "minimal"
+    ],
+    "search_text": "Brown suede jacket featuring a relaxed fit, minimalist style, and zip closure, perfect for casual and smart-casual outings.",
+    "raw_caption": "The image shows a brown suede jacket with a relaxed fit, minimalist design, and zip closure, suitable for casual or smart-casual outings."
+  },
+  {
+    "item_id": "item_096",
+    "filename": "item_096.jpg",
+    "image_path": "data/uploaded_images/item_096.jpg",
+    "status": "metadata_generated",
+    "caption": "A beige, textured, slim-fit blazer with a band collar and wooden buttons, made from linen or a linen blend, ideal for smart casual or semi-formal occasions.",
+    "category": [
+      "jacket",
+      "upperwear",
+      "blazer"
+    ],
+    "color": [
+      "beige"
+    ],
+    "style": [
+      "smart casual",
+      "semi-formal",
+      "slim-fit",
+      "textured"
+    ],
+    "search_text": "Beige slim-fit linen blazer with band collar and wooden buttons, perfect for smart casual or semi-formal wear.",
+    "raw_caption": "The main clothing item is a beige, textured, slim-fit blazer with a band collar and wooden buttons, likely made of linen or a linen blend, suitable for smart casual or semi-formal occasions."
+  },
+  {
+    "item_id": "item_097",
+    "filename": "item_097.jpg",
+    "image_path": "data/uploaded_images/item_097.jpg",
+    "status": "metadata_generated",
+    "caption": "Long-sleeve button-up shirt in solid warm brown with a classic collar, made from medium-weight cotton or cotton blend fabric, featuring a regular fit suitable for casual or smart-casual wear.",
+    "category": [
+      "shirt",
+      "upperwear"
+    ],
+    "color": [
+      "warm brown"
+    ],
+    "style": [
+      "casual",
+      "smart-casual",
+      "regular fit"
+    ],
+    "search_text": "Long-sleeve warm brown button-up shirt with classic collar in medium-weight cotton fabric, perfect for casual and smart-casual occasions.",
+    "raw_caption": "This is a long-sleeve, button-up shirt in a solid warm brown color with a classic collar, made from a medium-weight fabric likely cotton or a cotton blend, featuring a regular fit suitable for casual or smart-casual wear."
+  },
+  {
+    "item_id": "item_098",
+    "filename": "item_098.jpg",
+    "image_path": "data/uploaded_images/item_098.jpg",
+    "status": "metadata_generated",
+    "caption": "Light blue, straight-fit denim jeans with a classic plain pattern, made of cotton, suitable for casual and everyday wear.",
+    "category": [
+      "jeans",
+      "bottomwear",
+      "denim"
+    ],
+    "color": [
+      "light blue"
+    ],
+    "style": [
+      "casual",
+      "daily wear",
+      "straight-fit"
+    ],
+    "search_text": "Light blue straight-fit denim jeans made of cotton with a classic plain pattern, perfect for casual and everyday use.",
+    "raw_caption": "These are light blue, straight-fit denim jeans with a classic plain pattern, likely made of cotton, suitable for casual and everyday wear."
+  },
+  {
+    "item_id": "item_099",
+    "filename": "item_099.jpg",
+    "image_path": "data/uploaded_images/item_099.jpg",
+    "status": "metadata_generated",
+    "caption": "A cream-colored, cable-knit pullover sweater with a half-zip collar, relaxed fit, made of wool or wool blend, ideal for casual and semi-casual cooler weather.",
+    "category": [
+      "upperwear",
+      "pullover",
+      "sweater"
+    ],
+    "color": [
+      "cream"
+    ],
+    "style": [
+      "casual",
+      "semi-casual",
+      "winter",
+      "relaxed fit"
+    ],
+    "search_text": "Cream cable-knit wool blend pullover sweater with half-zip collar, relaxed fit, suitable for casual and semi-casual outfits in cooler weather.",
+    "raw_caption": "The main clothing item is a cream-colored, cable-knit pullover sweater with a half-zip collar, featuring a relaxed fit and likely made of wool or a wool blend, suitable for casual or semi-casual outings in cooler weather."
+  },
+  {
+    "item_id": "item_100",
+    "filename": "item_100.jpg",
+    "image_path": "data/uploaded_images/item_100.jpg",
+    "status": "metadata_generated",
+    "caption": "A long-sleeve, button-up shirt with a modern fit in shades of blue and a geometric checkered pattern, made from lightweight cotton, ideal for casual or semi-formal daytime wear.",
+    "category": [
+      "shirt",
+      "upperwear"
+    ],
+    "color": [
+      "blue"
+    ],
+    "style": [
+      "casual",
+      "semi-formal",
+      "daytime",
+      "modern fit"
+    ],
+    "search_text": "Long-sleeve button-up modern fit blue checkered shirt made from lightweight cotton suitable for casual and semi-formal daytime occasions.",
+    "raw_caption": "The clothing item is a long-sleeve, button-up shirt with a modern fit in shades of blue featuring a geometric checkered pattern, likely made from lightweight cotton, suitable for casual or semi-formal daytime wear."
+  },
+  {
+    "item_id": "item_101",
+    "filename": "item_101.jpg",
+    "image_path": "data/uploaded_images/item_101.jpg",
+    "status": "metadata_generated",
+    "caption": "A short-sleeve button-up shirt with a vibrant multicolored marble pattern in pink, red, purple, turquoise, and cream, made from a lightweight fabric like cotton or viscose, offering a relaxed fit perfect for casual or summer wear.",
+    "category": [
+      "shirt",
+      "upperwear"
+    ],
+    "color": [
+      "pink",
+      "red",
+      "purple",
+      "turquoise",
+      "cream"
+    ],
+    "style": [
+      "casual",
+      "summer",
+      "relaxed fit"
+    ],
+    "search_text": "Short-sleeve button-up shirt featuring a multicolored marble pattern in pink, red, purple, turquoise, and cream, crafted from lightweight cotton or viscose fabric, designed for a relaxed fit ideal for casual and summer occasions.",
+    "raw_caption": "The clothing item is a short-sleeve button-up shirt featuring a vibrant, multicolored marble pattern in shades of pink, red, purple, turquoise, and cream, likely made from a lightweight fabric such as cotton or viscose, offering a relaxed fit ideal for casual or summer outings."
+  },
+  {
+    "item_id": "item_102",
+    "filename": "item_102.jpg",
+    "image_path": "data/uploaded_images/item_102.jpg",
+    "status": "metadata_generated",
+    "caption": "A fitted, long-sleeve, button-up shirt in solid dark blue with a subtle textured fabric, suitable for casual or smart-casual occasions.",
+    "category": [
+      "shirt",
+      "upperwear"
+    ],
+    "color": [
+      "dark blue"
+    ],
+    "style": [
+      "fitted",
+      "casual",
+      "smart-casual"
+    ],
+    "search_text": "A fitted long-sleeve button-up shirt in solid dark blue with textured fabric ideal for casual and smart-casual looks.",
+    "raw_caption": "This is a fitted, long-sleeve, button-up shirt in solid dark blue with a subtle textured fabric, appropriate for casual or smart-casual occasions."
+  },
+  {
+    "item_id": "item_103",
+    "filename": "item_103.jpg",
+    "image_path": "data/uploaded_images/item_103.jpg",
+    "status": "metadata_generated",
+    "caption": "Black utility vest with multiple zippered and flap pockets, mesh back panel, relaxed fit, made from lightweight durable nylon, ideal for outdoor and casual wear.",
+    "category": [
+      "vest",
+      "upperwear",
+      "outerwear"
+    ],
+    "color": [
+      "black"
+    ],
+    "style": [
+      "casual",
+      "outdoor",
+      "utility",
+      "sporty"
+    ],
+    "search_text": "Black utility vest featuring multiple zippered and flap pockets, a mesh back panel, relaxed fit, made from lightweight durable nylon fabric, perfect for outdoor activities and casual wear.",
+    "raw_caption": "This black utility vest features multiple zippered and flap pockets, a mesh back panel, and a relaxed fit, likely made from a lightweight, durable nylon fabric, suitable for outdoor activities or casual wear."
+  },
+  {
+    "item_id": "item_104",
+    "filename": "item_104.jpg",
+    "image_path": "data/uploaded_images/item_104.jpg",
+    "status": "metadata_generated",
+    "caption": "A beige and white plaid button-up shirt with a relaxed fit, made of lightweight cotton or linen, ideal for casual or semi-casual warm weather outings.",
+    "category": [
+      "shirt",
+      "upperwear"
+    ],
+    "color": [
+      "beige",
+      "white"
+    ],
+    "style": [
+      "casual",
+      "semi-casual",
+      "summer",
+      "lightweight"
+    ],
+    "search_text": "Beige and white plaid button-up shirt with relaxed fit, lightweight cotton or linen fabric, perfect for casual and semi-casual summer wear.",
+    "raw_caption": "The main clothing item is a beige and white plaid button-up shirt with a relaxed fit, likely made of lightweight cotton or linen, suitable for casual or semi-casual outings in warm weather."
+  },
+  {
+    "item_id": "item_105",
+    "filename": "item_105.jpg",
+    "image_path": "data/uploaded_images/item_105.jpg",
+    "status": "metadata_generated",
+    "caption": "Mid-length charcoal gray athletic shorts with a relaxed fit, made from lightweight, moisture-wicking fabric, featuring a zippered pocket and reflective dot details, ideal for workouts or casual outdoor activities.",
+    "category": [
+      "bottomwear",
+      "athletic shorts",
+      "casual"
+    ],
+    "color": [
+      "charcoal gray"
+    ],
+    "style": [
+      "sporty",
+      "casual",
+      "lightweight",
+      "activewear"
+    ],
+    "search_text": "Charcoal gray mid-length athletic shorts with relaxed fit, moisture-wicking fabric, zippered pocket, and reflective dots, perfect for workouts and casual outdoor use.",
+    "raw_caption": "These are mid-length charcoal gray athletic shorts with a relaxed fit, likely made from a lightweight, moisture-wicking fabric, featuring a zippered pocket and reflective dot details, suitable for workouts or casual outdoor activities."
+  },
+  {
+    "item_id": "item_106",
+    "filename": "item_106.jpg",
+    "image_path": "data/uploaded_images/item_106.jpg",
+    "status": "metadata_generated",
+    "caption": "Loose-fit olive green cargo pants with multiple flap pockets and button details, made from durable cotton or cotton-blend fabric, ideal for casual or streetwear occasions.",
+    "category": [
+      "bottomwear",
+      "cargo pants",
+      "trousers"
+    ],
+    "color": [
+      "olive green"
+    ],
+    "style": [
+      "casual",
+      "streetwear",
+      "comfortable",
+      "durable"
+    ],
+    "search_text": "Loose-fit olive green cargo pants featuring multiple flap pockets and button details, crafted from durable cotton or cotton-blend fabric, perfect for casual and streetwear styles.",
+    "raw_caption": "These are loose-fit olive green cargo pants with multiple flap pockets and button details, likely made from a durable cotton or cotton-blend fabric, suitable for casual or streetwear occasions."
+  }
+]
