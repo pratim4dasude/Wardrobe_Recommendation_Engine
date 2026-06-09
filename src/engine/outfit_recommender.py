@@ -534,21 +534,10 @@ def build_candidate_pool(
 
         bm25_reranked_candidates = make_json_safe(bm25_reranked_candidates)
 
-        print("\n" + "=" * 80)
-        print(f"PGVECTOR + BM25 RERANKING DEBUG | item_type: {item_type}")
-        print("=" * 80)
-        print(f"PGVECTOR query: {outfit_query[:300]}...")
-
-        for rank, candidate in enumerate(bm25_reranked_candidates[:5], start=1):
-            print(
-                f"{rank}. {candidate.get('item_id')} | "
-                f"text_score={candidate.get('text_score')} | "
-                f"metadata_score={candidate.get('metadata_score')} | "
-                f"candidate_score={candidate.get('candidate_score')} | "
-                f"bm25_score={candidate.get('bm25_score')} | "
-                f"hybrid_keyword_score={candidate.get('hybrid_keyword_score')}"
-            )
-            print(f"   caption: {candidate.get('caption', '')[:160]}")
+        print(
+            f"Retrieved {len(bm25_reranked_candidates)} candidate(s) "
+            f"for item_type={item_type} using pgvector + BM25."
+        )
 
         final_grouped_candidates[item_type] = [
             compact_candidate_for_llm(item)

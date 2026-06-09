@@ -32,7 +32,7 @@ outputs/sample_results/*
 # Uploaded images
 data/chat_memory/*
 !data/chat_memory/.gitkeep
-data/uploaded_images/*
+#data/uploaded_images/*
 
 !data/uploaded_images/.gitkeep
 

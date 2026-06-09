@@ -33,7 +33,7 @@ from src.engine.pgvector_similar_search import (
 
 load_dotenv()
 
-client = OpenAI()
+client = OpenAI(timeout=60.0)
 
 CHAT_MODEL = "gpt-4.1-mini"
 HYBRID_EMBEDDINGS_PATH = "data/wardrobe_hybrid_embeddings.json"
