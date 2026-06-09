@@ -230,7 +230,7 @@ def start_chat() -> None:
     print("- What can I pair with item_003 for a smart casual outing?")
     print(
         "- What can I pair with "
-        "C:\\Users\\KIIT\\PycharmProjects\\Wardrobe_Recommendation_Engine\\11.jpg "
+        "C:\\Users\\Wardrobe_Recommendation_Engine\\11.jpg "
         "for a party?"
     )
     print("- Find similar items to what we have now")
