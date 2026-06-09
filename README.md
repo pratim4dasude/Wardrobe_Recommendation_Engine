@@ -10,6 +10,8 @@ model to assemble outfits strictly from those retrieved items, and finally *vali
 outfit in code before it is shown. In other words, this is a Retrieval-Augmented Generation
 (RAG) pipeline applied to fashion.
 
+> 💡 **How it works:** To understand the project workflow and see it in action, please check the [OUT_LOG.txt](OUT_LOG.txt).
+
 ---
 
 ## What it can do
