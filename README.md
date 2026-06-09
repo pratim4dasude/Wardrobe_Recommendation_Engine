@@ -84,7 +84,7 @@ For each message, the assistant runs a short pipeline:
                             |        +--------------------------------------+
                             |        |     HYBRID CANDIDATE RETRIEVAL       |
                             |        |  +-------------------------------+   |
-                            |        |  | text-embedding cosine (vibe)  |   |
+                            |        |  | pgvector cosine (text-embed)  |   |
                             |        |  | metadata bonus (color/style)  |   |
                             |        |  | BM25 keyword rerank (exact)   |   |
                             |        |  +-------------------------------+   |
@@ -133,6 +133,10 @@ These merge into a combined keyword score used to rank candidates per outfit rol
 similarity (the *find similar* and *outside-image* flows) is handled separately by CLIP visual
 embeddings (512-d), compared by cosine against the wardrobe.
 
+All wardrobe vectors live in PostgreSQL with the pgvector extension. Candidate retrieval and
+image similarity run as `<=>` cosine-distance queries against pgvector, so the engine scales
+past in-memory scoring while keeping the ranking logic above unchanged.
+
 ---
 
 ## Technology
@@ -145,9 +149,11 @@ embeddings (512-d), compared by cosine against the wardrobe.
 | CLIP `clip-vit-base-patch32` (Hugging Face Transformers) | Visual embeddings for image similarity (512-d) |
 | PyTorch | Runs CLIP and tensor cosine similarity |
 | Pillow | Image loading and decoding before CLIP |
-| python-dotenv | Loads the OpenAI API key from `.env` |
+| PostgreSQL + pgvector | Live wardrobe vector store, similarity search, and per-session chat memory |
+| psycopg 3 | PostgreSQL driver used by the engine |
+| python-dotenv | Loads the OpenAI API key and database URL from `.env` |
 | Custom BM25 | Keyword reranking, dependency-free |
-| Local JSON store | Wardrobe data, embeddings, and per-session chat memory |
+| Local JSON store | Offline build artifacts: inventory, metadata, and prepared embeddings |
 
 ---
 
@@ -166,37 +172,60 @@ images  -->  inventory.json  -->  metadata.json  -->  text embeddings  -->  hybr
 - Visual and hybrid: the CLIP 512-d vector is added, producing the single hybrid embeddings
   file that the live engine reads.
 
-The prepared embedding files are already included, so the chat assistant can run without
-rebuilding anything.
+On first startup the prepared `wardrobe_hybrid_embeddings.json` is migrated once into
+PostgreSQL/pgvector, which is what the live engine queries at request time. The prepared files
+are already included, so the chat assistant can run without rebuilding anything.
 
 ---
 
 ## Getting started
 
-1. Prerequisites: Python 3.11+ and an OpenAI API key.
+1. Prerequisites:
+   - Python 3.11+
+   - An OpenAI API key
+   - Docker (used to run PostgreSQL with the pgvector extension)
 
 2. Install dependencies:
 
 ```
 python -m venv venv
 venv\Scripts\activate          # Windows  (use: source venv/bin/activate on macOS/Linux)
-pip install openai python-dotenv torch transformers pillow
+pip install -r requirements.txt
 ```
 
-3. Add the API key by creating a `.env` file in the project root:
+The first run downloads the CLIP model (about 600 MB) from Hugging Face.
+
+3. Start PostgreSQL + pgvector with Docker:
+
+```
+docker run --name wardrobe-pgvector -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=wardrobe_db -p 5432:5432 -d pgvector/pgvector:pg16
+```
+
+If the container already exists from a previous run, just start it again:
+
+```
+docker start wardrobe-pgvector
+```
+
+4. Create a `.env` file in the project root with the API key and the database URL:
 
 ```
 OPENAI_API_KEY=sk-your-key-here
+DATABASE_URL=postgresql://postgres:postgres@localhost:5432/wardrobe_db
 ```
 
-4. Run the chat assistant from the project root:
+5. Run the engine from the project root:
 
 ```
-python -m scripts.fashion_chat_demo
+python main.py
 ```
+
+On the first run, `main.py` performs all setup automatically: it checks the environment and
+wardrobe images, verifies the PostgreSQL/pgvector connection, builds any missing wardrobe
+files, migrates the prepared embeddings into pgvector, creates the chat-memory tables, and then
+starts the interactive assistant. Later runs skip whatever is already done.
 
 Type a request such as `I have office tomorrow, what should I wear?`, and type `exit` to quit.
-The first run downloads the CLIP model (about 600 MB) from Hugging Face.
 
 ---
 
@@ -228,11 +257,12 @@ This is an actively evolving project. Honest status:
 
 - Wardrobe scope: currently tops, bottoms, and outerwear. Footwear and accessories are not yet
   in the dataset, so outfits stop at shirt and trousers with an optional layer.
-- Serving layer: the engine runs as a local command-line application. The REST API, database,
-  and web interface are planned and not yet implemented.
-- Scale: retrieval loads and scores embeddings in-process, which suits closets of around a
-  hundred items. A vector index such as FAISS or pgvector is the planned upgrade for larger
-  wardrobes.
+- Serving layer: the engine runs as a local command-line application backed by PostgreSQL +
+  pgvector for vector search and chat memory. The REST API and web interface are planned and
+  not yet implemented.
+- Scale: wardrobe vectors are stored and searched in pgvector, which comfortably handles the
+  current closet and scales well beyond it. The text-only flow still scores in-process and is a
+  candidate to route through pgvector too.
 
 Planned next: add footwear and accessories, an offline evaluation harness for recommendation
 quality, structured-output JSON for the model calls, and the API and web serving layer.
