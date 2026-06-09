@@ -284,7 +284,7 @@ def process_inventory(
             results.append(failed_item)
 
             print("\nFailed item:")
-            print(json.dumps(failed_item, indent=2, ensure_ascii=False))
+            print  (json.dumps(failed_item, indent=2, ensure_ascii=False))
 
             save_results(output_file, results)
 
