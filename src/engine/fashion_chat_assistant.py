@@ -20,9 +20,14 @@ from src.engine.outfit_recommender import (
 )
 from src.engine.query_image_processor import process_query_image
 from src.engine.query_understanding import understand_user_query
-from src.engine.similar_search import (
-    similar_search_by_item_id,
-    similar_search_by_query_item,
+# from src.engine.similar_search import (
+#     similar_search_by_item_id,
+#     similar_search_by_query_item,
+# )
+
+from src.engine.pgvector_similar_search import (
+    similar_search_by_item_id_pgvector as similar_search_by_item_id,
+    similar_search_by_query_item_pgvector as similar_search_by_query_item,
 )
 
 

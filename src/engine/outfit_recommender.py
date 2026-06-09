@@ -7,7 +7,6 @@ from openai import OpenAI
 
 from src.engine.bm25_retrieval import rerank_items_with_bm25
 from src.engine.embeddings import create_text_embedding
-from src.utils import resolve_project_path
 
 
 load_dotenv()
@@ -18,31 +17,72 @@ OUTFIT_MODEL = "gpt-4.1-mini"
 HYBRID_EMBEDDINGS_PATH = "data/wardrobe_hybrid_embeddings.json"
 
 
-def load_hybrid_items(
-    hybrid_embeddings_path: str = HYBRID_EMBEDDINGS_PATH,
-) -> list[dict]:
+def make_json_safe(value):
     """
-    Load wardrobe items with metadata and hybrid embeddings.
+    Convert numpy/float32/float64 values into normal Python JSON-safe values.
+
+    This prevents:
+    Object of type float32 is not JSON serializable
     """
-    hybrid_file = resolve_project_path(hybrid_embeddings_path)
+    if value is None:
+        return None
 
-    if not hybrid_file.exists():
-        raise FileNotFoundError(f"Hybrid embeddings file not found: {hybrid_file}")
+    if isinstance(value, dict):
+        return {key: make_json_safe(val) for key, val in value.items()}
 
-    with hybrid_file.open("r", encoding="utf-8") as file:
-        items = json.load(file)
+    if isinstance(value, list):
+        return [make_json_safe(item) for item in value]
 
-    valid_items = []
+    if isinstance(value, tuple):
+        return [make_json_safe(item) for item in value]
 
-    for item in items:
-        if (
-            item.get("status") == "hybrid_embedding_generated"
-            and item.get("text_embedding")
-            and item.get("caption")
-        ):
-            valid_items.append(item)
+    if isinstance(value, set):
+        return [make_json_safe(item) for item in value]
 
-    return valid_items
+    if hasattr(value, "item"):
+        return make_json_safe(value.item())
+
+    if isinstance(value, (str, int, float, bool)):
+        return value
+
+    return str(value)
+
+
+def safe_float(value, default: float = 0.0) -> float:
+    """
+    Convert Python/numpy numeric values into normal Python float.
+    """
+    if value is None:
+        return default
+
+    if hasattr(value, "item"):
+        value = value.item()
+
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return default
+
+
+def load_hybrid_items(hybrid_embeddings_path: str | None = None) -> list[dict]:
+    """
+    Load all wardrobe items from pgvector DB.
+
+    hybrid_embeddings_path is kept only so old function calls do not break.
+    """
+    from src.db.pgvector_store import load_all_items
+
+    items = load_all_items()
+
+    if not items:
+        raise ValueError(
+            "No wardrobe items found in pgvector DB. "
+            "Run: python scripts\\migrate_json_to_pgvector.py"
+        )
+
+    print(f"Loaded {len(items)} wardrobe items from pgvector DB.")
+
+    return make_json_safe(items)
 
 
 def find_item_by_id(items: list[dict], item_id: str) -> dict:
@@ -63,6 +103,9 @@ def cosine_similarity(vector_a: list[float], vector_b: list[float]) -> float:
     if len(vector_a) != len(vector_b):
         raise ValueError(f"Vector size mismatch: {len(vector_a)} vs {len(vector_b)}")
 
+    vector_a = [safe_float(value) for value in vector_a]
+    vector_b = [safe_float(value) for value in vector_b]
+
     dot_product = sum(a * b for a, b in zip(vector_a, vector_b, strict=False))
     norm_a = math.sqrt(sum(a * a for a in vector_a))
     norm_b = math.sqrt(sum(b * b for b in vector_b))
@@ -70,7 +113,7 @@ def cosine_similarity(vector_a: list[float], vector_b: list[float]) -> float:
     if norm_a == 0 or norm_b == 0:
         return 0.0
 
-    return dot_product / (norm_a * norm_b)
+    return float(dot_product / (norm_a * norm_b))
 
 
 def detect_item_type(item: dict) -> str:
@@ -212,9 +255,6 @@ def normalize_text_list(values: list | str | None) -> set[str]:
 def metadata_bonus_score(source_item: dict, candidate_item: dict, occasion: str) -> float:
     """
     Rule-based score to help candidate selection before LLM.
-
-    This is not the final outfit decision.
-    It only improves candidate ranking before sending to the LLM.
     """
     score = 0.0
 
@@ -276,7 +316,7 @@ def metadata_bonus_score(source_item: dict, candidate_item: dict, occasion: str)
         if word in candidate_text:
             score += 0.02
 
-    return round(score, 4)
+    return round(float(score), 4)
 
 
 def build_outfit_query(source_item: dict, occasion: str) -> str:
@@ -298,7 +338,7 @@ def compact_candidate_for_llm(item: dict) -> dict:
     Keep only useful fields for the LLM prompt.
     This avoids sending unnecessary large data.
     """
-    return {
+    compact_item = {
         "item_id": item.get("item_id"),
         "filename": item.get("filename"),
         "image_path": item.get("image_path"),
@@ -308,14 +348,120 @@ def compact_candidate_for_llm(item: dict) -> dict:
         "color": item.get("color", []),
         "style": item.get("style", []),
         "search_text": item.get("search_text", ""),
-        "text_score": item.get("text_score"),
-        "metadata_score": item.get("metadata_score"),
-        "candidate_score": item.get("candidate_score"),
-        "bm25_score": item.get("bm25_score"),
-        "bm25_raw_score": item.get("bm25_raw_score"),
-        "hybrid_keyword_score": item.get("hybrid_keyword_score"),
+        "text_score": safe_float(item.get("text_score")),
+        "metadata_score": safe_float(item.get("metadata_score")),
+        "candidate_score": safe_float(item.get("candidate_score")),
+        "bm25_score": safe_float(item.get("bm25_score")),
+        "bm25_raw_score": safe_float(item.get("bm25_raw_score")),
+        "hybrid_keyword_score": safe_float(item.get("hybrid_keyword_score")),
     }
 
+    return make_json_safe(compact_item)
+
+
+# def build_candidate_pool(
+#     source_item: dict,
+#     occasion: str,
+#     items: list[dict],
+#     max_per_type: int = 6,
+# ) -> dict[str, list[dict]]:
+#     """
+#     Retrieve compatible candidates grouped by outfit role/type.
+#
+#     Ranking layers:
+#     1. Text embedding similarity
+#     2. Metadata/style/category bonus
+#     3. BM25 keyword score
+#     4. Final hybrid keyword score
+#     """
+#     source_type = detect_item_type(source_item)
+#     target_types = get_target_item_types(source_type)
+#
+#     outfit_query = build_outfit_query(source_item=source_item, occasion=occasion)
+#     query_embedding = create_text_embedding(outfit_query)
+#     query_embedding = [safe_float(value) for value in query_embedding]
+#
+#     grouped_candidates = defaultdict(list)
+#
+#     for item in items:
+#         if item.get("item_id") == source_item.get("item_id"):
+#             continue
+#
+#         candidate_type = detect_item_type(item)
+#
+#         if candidate_type not in target_types:
+#             continue
+#
+#         if not item.get("text_embedding"):
+#             continue
+#
+#         text_embedding = [safe_float(value) for value in item["text_embedding"]]
+#
+#         text_score = safe_float(cosine_similarity(query_embedding, text_embedding))
+#         metadata_score = safe_float(metadata_bonus_score(source_item, item, occasion))
+#         candidate_score = safe_float(text_score + metadata_score)
+#
+#         candidate = {
+#             "item_id": item.get("item_id"),
+#             "filename": item.get("filename"),
+#             "image_path": item.get("image_path"),
+#             "item_type": candidate_type,
+#             "candidate_score": round(candidate_score, 4),
+#             "similarity_score": round(candidate_score, 4),
+#             "text_score": round(text_score, 4),
+#             "metadata_score": round(metadata_score, 4),
+#             "caption": item.get("caption", ""),
+#             "category": item.get("category", []),
+#             "color": item.get("color", []),
+#             "style": item.get("style", []),
+#             "search_text": item.get("search_text", ""),
+#         }
+#
+#         grouped_candidates[candidate_type].append(make_json_safe(candidate))
+#
+#     final_grouped_candidates = {}
+#
+#     for item_type, candidates in grouped_candidates.items():
+#         candidates = sorted(
+#             candidates,
+#             key=lambda item: safe_float(item.get("candidate_score")),
+#             reverse=True,
+#         )
+#
+#         shortlist_size = max(max_per_type * 3, max_per_type)
+#         candidates = candidates[:shortlist_size]
+#
+#         bm25_reranked_candidates = rerank_items_with_bm25(
+#             query=outfit_query,
+#             items=candidates,
+#             bm25_weight=0.30,
+#             existing_score_weight=0.70,
+#         )
+#
+#         bm25_reranked_candidates = make_json_safe(bm25_reranked_candidates)
+#
+#         print("\n" + "=" * 80)
+#         print(f"BM25 + HYBRID RERANKING DEBUG | item_type: {item_type}")
+#         print("=" * 80)
+#         print(f"BM25 query: {outfit_query[:300]}...")
+#
+#         for rank, candidate in enumerate(bm25_reranked_candidates[:5], start=1):
+#             print(
+#                 f"{rank}. {candidate.get('item_id')} | "
+#                 f"text_score={candidate.get('text_score')} | "
+#                 f"metadata_score={candidate.get('metadata_score')} | "
+#                 f"candidate_score={candidate.get('candidate_score')} | "
+#                 f"bm25_score={candidate.get('bm25_score')} | "
+#                 f"hybrid_keyword_score={candidate.get('hybrid_keyword_score')}"
+#             )
+#             print(f"   caption: {candidate.get('caption', '')[:160]}")
+#
+#         final_grouped_candidates[item_type] = [
+#             compact_candidate_for_llm(item)
+#             for item in bm25_reranked_candidates[:max_per_type]
+#         ]
+#
+#     return make_json_safe(final_grouped_candidates)
 
 def build_candidate_pool(
     source_item: dict,
@@ -323,70 +469,61 @@ def build_candidate_pool(
     items: list[dict],
     max_per_type: int = 6,
 ) -> dict[str, list[dict]]:
-    """
-    Retrieve compatible candidates grouped by outfit role/type.
 
-    Ranking layers:
-    1. Text embedding similarity
-    2. Metadata/style/category bonus
-    3. BM25 keyword score
-    4. Final hybrid keyword score
-    """
+    from src.db.pgvector_store import search_by_text_embedding
+
     source_type = detect_item_type(source_item)
     target_types = get_target_item_types(source_type)
 
     outfit_query = build_outfit_query(source_item=source_item, occasion=occasion)
     query_embedding = create_text_embedding(outfit_query)
-
-    grouped_candidates = defaultdict(list)
-
-    for item in items:
-        if item.get("item_id") == source_item.get("item_id"):
-            continue
-
-        candidate_type = detect_item_type(item)
-
-        if candidate_type not in target_types:
-            continue
-
-        if not item.get("text_embedding"):
-            continue
-
-        text_score = cosine_similarity(query_embedding, item["text_embedding"])
-        metadata_score = metadata_bonus_score(source_item, item, occasion)
-
-        candidate_score = text_score + metadata_score
-
-        candidate = {
-            "item_id": item.get("item_id"),
-            "filename": item.get("filename"),
-            "image_path": item.get("image_path"),
-            "item_type": candidate_type,
-            "candidate_score": round(candidate_score, 4),
-            "similarity_score": round(candidate_score, 4),
-            "text_score": round(text_score, 4),
-            "metadata_score": metadata_score,
-            "caption": item.get("caption", ""),
-            "category": item.get("category", []),
-            "color": item.get("color", []),
-            "style": item.get("style", []),
-            "search_text": item.get("search_text", ""),
-        }
-
-        grouped_candidates[candidate_type].append(candidate)
+    query_embedding = [safe_float(value) for value in query_embedding]
 
     final_grouped_candidates = {}
 
-    for item_type, candidates in grouped_candidates.items():
-        candidates = sorted(
-            candidates,
-            key=lambda item: item.get("candidate_score", 0.0),
-            reverse=True,
+    for item_type in target_types:
+        pgvector_candidates = search_by_text_embedding(
+            query_embedding=query_embedding,
+            top_k=max_per_type * 3,
+            item_type=item_type,
+            exclude_item_id=source_item.get("item_id"),
         )
 
-        # Keep a wider candidate set before BM25 so exact keywords can recover.
-        shortlist_size = max(max_per_type * 3, max_per_type)
-        candidates = candidates[:shortlist_size]
+        if not pgvector_candidates:
+            continue
+
+        candidates = []
+
+        for item in pgvector_candidates:
+            text_score = safe_float(item.get("text_score"))
+            metadata_score = safe_float(
+                metadata_bonus_score(source_item, item, occasion)
+            )
+            candidate_score = safe_float(text_score + metadata_score)
+
+            candidate = {
+                "item_id": item.get("item_id"),
+                "filename": item.get("filename"),
+                "image_path": item.get("image_path"),
+                "item_type": item_type,
+                "candidate_score": round(candidate_score, 4),
+                "similarity_score": round(candidate_score, 4),
+                "text_score": round(text_score, 4),
+                "metadata_score": round(metadata_score, 4),
+                "caption": item.get("caption", ""),
+                "category": item.get("category", []),
+                "color": item.get("color", []),
+                "style": item.get("style", []),
+                "search_text": item.get("search_text", ""),
+            }
+
+            candidates.append(make_json_safe(candidate))
+
+        candidates = sorted(
+            candidates,
+            key=lambda item: safe_float(item.get("candidate_score")),
+            reverse=True,
+        )
 
         bm25_reranked_candidates = rerank_items_with_bm25(
             query=outfit_query,
@@ -395,10 +532,12 @@ def build_candidate_pool(
             existing_score_weight=0.70,
         )
 
+        bm25_reranked_candidates = make_json_safe(bm25_reranked_candidates)
+
         print("\n" + "=" * 80)
-        print(f"BM25 + HYBRID RERANKING DEBUG | item_type: {item_type}")
+        print(f"PGVECTOR + BM25 RERANKING DEBUG | item_type: {item_type}")
         print("=" * 80)
-        print(f"BM25 query: {outfit_query[:300]}...")
+        print(f"PGVECTOR query: {outfit_query[:300]}...")
 
         for rank, candidate in enumerate(bm25_reranked_candidates[:5], start=1):
             print(
@@ -416,14 +555,14 @@ def build_candidate_pool(
             for item in bm25_reranked_candidates[:max_per_type]
         ]
 
-    return final_grouped_candidates
+    return make_json_safe(final_grouped_candidates)
 
 
 def build_source_context(source_item: dict) -> dict:
     """
     Prepare source item for LLM.
     """
-    return {
+    source_context = {
         "item_id": source_item.get("item_id"),
         "filename": source_item.get("filename"),
         "image_path": source_item.get("image_path"),
@@ -434,6 +573,8 @@ def build_source_context(source_item: dict) -> dict:
         "style": source_item.get("style", []),
         "search_text": source_item.get("search_text", ""),
     }
+
+    return make_json_safe(source_context)
 
 
 def extract_json_from_text(text: str) -> dict:
@@ -465,29 +606,50 @@ def llm_create_outfit_recommendation(
     """
     Ask LLM to create complete outfit recommendations from retrieved candidates.
     """
+    source_item = make_json_safe(source_item)
+    candidate_pool = make_json_safe(candidate_pool)
+
     source_context = build_source_context(source_item)
 
     source_type = detect_item_type(source_item)
     required_roles = get_required_roles_for_source_type(source_type)
 
+    source_context_json = json.dumps(
+        make_json_safe(source_context),
+        indent=2,
+        ensure_ascii=False,
+    )
+
+    required_roles_json = json.dumps(
+        make_json_safe(required_roles),
+        indent=2,
+        ensure_ascii=False,
+    )
+
+    candidate_pool_json = json.dumps(
+        make_json_safe(candidate_pool),
+        indent=2,
+        ensure_ascii=False,
+    )
+
     prompt = f"""
 You are a fashion outfit recommendation assistant.
 
 The user selected this source wardrobe item:
-{json.dumps(source_context, indent=2, ensure_ascii=False)}
+{source_context_json}
 
 Detected source item type:
 "{source_type}"
 
 Required roles for a complete outfit:
-{json.dumps(required_roles, indent=2, ensure_ascii=False)}
+{required_roles_json}
 
 The user wants an outfit for this occasion/style intent:
 "{occasion}"
 
 Below are compatible wardrobe candidates retrieved from the user's closet.
 They are grouped by item type:
-{json.dumps(candidate_pool, indent=2, ensure_ascii=False)}
+{candidate_pool_json}
 
 Candidate scoring meaning:
 - text_score: semantic compatibility using text embeddings.
@@ -576,9 +738,10 @@ Rules:
 def validate_outfit_recommendation(recommendation: dict, source_item: dict) -> dict:
     """
     Lightweight post-validation to remove incomplete outfits.
-
-    This keeps the output safe even if the LLM ignores a rule.
     """
+    recommendation = make_json_safe(recommendation)
+    source_item = make_json_safe(source_item)
+
     source_type = detect_item_type(source_item)
     required_roles = get_required_roles_for_source_type(source_type)
 
@@ -626,7 +789,7 @@ def validate_outfit_recommendation(recommendation: dict, source_item: dict) -> d
             + " No complete outfits passed validation."
         )
 
-    return recommendation
+    return make_json_safe(recommendation)
 
 
 def recommend_outfits_for_item(
@@ -640,6 +803,8 @@ def recommend_outfits_for_item(
     """
     items = load_hybrid_items(hybrid_embeddings_path)
     source_item = find_item_by_id(items, item_id)
+
+    source_item = make_json_safe(source_item)
 
     source_type = detect_item_type(source_item)
     target_types = get_target_item_types(source_type)
@@ -660,6 +825,8 @@ def recommend_outfits_for_item(
         items=items,
         max_per_type=6,
     )
+
+    candidate_pool = make_json_safe(candidate_pool)
 
     for item_type, candidates in candidate_pool.items():
         print(f"{item_type}: {len(candidates)} candidate(s)")
@@ -697,13 +864,15 @@ def recommend_outfits_for_item(
             "error": str(error),
         }
 
-    return recommendation
+    return make_json_safe(recommendation)
 
 
 def print_outfit_recommendations(recommendation: dict) -> None:
     """
     Print outfit recommendations clearly.
     """
+    recommendation = make_json_safe(recommendation)
+
     print("\n" + "=" * 80)
     print("LLM OUTFIT RECOMMENDATIONS")
     print("=" * 80)
